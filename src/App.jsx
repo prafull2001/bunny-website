@@ -7,6 +7,11 @@ import PrivacyPolicy from './PrivacyPolicy';
 import TermsOfService from './TermsOfService';
 import './index.css';
 
+// Assets
+import logoImg from './assets/bunny-logo.png';
+import bunnyPetImg from './assets/bunny-pet.png';
+import homescreenImg from './assets/homescreen.jpg';
+
 function Home() {
   const [scrolled, setScrolled] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -60,7 +65,7 @@ function Home() {
       <nav className={`navbar ${scrolled ? 'navbar-scrolled' : ''}`}>
         <div className="container nav-content">
           <div className="brand">
-            <img src="/assets/bunny-logo.png" alt="Bunny Logo" className="brand-logo-img" />
+            <img src={logoImg} alt="Bunny Logo" className="brand-logo-img" />
             <span className="brand-name">Bunny</span>
           </div>
           <div className="nav-links">
@@ -88,7 +93,7 @@ function Home() {
             </div>
             <h1 className="hero-title">
               Stay connected,<br />
-              <img src="/assets/bunny-pet.png" alt="Bunny Pet" className="hero-pet-img" />
+              <img src={bunnyPetImg} alt="Bunny Pet" className="hero-pet-img" />
               <span className="highlight-text">miles apart.</span>
             </h1>
             <p className="hero-subtitle">
@@ -173,7 +178,7 @@ function Home() {
           <div className="footer-grid">
             <div className="footer-brand-col">
               <div className="brand">
-                <img src="/assets/bunny-logo.png" alt="Bunny Logo" className="brand-logo-img" />
+                <img src={logoImg} alt="Bunny Logo" className="brand-logo-img" />
                 <span className="brand-name">Bunny</span>
               </div>
               <p>
