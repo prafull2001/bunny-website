@@ -949,3 +949,51 @@ a {
 .app-store-badge:hover {
   transform: scale(1.05);
 }
+
+/* --- Confirmation Page --- */
+.confirm-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-color);
+  padding: 16px;
+}
+
+.confirm-container {
+  width: 100%;
+  max-width: 450px;
+  text-align: center;
+}
+
+.confirm-image {
+  width: 250px;
+  height: 250px;
+  object-fit: contain;
+  margin: 0 auto 32px;
+  filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.1));
+}
+
+.confirm-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 24px;
+  line-height: 1.2;
+}
+
+.confirm-text {
+  font-size: 18px;
+  color: var(--text-secondary);
+  margin-bottom: 32px;
+  line-height: 1.6;
+}
+
+.confirm-container .btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 32px;
+  font-size: 18px;
+}
