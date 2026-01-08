@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+
 import { motion } from 'framer-motion';
 import bunnyHeartImg from './assets/bunny-pet.png'; // Using bunny-pet as placeholder
 
@@ -35,11 +35,8 @@ const Confirm = () => {
                     transition={{ delay: 0.4, duration: 0.5 }}
                 >
                     <p className="confirm-text">
-                        You're all set! You can now return to the app and sign in.
+                        You're all set! Please return to the Bunny app to continue.
                     </p>
-                    <Link to="/" className="btn-primary">
-                        Back to Home
-                    </Link>
                 </motion.div>
             </div>
         </div>
