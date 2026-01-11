@@ -6,6 +6,7 @@ import Contact from './Contact';
 import PrivacyPolicy from './PrivacyPolicy';
 import TermsOfService from './TermsOfService';
 import Confirm from './Confirm';
+import AvishiSurprise from './AvishiSurprise';
 import './index.css';
 
 // Assets
@@ -231,6 +232,7 @@ function App() {
         <Route path="/privacy" element={<PrivacyPolicy />} />
         <Route path="/terms" element={<TermsOfService />} />
         <Route path="/confirm" element={<Confirm />} />
+        <Route path="/avishi" element={<AvishiSurprise />} />
       </Routes>
     </Router>
   );
