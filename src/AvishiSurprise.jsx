@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import confetti from 'canvas-confetti';
 import { Link } from 'react-router-dom';
+import { X } from 'lucide-react';
 
 // Photos
 import photo1 from './assets/avishi-1.jpg';
@@ -10,29 +11,34 @@ import photo3 from './assets/avishi-3.jpg';
 import photo4 from './assets/avishi-4.jpg';
 
 const PHOTOS = [
-    { id: 1, src: photo1, rotate: -6 },
-    { id: 2, src: photo2, rotate: 4 },
-    { id: 3, src: photo3, rotate: -3 },
-    { id: 4, src: photo4, rotate: 5 },
+    // isRotated: true for the first two images as requested
+    { id: 1, src: photo1, rotate: -6, isUpsideDown: true },
+    { id: 2, src: photo2, rotate: 4, isUpsideDown: true },
+    { id: 3, src: photo3, rotate: -3, isUpsideDown: false },
+    { id: 4, src: photo4, rotate: 5, isUpsideDown: false },
 ];
 
-// Laurel Green Palette
-// #B0C291 (Laurel Green), #95A16D (Asparagus), #75866D (Camouflage Green), #9FBC9C (Light Laurel)
+// Laurel Green Palette for specific UI elements (text, buttons)
 const PALETTE = {
-    bgGradient: 'linear-gradient(to bottom, #F1F8E9, #DCEDC8)', // Very light green bg
+    bgGradient: 'linear-gradient(to bottom, #F1F8E9, #DCEDC8)',
     primary: '#75866D',
     secondary: '#95A16D',
     accent: '#B0C291',
     highlight: '#9FBC9C'
 };
 
-const BALLOON_COLORS = ['#B0C291', '#95A16D', '#75866D', '#9FBC9C', '#81C784'];
+// Restored Multi-color Balloons
+const BALLOON_COLORS = ['#FF69B4', '#87CEEB', '#DDA0DD', '#FFD700', '#98FB98', '#FFA07A'];
 
 export default function AvishiSurprise() {
     const [flowersBloomed, setFlowersBloomed] = useState(false);
+    const [selectedPhotoId, setSelectedPhotoId] = useState(null);
 
     useEffect(() => {
-        // Fire confetti on mount - Green/Nature themed
+        // Force scroll to top on refresh/mount
+        window.scrollTo(0, 0);
+
+        // Fire confetti on mount
         const duration = 3000;
         const end = Date.now() + duration;
 
@@ -42,14 +48,14 @@ export default function AvishiSurprise() {
                 angle: 60,
                 spread: 55,
                 origin: { x: 0 },
-                colors: ['#B0C291', '#95A16D', '#75866D', '#ffffff', '#FFD700']
+                colors: BALLOON_COLORS
             });
             confetti({
                 particleCount: 5,
                 angle: 120,
                 spread: 55,
                 origin: { x: 1 },
-                colors: ['#B0C291', '#95A16D', '#75866D', '#ffffff', '#FFD700']
+                colors: BALLOON_COLORS
             });
 
             if (Date.now() < end) {
@@ -66,11 +72,11 @@ export default function AvishiSurprise() {
         <div className="avishi-container" style={{
             minHeight: '100vh',
             background: PALETTE.bgGradient,
-            overflow: 'hidden',
+            overflowX: 'hidden', // Prevent horizontal scroll from balloons/expanded items
             position: 'relative',
             padding: '2rem'
         }}>
-            {/* Floating Balloons Background */}
+            {/* Floating Balloons Background - Multi-color */}
             {BALLOON_COLORS.map((color, i) => (
                 <motion.div
                     key={i}
@@ -87,12 +93,12 @@ export default function AvishiSurprise() {
                     }}
                     style={{
                         position: 'absolute',
-                        left: `${10 + i * 20}%`,
+                        left: `${10 + i * 15}%`,
                         width: '60px',
                         height: '70px',
                         backgroundColor: color,
                         borderRadius: '50%',
-                        opacity: 0.4,
+                        opacity: 0.6,
                         zIndex: 0
                     }}
                 >
@@ -115,12 +121,12 @@ export default function AvishiSurprise() {
                     initial={{ opacity: 0, y: -50 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1 }}
-                    style={{ textAlign: 'center', marginBottom: '4rem', marginTop: '2rem' }}
+                    style={{ textAlign: 'center', marginBottom: '3rem', marginTop: '2rem' }}
                 >
                     <h1 style={{
                         fontSize: '3.5rem',
                         marginBottom: '0.5rem',
-                        background: `linear-gradient(45deg, ${PALETTE.secondary}, ${PALETTE.primary})`,
+                        background: `linear-gradient(45deg, ${PALETTE.secondary}, #FF69B4)`, // Mix of green and pink
                         WebkitBackgroundClip: 'text',
                         WebkitTextFillColor: 'transparent',
                         fontFamily: '"Outfit", sans-serif',
@@ -133,54 +139,152 @@ export default function AvishiSurprise() {
                     </p>
                 </motion.div>
 
-                {/* Photo Gallery - Scattered Polaroids */}
+                {/* Photo Gallery - Deck of Cards Layout */}
                 <div style={{
-                    display: 'grid',
-                    gridTemplateColumns: 'repeat(2, 1fr)',
-                    gap: '2rem',
-                    marginBottom: '5rem',
-                    perspective: '1000px'
+                    height: '400px',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    marginBottom: '4rem',
+                    position: 'relative'
                 }}>
-                    {PHOTOS.map((photo, index) => (
-                        <motion.div
-                            key={photo.id}
-                            initial={{ opacity: 0, scale: 0.8 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            transition={{ delay: 0.5 + index * 0.2 }}
-                            whileHover={{
-                                scale: 1.05,
-                                rotate: 0,
-                                zIndex: 10,
-                                boxShadow: '0 20px 40px rgba(0,0,0,0.2)'
-                            }}
-                            style={{
-                                backgroundColor: 'white',
-                                padding: '1rem 1rem 3rem 1rem',
-                                borderRadius: '4px',
-                                boxShadow: '0 10px 20px rgba(0,0,0,0.1)',
-                                transform: `rotate(${photo.rotate}deg)`,
-                                cursor: 'pointer',
-                                aspectRatio: '3/4'
-                            }}
-                        >
-                            <div style={{
-                                width: '100%',
-                                height: '100%',
-                                backgroundColor: '#eee',
-                                borderRadius: '2px',
-                                overflow: 'hidden'
-                            }}>
-                                <img
-                                    src={photo.src}
-                                    alt={`Memory ${index + 1}`}
-                                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                                />
-                            </div>
-                        </motion.div>
-                    ))}
+                    {PHOTOS.map((photo, index) => {
+                        // Calculate random-ish positions for the "scattered deck" look when not selected
+                        const randomX = (index % 2 === 0 ? -1 : 1) * (index * 10);
+                        const randomRotate = photo.rotate;
+
+                        return (
+                            <motion.div
+                                key={photo.id}
+                                layoutId={`card-${photo.id}`}
+                                onClick={() => setSelectedPhotoId(photo.id)}
+                                whileHover={{ scale: 1.05, zIndex: 10, rotate: 0 }}
+                                style={{
+                                    position: 'absolute',
+                                    width: '220px',
+                                    aspectRatio: '3/4',
+                                    backgroundColor: 'white',
+                                    padding: '1rem 1rem 3rem 1rem',
+                                    borderRadius: '8px',
+                                    boxShadow: '0 10px 30px rgba(0,0,0,0.15)',
+                                    cursor: 'pointer',
+                                    zIndex: index,
+                                    transform: `rotate(${randomRotate}deg) translateX(${randomX}px)`,
+                                    // If we are looking at this card in the deck (not expanded), apply deck transforms
+                                    // Framer motion 'animate' will handle the transition
+                                }}
+                                animate={{
+                                    rotate: randomRotate,
+                                    x: randomX,
+                                    scale: 1
+                                }}
+                            >
+                                <div style={{
+                                    width: '100%',
+                                    height: '100%',
+                                    backgroundColor: '#f0f0f0',
+                                    borderRadius: '4px',
+                                    overflow: 'hidden'
+                                }}>
+                                    <img
+                                        src={photo.src}
+                                        alt={`Memory ${index + 1}`}
+                                        style={{
+                                            width: '100%',
+                                            height: '100%',
+                                            objectFit: 'cover',
+                                            transform: photo.isUpsideDown ? 'rotate(180deg)' : 'none'
+                                        }}
+                                    />
+                                </div>
+                            </motion.div>
+                        );
+                    })}
                 </div>
 
-                {/* Flower Animation Text/Placeholder */}
+                {/* Expanded Card View (Overlay) */}
+                <AnimatePresence>
+                    {selectedPhotoId && (
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            onClick={() => setSelectedPhotoId(null)}
+                            style={{
+                                position: 'fixed',
+                                top: 0,
+                                left: 0,
+                                right: 0,
+                                bottom: 0,
+                                background: 'rgba(0,0,0,0.8)',
+                                zIndex: 100,
+                                display: 'flex',
+                                justifyContent: 'center',
+                                alignItems: 'center',
+                                padding: '2rem'
+                            }}
+                        >
+                            <motion.div
+                                layoutId={`card-${selectedPhotoId}`}
+                                style={{
+                                    width: '100%',
+                                    maxWidth: '500px',
+                                    aspectRatio: '3/4',
+                                    backgroundColor: 'white',
+                                    padding: '1rem 1rem 3.5rem 1rem',
+                                    borderRadius: '12px',
+                                    overflow: 'hidden',
+                                    position: 'relative'
+                                }}
+                                onClick={(e) => e.stopPropagation()} // Prevent clicking card from closing
+                            >
+                                {/* Close Button */}
+                                <button
+                                    onClick={() => setSelectedPhotoId(null)}
+                                    style={{
+                                        position: 'absolute',
+                                        top: '1rem',
+                                        right: '1rem',
+                                        background: 'rgba(0,0,0,0.1)',
+                                        border: 'none',
+                                        borderRadius: '50%',
+                                        width: '32px',
+                                        height: '32px',
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        justifyContent: 'center',
+                                        cursor: 'pointer',
+                                        zIndex: 20
+                                    }}
+                                >
+                                    <X size={20} color="#333" />
+                                </button>
+
+                                {/* Expanded Image */}
+                                <div style={{
+                                    width: '100%',
+                                    height: '100%',
+                                    backgroundColor: '#f0f0f0',
+                                    borderRadius: '6px',
+                                    overflow: 'hidden'
+                                }}>
+                                    <img
+                                        src={PHOTOS.find(p => p.id === selectedPhotoId)?.src}
+                                        alt="Expanded Memory"
+                                        style={{
+                                            width: '100%',
+                                            height: '100%',
+                                            objectFit: 'cover',
+                                            transform: PHOTOS.find(p => p.id === selectedPhotoId)?.isUpsideDown ? 'rotate(180deg)' : 'none'
+                                        }}
+                                    />
+                                </div>
+                            </motion.div>
+                        </motion.div>
+                    )}
+                </AnimatePresence>
+
+                {/* Flower Animation & Message */}
                 <motion.div
                     style={{
                         display: 'flex',
@@ -197,7 +301,7 @@ export default function AvishiSurprise() {
                         animate={{ opacity: flowersBloomed ? 1 : 0 }}
                         transition={{ delay: 1, duration: 1 }}
                         style={{
-                            marginTop: '0rem', // Moved up slightly as the bouquet is tall
+                            marginTop: '0rem',
                             textAlign: 'center',
                             background: 'white',
                             padding: '2rem',
@@ -210,7 +314,7 @@ export default function AvishiSurprise() {
                             "I'm so happy I met you, words can't describe how much you mean to me. Happy bday Bunny!"
                         </p>
                         <p style={{ marginTop: '1rem', fontWeight: 'bold', color: PALETTE.secondary }}>
-                            - With Love ❤️
+                            - P ❤️
                         </p>
                     </motion.div>
 
@@ -236,7 +340,7 @@ export default function AvishiSurprise() {
     );
 }
 
-// SVG Lily Component
+// SVG Lily Component (Unchanged)
 function LilyBouquet({ visible }) {
     const stemVariant = {
         hidden: { pathLength: 0, opacity: 0 },
@@ -248,9 +352,8 @@ function LilyBouquet({ visible }) {
         visible: { scale: 1, opacity: 1, transition: { delay: 1.8, duration: 0.8, type: "spring", stiffness: 50 } }
     };
 
-    // Lily color: White with soft pink/green hints
-    const lilyColor = "#FFFAF0"; // Floral White
-    const lilyCenter = "#FFFACD"; // Lemon Chiffon
+    const lilyColor = "#FFFAF0";
+    const lilyCenter = "#FFFACD";
 
     return (
         <svg width="300" height="400" viewBox="0 0 300 400" overflow="visible">
@@ -271,7 +374,6 @@ function LilyBouquet({ visible }) {
                 variants={flowerVariant}
                 style={{ originX: '150px', originY: '150px' }}
             >
-                {/* Petals */}
                 {[0, 60, 120, 180, 240, 300].map((rot) => (
                     <path
                         key={rot}
@@ -282,7 +384,6 @@ function LilyBouquet({ visible }) {
                         transform={`rotate(${rot}, 150, 150)`}
                     />
                 ))}
-                {/* Stamens */}
                 {[30, 90, 150, 210, 270, 330].map((rot) => (
                     <line
                         key={rot}
@@ -305,7 +406,7 @@ function LilyBouquet({ visible }) {
                 initial="hidden"
                 animate={visible ? "visible" : "hidden"}
             />
-            {/* Left Lily Head - Slightly Tilted */}
+            {/* Left Lily Head */}
             <motion.g
                 initial="hidden"
                 animate={visible ? "visible" : "hidden"}
@@ -337,7 +438,7 @@ function LilyBouquet({ visible }) {
                 initial="hidden"
                 animate={visible ? "visible" : "hidden"}
             />
-            {/* Right Lily Head - Slightly Tilted */}
+            {/* Right Lily Head */}
             <motion.g
                 initial="hidden"
                 animate={visible ? "visible" : "hidden"}
