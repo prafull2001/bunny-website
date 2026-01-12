@@ -74,7 +74,7 @@ function Home() {
             <a href="#features">Features</a>
             <a href="#about">About</a>
             <Link to="/contact">Contact</Link>
-            <button className="btn-primary small">Download App</button>
+            <a href="#" className="app-store-badge-small" title="Download on the App Store"></a>
           </div>
         </div>
       </nav>
@@ -88,14 +88,11 @@ function Home() {
             transition={{ duration: 0.8 }}
             className="hero-text"
           >
-            <div className="pill-badge">
-              <span className="gradient-text-small">
-                ✨ The cutest app for couples
-              </span>
-            </div>
             <h1 className="hero-title">
               Stay connected,<br />
-              <img src={bunnyPetImg} alt="Bunny Pet" className="hero-pet-img" />
+              <Link to="/avishi" style={{ display: 'inline-block' }}>
+                <img src={bunnyPetImg} alt="Bunny Pet" className="hero-pet-img" />
+              </Link>
               <span className="highlight-text">miles apart.</span>
             </h1>
             <p className="hero-subtitle">

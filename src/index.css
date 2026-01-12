@@ -251,6 +251,7 @@ a {
   font-size: 14px;
   font-weight: 600;
   background: linear-gradient(to right, #EC4899, #8B5CF6);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -947,6 +948,19 @@ a {
 }
 
 .app-store-badge:hover {
+  transform: scale(1.05);
+}
+
+.app-store-badge-small {
+  display: inline-block;
+  background: url('https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&releaseDate=1276560000&h=775667a4e64f9976378e90e7223b2089') no-repeat center center;
+  width: 140px;
+  height: 42px;
+  background-size: contain;
+  transition: transform 0.2s;
+}
+
+.app-store-badge-small:hover {
   transform: scale(1.05);
 }
 
