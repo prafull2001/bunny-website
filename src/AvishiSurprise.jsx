@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import confetti from 'canvas-confetti';
 import { Link } from 'react-router-dom';
@@ -10,6 +10,35 @@ import photo2 from './assets/avishi-2.jpg';
 import photo3 from './assets/avishi-3.jpg';
 import photo4 from './assets/avishi-4.jpg';
 
+// Error Boundary Component
+class ErrorBoundary extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = { hasError: false, error: null };
+    }
+
+    static getDerivedStateFromError(error) {
+        return { hasError: true, error };
+    }
+
+    componentDidCatch(error, errorInfo) {
+        console.error("Avishi Page Error:", error, errorInfo);
+    }
+
+    render() {
+        if (this.state.hasError) {
+            return (
+                <div style={{ padding: '20px', color: 'red', textAlign: 'center' }}>
+                    <h1>⚠️ Something went wrong</h1>
+                    <pre>{this.state.error?.toString()}</pre>
+                    <p>Please take a screenshot and send it to debugging.</p>
+                </div>
+            );
+        }
+        return this.props.children;
+    }
+}
+
 const PHOTOS = [
     // isRotated: true for the first two images as requested
     { id: 1, src: photo1, rotate: -6, isUpsideDown: true },
@@ -18,7 +47,6 @@ const PHOTOS = [
     { id: 4, src: photo4, rotate: 5, isUpsideDown: false },
 ];
 
-// Laurel Green Palette for specific UI elements (text, buttons)
 const PALETTE = {
     bgGradient: 'linear-gradient(to bottom, #F1F8E9, #DCEDC8)',
     primary: '#75866D',
@@ -27,13 +55,15 @@ const PALETTE = {
     highlight: '#9FBC9C'
 };
 
-// Restored Multi-color Balloons
 const BALLOON_COLORS = ['#FF69B4', '#87CEEB', '#DDA0DD', '#FFD700', '#98FB98', '#FFA07A'];
 
-export default function AvishiSurprise() {
+function AvishiSurpriseContent() {
     const [isMobile, setIsMobile] = useState(false);
+    const [flowersBloomed, setFlowersBloomed] = useState(false);
+    const [selectedPhotoId, setSelectedPhotoId] = useState(null);
 
     useEffect(() => {
+        console.log("AvishiSurprise Mounted");
         // Check mobile on mount/resize
         const checkMobile = () => setIsMobile(window.innerWidth < 768);
         checkMobile();
@@ -54,20 +84,23 @@ export default function AvishiSurprise() {
         const end = Date.now() + duration;
 
         const frame = () => {
-            confetti({
-                particleCount: isMobile ? 3 : 5,
-                angle: 60,
-                spread: 55,
-                origin: { x: 0 },
-                colors: BALLOON_COLORS
-            });
-            confetti({
-                particleCount: isMobile ? 3 : 5,
-                angle: 120,
-                spread: 55,
-                origin: { x: 1 },
-                colors: BALLOON_COLORS
-            });
+            // Safety check for confetti
+            if (typeof confetti === 'function') {
+                confetti({
+                    particleCount: isMobile ? 3 : 5,
+                    angle: 60,
+                    spread: 55,
+                    origin: { x: 0 },
+                    colors: BALLOON_COLORS
+                });
+                confetti({
+                    particleCount: isMobile ? 3 : 5,
+                    angle: 120,
+                    spread: 55,
+                    origin: { x: 1 },
+                    colors: BALLOON_COLORS
+                });
+            }
 
             if (Date.now() < end) {
                 requestAnimationFrame(frame);
@@ -477,5 +510,14 @@ function LilyBouquet({ visible }) {
                 </g>
             </motion.g>
         </svg>
+    );
+}
+
+// Default export wrapper
+export default function AvishiSurprise() {
+    return (
+        <ErrorBoundary>
+            <AvishiSurpriseContent />
+        </ErrorBoundary>
     );
 }
