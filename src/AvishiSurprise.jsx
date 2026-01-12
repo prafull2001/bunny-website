@@ -36,7 +36,11 @@ export default function AvishiSurprise() {
 
     useEffect(() => {
         // Force scroll to top on refresh/mount
+        if ('scrollRestoration' in window.history) {
+            window.history.scrollRestoration = 'manual';
+        }
         window.scrollTo(0, 0);
+        setTimeout(() => window.scrollTo(0, 0), 10);
 
         // Fire confetti on mount
         const duration = 3000;
@@ -141,7 +145,7 @@ export default function AvishiSurprise() {
 
                 {/* Photo Gallery - Deck of Cards Layout */}
                 <div style={{
-                    height: '400px',
+                    height: '500px', // Increased height
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
@@ -149,8 +153,11 @@ export default function AvishiSurprise() {
                     position: 'relative'
                 }}>
                     {PHOTOS.map((photo, index) => {
-                        // Calculate random-ish positions for the "scattered deck" look when not selected
-                        const randomX = (index % 2 === 0 ? -1 : 1) * (index * 10);
+                        // Spread logic: Fan them out horizontally
+                        // Index 0: -1.5 * 80 = -120px
+                        // Index 1: -0.5 * 80 = -40px etc.
+                        const spread = 80;
+                        const randomX = (index - 1.5) * spread;
                         const randomRotate = photo.rotate;
 
                         return (
@@ -158,25 +165,24 @@ export default function AvishiSurprise() {
                                 key={photo.id}
                                 layoutId={`card-${photo.id}`}
                                 onClick={() => setSelectedPhotoId(photo.id)}
-                                whileHover={{ scale: 1.05, zIndex: 10, rotate: 0 }}
+                                whileHover={{ scale: 1.1, zIndex: 20, rotate: 0, transition: { duration: 0.2 } }}
                                 style={{
                                     position: 'absolute',
-                                    width: '220px',
+                                    width: '280px', // Increased width (was 220px)
                                     aspectRatio: '3/4',
                                     backgroundColor: 'white',
-                                    padding: '1rem 1rem 3rem 1rem',
-                                    borderRadius: '8px',
-                                    boxShadow: '0 10px 30px rgba(0,0,0,0.15)',
+                                    padding: '1.2rem 1.2rem 4rem 1.2rem',
+                                    borderRadius: '12px',
+                                    boxShadow: '0 15px 35px rgba(0,0,0,0.2)',
                                     cursor: 'pointer',
                                     zIndex: index,
                                     transform: `rotate(${randomRotate}deg) translateX(${randomX}px)`,
-                                    // If we are looking at this card in the deck (not expanded), apply deck transforms
-                                    // Framer motion 'animate' will handle the transition
                                 }}
                                 animate={{
                                     rotate: randomRotate,
                                     x: randomX,
-                                    scale: 1
+                                    scale: 1,
+                                    zIndex: index
                                 }}
                             >
                                 <div style={{
