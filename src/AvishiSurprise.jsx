@@ -31,8 +31,15 @@ const PALETTE = {
 const BALLOON_COLORS = ['#FF69B4', '#87CEEB', '#DDA0DD', '#FFD700', '#98FB98', '#FFA07A'];
 
 export default function AvishiSurprise() {
-    const [flowersBloomed, setFlowersBloomed] = useState(false);
-    const [selectedPhotoId, setSelectedPhotoId] = useState(null);
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        // Check mobile on mount/resize
+        const checkMobile = () => setIsMobile(window.innerWidth < 768);
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
+        return () => window.removeEventListener('resize', checkMobile);
+    }, []);
 
     useEffect(() => {
         // Force scroll to top on refresh/mount
@@ -42,20 +49,20 @@ export default function AvishiSurprise() {
         window.scrollTo(0, 0);
         setTimeout(() => window.scrollTo(0, 0), 10);
 
-        // Fire confetti on mount
+        // Fire confetti on mount - reduced for mobile to save perf
         const duration = 3000;
         const end = Date.now() + duration;
 
         const frame = () => {
             confetti({
-                particleCount: 5,
+                particleCount: isMobile ? 3 : 5,
                 angle: 60,
                 spread: 55,
                 origin: { x: 0 },
                 colors: BALLOON_COLORS
             });
             confetti({
-                particleCount: 5,
+                particleCount: isMobile ? 3 : 5,
                 angle: 120,
                 spread: 55,
                 origin: { x: 1 },
@@ -70,15 +77,16 @@ export default function AvishiSurprise() {
 
         // Trigger flower bloom after a delay
         setTimeout(() => setFlowersBloomed(true), 1500);
-    }, []);
+    }, [isMobile]);
 
     return (
         <div className="avishi-container" style={{
             minHeight: '100vh',
             background: PALETTE.bgGradient,
-            overflowX: 'hidden', // Prevent horizontal scroll from balloons/expanded items
+            overflowX: 'hidden', // Prevent horizontal scroll
             position: 'relative',
-            padding: '2rem'
+            padding: isMobile ? '1rem' : '2rem',
+            paddingBottom: '4rem' // Extra padding at bottom for scrolling
         }}>
             {/* Floating Balloons Background - Multi-color */}
             {BALLOON_COLORS.map((color, i) => (
@@ -98,8 +106,8 @@ export default function AvishiSurprise() {
                     style={{
                         position: 'absolute',
                         left: `${10 + i * 15}%`,
-                        width: '60px',
-                        height: '70px',
+                        width: isMobile ? '40px' : '60px',
+                        height: isMobile ? '50px' : '70px',
                         backgroundColor: color,
                         borderRadius: '50%',
                         opacity: 0.6,
@@ -108,10 +116,10 @@ export default function AvishiSurprise() {
                 >
                     <div style={{
                         position: 'absolute',
-                        bottom: '-15px',
+                        bottom: isMobile ? '-10px' : '-15px',
                         left: '50%',
                         width: '2px',
-                        height: '20px',
+                        height: isMobile ? '15px' : '20px',
                         background: 'rgba(0,0,0,0.1)',
                         transform: 'translateX(-50%)'
                     }} />
@@ -125,27 +133,28 @@ export default function AvishiSurprise() {
                     initial={{ opacity: 0, y: -50 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1 }}
-                    style={{ textAlign: 'center', marginBottom: '3rem', marginTop: '2rem' }}
+                    style={{ textAlign: 'center', marginBottom: isMobile ? '2rem' : '3rem', marginTop: '2rem' }}
                 >
                     <h1 style={{
-                        fontSize: '3.5rem',
+                        fontSize: isMobile ? '2.5rem' : '3.5rem',
                         marginBottom: '0.5rem',
                         background: `linear-gradient(45deg, ${PALETTE.secondary}, #FF69B4)`, // Mix of green and pink
                         WebkitBackgroundClip: 'text',
                         WebkitTextFillColor: 'transparent',
                         fontFamily: '"Outfit", sans-serif',
-                        fontWeight: 'bold'
+                        fontWeight: 'bold',
+                        lineHeight: 1.2
                     }}>
                         Happy Birthday Avishi!
                     </h1>
-                    <p style={{ fontSize: '1.2rem', color: '#556B2F' }}>
+                    <p style={{ fontSize: isMobile ? '1rem' : '1.2rem', color: '#556B2F' }}>
                         The one and only Bunny 🐰 ❤️
                     </p>
                 </motion.div>
 
                 {/* Photo Gallery - Deck of Cards Layout */}
                 <div style={{
-                    height: '500px', // Increased height
+                    height: isMobile ? '400px' : '500px',
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
@@ -153,10 +162,12 @@ export default function AvishiSurprise() {
                     position: 'relative'
                 }}>
                     {PHOTOS.map((photo, index) => {
-                        // Spread logic: Fan them out horizontally
-                        // Index 0: -1.5 * 80 = -120px
-                        // Index 1: -0.5 * 80 = -40px etc.
-                        const spread = 80;
+                        // Responsive Spread & Size
+                        // Mobile: 200px width, 40px spread
+                        // Desktop: 280px width, 80px spread
+                        const cardWidth = isMobile ? 180 : 280;
+                        const spread = isMobile ? 35 : 80;
+
                         const randomX = (index - 1.5) * spread;
                         const randomRotate = photo.rotate;
 
@@ -168,10 +179,10 @@ export default function AvishiSurprise() {
                                 whileHover={{ scale: 1.1, zIndex: 20, rotate: 0, transition: { duration: 0.2 } }}
                                 style={{
                                     position: 'absolute',
-                                    width: '280px', // Increased width (was 220px)
+                                    width: `${cardWidth}px`,
                                     aspectRatio: '3/4',
                                     backgroundColor: 'white',
-                                    padding: '1.2rem 1.2rem 4rem 1.2rem',
+                                    padding: isMobile ? '0.8rem 0.8rem 2.5rem 0.8rem' : '1.2rem 1.2rem 4rem 1.2rem',
                                     borderRadius: '12px',
                                     boxShadow: '0 15px 35px rgba(0,0,0,0.2)',
                                     cursor: 'pointer',
