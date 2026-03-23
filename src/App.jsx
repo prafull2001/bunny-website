@@ -7,12 +7,17 @@ import PrivacyPolicy from './PrivacyPolicy';
 import TermsOfService from './TermsOfService';
 import Confirm from './Confirm';
 import AvishiSurprise from './AvishiSurprise';
+import Anniversaries from './Anniversaries';
 import './index.css';
 
 // Assets
 import logoImg from './assets/bunny-logo.png';
 import bunnyPetImg from './assets/bunny-pet.png';
 import homescreenImg from './assets/homescreen.jpg';
+import screenshotHome from './assets/screenshot-home.png';
+import screenshotWhiteboard from './assets/screenshot-whiteboard.png';
+import screenshotPet from './assets/screenshot-pet.png';
+import screenshotGames from './assets/screenshot-games.png';
 
 function Home() {
   const [scrolled, setScrolled] = useState(false);
@@ -29,7 +34,7 @@ function Home() {
   // Simple auto-rotate for carousel
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % 3);
+      setCurrentSlide((prev) => (prev + 1) % 4);
     }, 4000);
     return () => clearInterval(timer);
   }, []);
@@ -74,7 +79,7 @@ function Home() {
             <a href="#features">Features</a>
             <a href="#about">About</a>
             <Link to="/contact">Contact</Link>
-            <a href="#" className="app-store-badge-small" title="Download on the App Store"></a>
+            <a href="https://apps.apple.com/us/app/bunny-love-notes-for-couples/id6756160637" className="app-store-badge-small" title="Download on the App Store"></a>
           </div>
         </div>
       </nav>
@@ -99,7 +104,7 @@ function Home() {
               Bunny helps you feel closer to your partner through shared pets, doodles, games, and daily check-ins. Your digital home for two.
             </p>
             <div className="hero-buttons">
-              <a href="#" className="app-store-badge" title="Download on the App Store"></a>
+              <a href="https://apps.apple.com/us/app/bunny-love-notes-for-couples/id6756160637" className="app-store-badge" title="Download on the App Store"></a>
             </div>
           </motion.div>
 
@@ -114,24 +119,51 @@ function Home() {
             <div className="phone-frame animate-float">
               <div className="notch"></div>
               <div className="screen-content">
-                <div className="carousel-slide" style={{ backgroundColor: '#E0F2F1', display: currentSlide === 0 ? 'flex' : 'none' }}>
-                  <div className="placeholder-content">
-                    <span className="emoji">📅</span>
-                    <span>Check-in Daily</span>
+                {[
+                  { img: screenshotHome, alt: 'App Home' },
+                  { img: screenshotWhiteboard, alt: 'Whiteboard' },
+                  { img: screenshotPet, alt: 'Pet Care' },
+                  { img: screenshotGames, alt: 'Games' },
+                ].map((slide, idx) => (
+                  <div
+                    key={idx}
+                    className="carousel-slide"
+                    style={{
+                      display: currentSlide === idx ? 'flex' : 'none',
+                      backgroundColor: '#fff',
+                      padding: 0,
+                    }}
+                  >
+                    <img
+                      src={slide.img}
+                      alt={slide.alt}
+                      style={{
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover',
+                      }}
+                    />
                   </div>
-                </div>
-                <div className="carousel-slide" style={{ backgroundColor: '#F3E5F5', display: currentSlide === 1 ? 'flex' : 'none' }}>
-                  <div className="placeholder-content">
-                    <span className="emoji">🎮</span>
-                    <span>Play Games</span>
-                  </div>
-                </div>
-                <div className="carousel-slide" style={{ backgroundColor: '#FFEBEE', display: currentSlide === 2 ? 'flex' : 'none' }}>
-                  <div className="placeholder-content">
-                    <span className="emoji">💌</span>
-                    <span>Send Love</span>
-                  </div>
-                </div>
+                ))}
+              </div>
+              <div style={{
+                position: 'absolute',
+                bottom: '20px',
+                left: '50%',
+                transform: 'translateX(-50%)',
+                display: 'flex',
+                gap: '6px',
+                zIndex: 15,
+              }}>
+                {[0, 1, 2, 3].map(i => (
+                  <div key={i} style={{
+                    width: '6px',
+                    height: '6px',
+                    borderRadius: '50%',
+                    background: currentSlide === i ? '#fff' : 'rgba(255,255,255,0.4)',
+                    transition: 'background 0.3s',
+                  }} />
+                ))}
               </div>
 
               {/* Background Blobs */}
@@ -230,6 +262,7 @@ function App() {
         <Route path="/terms" element={<TermsOfService />} />
         <Route path="/confirm" element={<Confirm />} />
         <Route path="/avishi" element={<AvishiSurprise />} />
+        <Route path="/anniversaries" element={<Anniversaries />} />
       </Routes>
     </Router>
   );
