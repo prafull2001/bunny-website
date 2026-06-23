@@ -1,10 +1,21 @@
 import { ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import Seo from './seo/Seo';
+import { breadcrumbSchema } from './seo/schema';
 
 function PrivacyPolicy() {
     return (
         <div className="legal-page">
+            <Seo
+                title="Privacy Policy | Bunny"
+                description="How Bunny collects, stores, and protects your data. Your love letters, photos, and relationship data stay private between you and your partner."
+                path="/privacy"
+                schema={breadcrumbSchema([
+                    { name: 'Home', path: '/' },
+                    { name: 'Privacy Policy', path: '/privacy' },
+                ])}
+            />
             <div className="container">
                 <Link to="/" className="back-link">
                     <ArrowLeft size={20} />

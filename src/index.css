@@ -1011,3 +1011,208 @@ a {
   padding: 12px 32px;
   font-size: 18px;
 }
+/* =========================================================
+   SEO content pages: About / Compare / Blog / FAQ
+   Reuses the .legal-content glass-panel shell.
+   ========================================================= */
+
+.legal-content h2 {
+  font-size: 26px;
+  font-weight: 800;
+  margin-top: 36px;
+  margin-bottom: 14px;
+  color: var(--text-primary);
+}
+
+.legal-content .lede {
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin-bottom: 24px;
+}
+
+.legal-content a {
+  color: var(--primary-hover);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.legal-content a:hover { color: var(--text-primary); }
+
+.cta-row {
+  margin: 32px 0 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.muted-links {
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid var(--glass-border);
+  font-size: 15px;
+  color: var(--text-light);
+}
+
+/* --- Compare hub grid --- */
+.compare-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.compare-card {
+  display: block;
+  background: var(--secondary-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 18px;
+  padding: 22px;
+  text-decoration: none !important;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.compare-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.compare-card h2 {
+  font-size: 20px;
+  margin: 0 0 8px;
+  color: var(--text-primary);
+}
+
+.compare-card p {
+  font-size: 15px;
+  margin: 0 0 14px;
+  color: var(--text-secondary);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.compare-card-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+  color: var(--primary-hover);
+  font-size: 15px;
+}
+
+/* --- Comparison table --- */
+.cmp-table-wrap { overflow-x: auto; margin: 12px 0 8px; }
+
+.cmp-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+}
+
+.cmp-table th,
+.cmp-table td {
+  text-align: left;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--glass-border);
+  color: var(--text-secondary);
+}
+
+.cmp-table thead th {
+  color: var(--text-primary);
+  font-weight: 800;
+  background: var(--secondary-hover);
+}
+
+.cmp-table td:first-child { color: var(--text-primary); font-weight: 600; }
+.cmp-yes { color: #4f8a4f; }
+.cmp-no { color: #c0857a; opacity: 0.7; }
+.cmp-text { font-size: 14px; }
+
+.verdict-box {
+  background: var(--secondary-hover);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  padding: 20px 24px;
+  margin: 24px 0;
+}
+.verdict-box h2 { margin-top: 0; font-size: 20px; }
+.verdict-box p { margin-bottom: 0; }
+
+/* --- FAQ items (compare, blog, home) --- */
+.faq-item { margin-bottom: 20px; }
+.faq-item h3 { margin-top: 0; margin-bottom: 8px; font-size: 18px; }
+.faq-item p { margin-bottom: 0; }
+
+/* --- Blog --- */
+.blog-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.blog-card {
+  display: block;
+  background: var(--secondary-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 18px;
+  padding: 24px;
+  text-decoration: none !important;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.blog-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+.blog-card h2 { margin: 6px 0 10px; font-size: 22px; }
+.blog-card p { margin: 0 0 14px; }
+
+.blog-card-meta {
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  font-weight: 700;
+}
+
+.blog-post .lede { font-size: 18px; }
+
+.tldr-box {
+  background: var(--secondary-hover);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  padding: 18px 24px;
+  margin: 20px 0 28px;
+}
+.tldr-box h2 { margin-top: 0; font-size: 18px; text-transform: uppercase; letter-spacing: 0.04em; }
+.tldr-box ul { margin-bottom: 0; }
+
+/* --- Home FAQ section --- */
+.faq-section {
+  padding: 80px 24px;
+  background: var(--bg-color);
+}
+.faq-section .section-header { text-align: center; margin-bottom: 40px; }
+.home-faq {
+  max-width: 780px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.home-faq .faq-item {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  padding: 22px 26px;
+}
+.home-faq .faq-item h3 { color: var(--text-primary); font-size: 18px; }
+.home-faq .faq-item p { color: var(--text-secondary); line-height: 1.7; }
+.faq-more-links {
+  max-width: 780px;
+  margin: 28px auto 0;
+  text-align: center;
+  color: var(--text-light);
+}
+.faq-more-links a { color: var(--primary-hover); font-weight: 600; }

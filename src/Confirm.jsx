@@ -2,10 +2,17 @@ import React from 'react';
 
 import { motion } from 'framer-motion';
 import bunnyHeartImg from './assets/bunny-pet.png'; // Using bunny-pet as placeholder
+import Seo from './seo/Seo';
 
 const Confirm = () => {
     return (
         <div className="confirm-page">
+            <Seo
+                title="Email Confirmed | Bunny"
+                description="Your email has been confirmed. Return to the Bunny app to continue."
+                path="/confirm"
+                noindex
+            />
             <div className="confirm-container">
                 <motion.div
                     initial={{ scale: 0.8, opacity: 0 }}

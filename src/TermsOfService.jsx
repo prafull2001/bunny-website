@@ -1,10 +1,21 @@
 import { ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import Seo from './seo/Seo';
+import { breadcrumbSchema } from './seo/schema';
 
 function TermsOfService() {
     return (
         <div className="legal-page">
+            <Seo
+                title="Terms of Service | Bunny"
+                description="The terms that govern your use of the Bunny couples app, including subscriptions, data ownership, and your responsibilities."
+                path="/terms"
+                schema={breadcrumbSchema([
+                    { name: 'Home', path: '/' },
+                    { name: 'Terms of Service', path: '/terms' },
+                ])}
+            />
             <div className="container">
                 <Link to="/" className="back-link">
                     <ArrowLeft size={20} />

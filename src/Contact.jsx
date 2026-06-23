@@ -2,10 +2,13 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Copy, Check, ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import Seo from './seo/Seo';
+import { SITE } from './seo/siteConfig';
+import { breadcrumbSchema } from './seo/schema';
 
 function Contact() {
     const [copied, setCopied] = useState(false);
-    const email = "prafull2001@gmail.com";
+    const email = SITE.contactEmail;
 
     const handleCopy = () => {
         navigator.clipboard.writeText(email);
@@ -15,6 +18,15 @@ function Contact() {
 
     return (
         <div className="contact-page">
+            <Seo
+                title="Contact Bunny — Get in Touch"
+                description="Questions, feedback, or feature requests for the Bunny couples app? Email us directly — a real person reads every message."
+                path="/contact"
+                schema={breadcrumbSchema([
+                    { name: 'Home', path: '/' },
+                    { name: 'Contact', path: '/contact' },
+                ])}
+            />
             <div className="contact-container">
                 <Link to="/" className="back-link">
                     <ArrowLeft size={20} />

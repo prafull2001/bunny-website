@@ -1,25 +1,27 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Gamepad, Gift, Sprout } from 'lucide-react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import Contact from './Contact';
-import PrivacyPolicy from './PrivacyPolicy';
-import TermsOfService from './TermsOfService';
-import Confirm from './Confirm';
-import AvishiSurprise from './AvishiSurprise';
-import Anniversaries from './Anniversaries';
+import { Link } from 'react-router-dom';
+import Seo from './seo/Seo';
+import { appStoreLink } from './seo/siteConfig';
+import {
+  organizationSchema,
+  websiteSchema,
+  softwareApplicationSchema,
+  faqSchema,
+} from './seo/schema';
+import { HOME_FAQ } from './data/faq';
 import './index.css';
 
-// Assets
-import logoImg from './assets/bunny-logo.png';
-import bunnyPetImg from './assets/bunny-pet.png';
-import homescreenImg from './assets/homescreen.jpg';
-import screenshotHome from './assets/screenshot-home.png';
-import screenshotWhiteboard from './assets/screenshot-whiteboard.png';
-import screenshotPet from './assets/screenshot-pet.png';
-import screenshotGames from './assets/screenshot-games.png';
+// Assets (WebP — see scripts/optimize-images.mjs)
+import logoImg from './assets/bunny-logo.webp';
+import bunnyPetImg from './assets/bunny-pet.webp';
+import screenshotHome from './assets/screenshot-home.webp';
+import screenshotWhiteboard from './assets/screenshot-whiteboard.webp';
+import screenshotPet from './assets/screenshot-pet.webp';
+import screenshotGames from './assets/screenshot-games.webp';
 
-function Home() {
+export function Home() {
   const [scrolled, setScrolled] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -68,18 +70,31 @@ function Home() {
 
   return (
     <div className="app-container">
+      <Seo
+        title="Bunny — App for Couples | Shared Pet, Notes &amp; Long Distance"
+        description="The all-in-one app for couples, especially long distance. Raise a shared pet, draw together, send love notes, play games &amp; check in daily. Free on iPhone."
+        path="/"
+        image="/og/og-home.jpg"
+        schema={[
+          organizationSchema(),
+          websiteSchema(),
+          softwareApplicationSchema(),
+          faqSchema(HOME_FAQ),
+        ]}
+      />
       {/* Navigation */}
       <nav className={`navbar ${scrolled ? 'navbar-scrolled' : ''}`}>
         <div className="container nav-content">
           <div className="brand">
-            <img src={logoImg} alt="Bunny Logo" className="brand-logo-img" />
+            <img src={logoImg} alt="Bunny app logo" className="brand-logo-img" />
             <span className="brand-name">Bunny</span>
           </div>
           <div className="nav-links">
             <a href="#features">Features</a>
-            <a href="#about">About</a>
+            <Link to="/compare">Compare</Link>
+            <Link to="/blog">Blog</Link>
             <Link to="/contact">Contact</Link>
-            <a href="https://apps.apple.com/us/app/bunny-love-notes-for-couples/id6756160637" className="app-store-badge-small" title="Download on the App Store"></a>
+            <a href={appStoreLink('homepage', 'nav')} className="app-store-badge-small" title="Download Bunny on the App Store"></a>
           </div>
         </div>
       </nav>
@@ -96,15 +111,15 @@ function Home() {
             <h1 className="hero-title">
               Stay connected,<br />
               <Link to="/avishi" style={{ display: 'inline-block' }}>
-                <img src={bunnyPetImg} alt="Bunny Pet" className="hero-pet-img" />
+                <img src={bunnyPetImg} alt="Bunny — the virtual pet couples raise together" className="hero-pet-img" />
               </Link>
               <span className="highlight-text">miles apart.</span>
             </h1>
             <p className="hero-subtitle">
-              Bunny helps you feel closer to your partner through shared pets, doodles, games, and daily check-ins. Your digital home for two.
+              Bunny is the all-in-one app for couples — especially long distance. Feel closer through a shared pet, a draw-together canvas, love notes, games, and daily check-ins. Your digital home for two.
             </p>
             <div className="hero-buttons">
-              <a href="https://apps.apple.com/us/app/bunny-love-notes-for-couples/id6756160637" className="app-store-badge" title="Download on the App Store"></a>
+              <a href={appStoreLink('homepage', 'hero')} className="app-store-badge" title="Download Bunny on the App Store"></a>
             </div>
           </motion.div>
 
@@ -120,10 +135,10 @@ function Home() {
               <div className="notch"></div>
               <div className="screen-content">
                 {[
-                  { img: screenshotHome, alt: 'App Home' },
-                  { img: screenshotWhiteboard, alt: 'Whiteboard' },
-                  { img: screenshotPet, alt: 'Pet Care' },
-                  { img: screenshotGames, alt: 'Games' },
+                  { img: screenshotHome, alt: 'Bunny app home screen showing a couple’s shared space' },
+                  { img: screenshotWhiteboard, alt: 'Shared draw-together whiteboard in the Bunny couples app' },
+                  { img: screenshotPet, alt: 'Raising a shared virtual pet together in Bunny' },
+                  { img: screenshotGames, alt: 'Mini-games for couples to play together in Bunny' },
                 ].map((slide, idx) => (
                   <div
                     key={idx}
@@ -203,13 +218,37 @@ function Home() {
         </div>
       </section>
 
+      {/* FAQ / SEO content */}
+      <section id="faq" className="faq-section">
+        <div className="container">
+          <div className="section-header">
+            <h2>Frequently asked questions</h2>
+            <p>Everything couples ask about Bunny, long-distance connection, and how it compares.</p>
+          </div>
+          <div className="home-faq">
+            {HOME_FAQ.map((item) => (
+              <div key={item.q} className="faq-item">
+                <h3>{item.q}</h3>
+                <p>{item.a}</p>
+              </div>
+            ))}
+          </div>
+          <p className="faq-more-links">
+            Compare Bunny with other apps: <Link to="/compare/bunny-vs-paired">vs Paired</Link>,{' '}
+            <Link to="/compare/bunny-vs-lovelee">vs lovelee</Link>,{' '}
+            <Link to="/compare/apps-like-locket-for-couples">apps like Locket</Link>. Or read our{' '}
+            <Link to="/blog">long-distance guides</Link>.
+          </p>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="footer">
         <div className="container">
           <div className="footer-grid">
             <div className="footer-brand-col">
               <div className="brand">
-                <img src={logoImg} alt="Bunny Logo" className="brand-logo-img" />
+                <img src={logoImg} alt="Bunny app logo" className="brand-logo-img" />
                 <span className="brand-name">Bunny</span>
               </div>
               <p>
@@ -220,8 +259,9 @@ function Home() {
             <div>
               <h4>Company</h4>
               <ul className="footer-links">
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Blog</a></li>
+                <li><Link to="/about">About Us</Link></li>
+                <li><Link to="/blog">Blog</Link></li>
+                <li><Link to="/compare">Compare</Link></li>
               </ul>
             </div>
 
@@ -251,21 +291,3 @@ function Home() {
     </div>
   );
 }
-
-function App() {
-  return (
-    <Router basename={import.meta.env.BASE_URL}>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/privacy" element={<PrivacyPolicy />} />
-        <Route path="/terms" element={<TermsOfService />} />
-        <Route path="/confirm" element={<Confirm />} />
-        <Route path="/avishi" element={<AvishiSurprise />} />
-        <Route path="/anniversaries" element={<Anniversaries />} />
-      </Routes>
-    </Router>
-  );
-}
-
-export default App;
