@@ -46,7 +46,10 @@ function PrivacyPolicy() {
                     <p>A photo you choose as your whiteboard wallpaper is stored locally on your device. The app also keeps local settings and drawing snapshots for its Home Screen widget. The drawing itself is synced and drawing image copies are uploaded to Supabase.</p>
 
                     <h3>Website Analytics</h3>
-                    <p>Our website currently has no configured behavioral analytics tracker. Hosting providers may process request information, such as an IP address, browser information, requested page and referrer, to serve and operate the website. This information is not necessarily anonymous.</p>
+                    <p>We use PostHog on Bunny's public marketing pages to measure page views and clicks on App Store links. Event information includes the public page visited, the first page visited in the browser session, the referring website's domain, selected campaign labels, and the placement of an App Store link when clicked. We remove URL query strings and fragments; only campaign values from a fixed allowed set are recorded separately.</p>
+                    <p>These events use randomly generated, pseudonymous identifiers kept in browser session storage, along with the session's initial referral information. This storage is tied to the browser tab's session and can survive page reloads or browser session restoration. We do not link these events to Bunny app accounts or use session recordings or automatic interaction capture.</p>
+                    <p>PostHog processes this website measurement data in its US Cloud service. Our project is configured to remove IP addresses from analytics events. PostHog and hosting providers still receive network request information, including IP addresses, when serving requests. Hosting providers may also process request logs containing browser information, requested pages and referrers.</p>
+                    <p>We do not load this website analytics tracker when your browser signals an enabled Global Privacy Control or Do Not Track preference.</p>
 
                     <h3>Subscription and Payment Data</h3>
                     <p>Apple processes purchases through the App Store. Bunny uses RevenueCat to validate purchases, restore access, manage Bunny Pro entitlements and understand purchase and subscription activity. RevenueCat receives your Bunny user ID and purchase history; Bunny stores the resulting access status and related purchase records.</p>
@@ -59,11 +62,12 @@ function PrivacyPolicy() {
                         <li>Save and sync shared content, activities and relationship progress</li>
                         <li>Deliver notifications and manage purchased access</li>
                         <li>Operate the service, investigate errors and respond to support requests</li>
+                        <li>Understand which website pages and referral sources lead visitors to App Store links</li>
                     </ul>
 
                     <h3>Data Sharing</h3>
                     <p>Pairing makes shared content and relationship activity available to your partner. Your partner can also see your display name and account email in the app.</p>
-                    <p>Service providers process information to run Bunny: Supabase handles accounts and shared data, RevenueCat handles purchase information, and Apple handles sign-in, purchases and push delivery. Information you send to support is available to the people handling your request.</p>
+                    <p>Service providers process information to run Bunny: Supabase handles accounts and shared data, RevenueCat handles purchase information, Apple handles sign-in, purchases and push delivery, and PostHog handles the website measurement described above. Information you send to support is available to the people handling your request.</p>
                     <p>Push notifications may include a sender name and message content or a preview. These pass through Apple's push notification service and may appear on the recipient's Lock Screen, depending on their device settings.</p>
 
                     <h3>Data Security</h3>
@@ -85,6 +89,7 @@ function PrivacyPolicy() {
                         <li>Use Delete Account in Bunny's Settings to request removal of your login, profile and associated account data</li>
                         <li>Control notifications and notification previews through your iPhone's Settings</li>
                         <li>Remove a custom whiteboard wallpaper through the whiteboard settings</li>
+                        <li>Use a browser that sends Global Privacy Control or Do Not Track to disable this website measurement</li>
                     </ul>
                     <p>Account deletion does not erase every copy of shared content. Shared relationship records, drawing images, copies already received by your partner, local device files and records held by Apple or RevenueCat may remain. Contact us with questions about information that remains after deletion.</p>
                     <p>Deleting a Bunny account does not cancel an App Store subscription. Manage or cancel it separately in your Apple account's subscription settings. <a href="https://support.apple.com/en-us/118428">Apple explains how to cancel a subscription.</a></p>

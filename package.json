@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite-react-ssg build && node scripts/postbuild.mjs && node scripts/verify-seo.mjs",
+    "build": "npm run test:analytics && vite-react-ssg build && node scripts/postbuild.mjs && node scripts/verify-seo.mjs",
+    "test:analytics": "node scripts/verify-analytics.mjs",
     "build:ssg": "vite-react-ssg build",
     "lint": "eslint .",
     "preview": "vite preview"
@@ -14,6 +15,7 @@
     "canvas-confetti": "^1.9.4",
     "framer-motion": "^12.24.7",
     "lucide-react": "^0.562.0",
+    "posthog-js": "1.438.12",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-router-dom": "^6.30.4",
