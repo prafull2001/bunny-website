@@ -215,6 +215,11 @@ export function Home() {
               </motion.div>
             ))}
           </div>
+          <p className="muted-links" style={{ textAlign: 'center', marginTop: 32 }}>
+            Explore Bunny: <Link to="/shared-pet-for-couples">Shared pet for couples</Link> ·{' '}
+            <Link to="/drawing-widgets-for-couples">Drawing widgets</Link> ·{' '}
+            <Link to="/love-notes-for-couples">Love notes</Link>
+          </p>
         </div>
       </section>
 

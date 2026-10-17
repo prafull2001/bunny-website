@@ -13,7 +13,7 @@ export const COMPARISONS = [
     intro:
       'Paired is the best-known couples app, built around research-backed daily questions. Bunny takes a different approach: shared play. Here is an honest, side-by-side look so you can pick the one that fits your relationship.',
     verdict:
-      'Choose Paired if you mainly want guided conversation prompts and relationship lessons. Choose Bunny if you want to feel connected through shared activities — a virtual pet, a draw-together canvas, love notes, and games — with a cheap lifetime option instead of a recurring subscription. Many couples happily use both.',
+      'Choose Paired if you mainly want guided conversation prompts and relationship lessons. Choose Bunny if you want to feel connected through shared activities — a virtual pet, a draw-together canvas, love notes, and games — with a lifetime option alongside a weekly subscription. Many couples happily use both.',
     bunnyPricing: 'Free; Pro from $1.99/week or $19.99 lifetime',
     competitorPricing: 'Free tier; Premium ~$14.99/month or ~$39.99+/year',
     features: [
@@ -32,7 +32,7 @@ export const COMPARISONS = [
     faq: [
       {
         q: 'Is Bunny a good alternative to Paired?',
-        a: 'Yes. Bunny is a good alternative to Paired for couples who want more than daily questions. Where Paired focuses on conversation prompts and relationship lessons, Bunny adds shared play — a virtual pet, a draw-together canvas, love notes, and mini-games — and offers a one-time lifetime purchase instead of a recurring subscription.',
+        a: 'Yes. Bunny is a good alternative to Paired for couples who want more than daily questions. Where Paired focuses on conversation prompts and relationship lessons, Bunny adds shared play — a virtual pet, a draw-together canvas, love notes, and mini-games — and offers a lifetime option alongside a weekly subscription.',
       },
       {
         q: 'Is Bunny cheaper than Paired?',
@@ -55,30 +55,30 @@ export const COMPARISONS = [
     intro:
       'Bunny and lovelee are two of the most playful couples apps, and they share a lot of DNA: love notes, doodles, a shared pet, and daily check-ins. Here is how they actually differ.',
     verdict:
-      'Both are great picks for couples who want something fun rather than clinical. lovelee leans into home-screen widgets and a love-question library; Bunny leans into a shared digital home with a draw-together canvas, mini-games, and a very low lifetime price. Try whichever matches the features you care about most.',
+      'Both apps offer shared pets, plants, notes, games, questions, and a whiteboard. Bunny brings these activities into a hand-drawn home with a Home Screen drawing widget. lovelee offers a Love Zone with drawing, note, mood, and days-together widgets. Compare the design and current paid offers to choose the space you both enjoy.',
     bunnyPricing: 'Free; Pro from $1.99/week or $19.99 lifetime',
-    competitorPricing: 'Free; Pro from ~$7.99/month or ~$39.99 lifetime',
+    competitorPricing: 'Free; paid subscriptions and lifetime offers vary by region and promotion',
     features: [
       { feature: 'Shared virtual pet', bunny: true, competitor: true },
       { feature: 'Grow a plant together', bunny: true, competitor: true },
-      { feature: 'Draw-together canvas / whiteboard', bunny: true, competitor: 'Doodles' },
+      { feature: 'Draw-together canvas / whiteboard', bunny: true, competitor: true },
       { feature: 'Love notes & letters', bunny: true, competitor: true },
-      { feature: 'Mini-games for two', bunny: true, competitor: false },
-      { feature: 'Home-screen widgets', bunny: 'Planned', competitor: true },
-      { feature: 'Love-question library', bunny: 'Some', competitor: true },
+      { feature: 'Mini-games for two', bunny: true, competitor: true },
+      { feature: 'Home-screen widgets', bunny: 'Drawing widget', competitor: 'Drawings, notes, moods, days together' },
+      { feature: 'Love-question library', bunny: true, competitor: true },
       { feature: 'Daily check-ins', bunny: true, competitor: true },
-      { feature: 'Lifetime price', bunny: '$19.99', competitor: '~$39.99' },
+      { feature: 'One-time lifetime option', bunny: true, competitor: true },
     ],
-    bunnyBestFor: 'Couples who want games and a draw-together canvas, at the lowest lifetime price.',
-    competitorBestFor: 'Couples who love home-screen widgets and a big library of love questions.',
+    bunnyBestFor: 'Couples who enjoy a hand-drawn home, shared activities, and a lifetime upgrade option.',
+    competitorBestFor: 'Couples who prefer lovelee’s Love Zone and its note, mood, and days-together widgets.',
     faq: [
       {
         q: 'What is the difference between Bunny and lovelee?',
-        a: 'Bunny and lovelee are both playful couples apps with a shared pet, love notes, and doodles. The main differences: Bunny adds mini-games for two and a dedicated draw-together canvas and has a lower $19.99 lifetime price, while lovelee emphasizes home-screen widgets and a large love-question library.',
+        a: 'Both offer pets, plants, games, shared whiteboards, love notes, question packs, and Home Screen widgets. Bunny centers these activities in a hand-drawn home and provides a drawing widget; lovelee also promotes note, mood, and days-together widgets. The design and current paid offers are useful points to compare.',
       },
       {
-        q: 'Which is cheaper, Bunny or lovelee?',
-        a: 'Bunny is cheaper for a lifetime purchase, at $19.99 versus lovelee’s roughly $39.99. Both apps are free to download.',
+        q: 'How do Bunny and lovelee prices compare?',
+        a: 'Both are free to download with paid upgrades. Bunny offers weekly and lifetime options. lovelee’s US listing includes $39.99 lifetime and a $19.99 lifetime offer, so Bunny is not always cheaper. Check the price and offer shown in each app for your region before purchasing.',
       },
     ],
   },
@@ -126,16 +126,17 @@ export const COMPARISONS = [
     targetKeyword: 'apps like Locket for couples',
     title: 'Apps Like Locket for Couples: Why Bunny Goes Further (2026)',
     metaDescription:
-      'Looking for apps like Locket for couples? Bunny puts your partner on your home screen and adds a shared pet, doodles, love notes and games. Compare in 2026.',
+      'Compare Bunny’s shared pet, drawing widget, love notes and games with Locket’s photo-sharing experience for friends and couples.',
     intro:
-      'Locket made the shared-photo widget famous — your favorite person’s photo, right on your home screen. Couples love it, but Locket is a single-feature app. If you want that closeness plus more ways to play, here is how Bunny compares.',
+      'Locket focuses on sharing everyday photos with close friends and partners, including through Home Screen widgets. Bunny focuses on shared activities such as pet care, doodles, notes, and games. These are different ways to stay present in each other’s day.',
     verdict:
-      'Use Locket if all you want is a photo on your home screen. Use Bunny if you want that feeling of presence and a shared pet, a draw-together canvas, love notes, mini-games, and daily check-ins — a complete shared space for two rather than one widget.',
+      'Choose Locket for photo sharing with close friends and partners. Choose Bunny for shared pet care, a draw-together canvas and drawing widget, love notes, games, and daily check-ins. Bunny’s drawing widget is not a photo-sharing widget.',
     bunnyPricing: 'Free; Pro from $1.99/week or $19.99 lifetime',
     competitorPricing: 'Free; Locket Gold from ~$1.99',
     features: [
       { feature: 'Feel present on each other’s phones', bunny: true, competitor: true },
-      { feature: 'Shared photos', bunny: 'Planned', competitor: true },
+      { feature: 'Photo-sharing widget', bunny: false, competitor: true },
+      { feature: 'Shared drawing widget', bunny: true, competitor: false },
       { feature: 'Shared virtual pet', bunny: true, competitor: false },
       { feature: 'Draw-together canvas', bunny: true, competitor: false },
       { feature: 'Love notes & letters', bunny: true, competitor: false },
@@ -148,11 +149,11 @@ export const COMPARISONS = [
     faq: [
       {
         q: 'What is a good app like Locket for couples?',
-        a: 'Bunny is a good Locket alternative for couples. It gives you the same sense of presence — feeling close throughout the day — and adds a shared virtual pet, a draw-together canvas, love notes, and mini-games, so it works as a complete shared space rather than a single widget.',
+        a: 'Bunny is an alternative for couples who want shared activities: a virtual pet, a draw-together canvas and drawing widget, love notes, and games. Choose Locket if photo sharing is your main goal; Bunny’s widget displays your shared drawing rather than photos.',
       },
       {
         q: 'Is Bunny better than Locket for long-distance relationships?',
-        a: 'For long distance, Bunny offers more ways to stay connected than Locket. Locket shares photos to your home screen; Bunny adds a shared pet, doodles, notes, games, and daily check-ins so there is always something to do together.',
+        a: 'It depends on your routine. Locket centers on sharing everyday photos. Bunny offers shared pet care, doodles, notes, games, and daily check-ins. Try the experience that you and your partner are most likely to use regularly.',
       },
     ],
   },

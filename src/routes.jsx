@@ -15,6 +15,9 @@ import BlogPost from './BlogPost';
 import Seo from './seo/Seo';
 import { COMPARISONS } from './data/compare';
 import { POSTS } from './data/blog';
+import SharedPetForCouples from './pages/SharedPetForCouples';
+import DrawingWidgetsForCouples from './pages/DrawingWidgetsForCouples';
+import LoveNotesForCouples from './pages/LoveNotesForCouples';
 
 export const routes = [
   { path: '/', element: <Home />, entry: 'src/App.jsx' },
@@ -22,6 +25,9 @@ export const routes = [
   { path: '/contact', element: <Contact />, entry: 'src/Contact.jsx' },
   { path: '/privacy', element: <PrivacyPolicy />, entry: 'src/PrivacyPolicy.jsx' },
   { path: '/terms', element: <TermsOfService />, entry: 'src/TermsOfService.jsx' },
+  { path: '/shared-pet-for-couples', element: <SharedPetForCouples />, entry: 'src/pages/SharedPetForCouples.jsx' },
+  { path: '/drawing-widgets-for-couples', element: <DrawingWidgetsForCouples />, entry: 'src/pages/DrawingWidgetsForCouples.jsx' },
+  { path: '/love-notes-for-couples', element: <LoveNotesForCouples />, entry: 'src/pages/LoveNotesForCouples.jsx' },
 
   // Comparison hub + one statically pre-rendered page per competitor
   { path: '/compare', element: <CompareHub />, entry: 'src/CompareHub.jsx' },

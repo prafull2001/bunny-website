@@ -14,7 +14,7 @@ export const POSTS = [
     excerpt:
       'A no-fluff roundup of the best apps for long-distance couples in 2026 — from shared-pet apps to daily-question apps — and how to pick the right one.',
     datePublished: '2026-06-22',
-    dateModified: '2026-06-22',
+    dateModified: '2026-10-16',
     author: 'Prafull Sharma',
     readingTime: '7 min read',
     tags: ['Long distance', 'App roundup'],
@@ -89,9 +89,8 @@ export const POSTS = [
         <h3>3. Locket — best simple widget</h3>
         <p>
           Locket puts your partner’s latest photo right on your home screen. It is
-          the simplest way to feel a little closer, and couples love it — but it is
-          a single-feature app. If you want that presence plus a shared pet and
-          games, see{' '}
+          built around sharing everyday photos with close friends and partners.
+          If you are looking for shared pet care and games, see{' '}
           <Link to="/compare/apps-like-locket-for-couples">apps like Locket for couples</Link>.
         </p>
 
@@ -134,7 +133,7 @@ export const POSTS = [
     excerpt:
       'From in-app mini-games to questions and challenges, here are 11 long-distance relationship games that actually make you feel closer.',
     datePublished: '2026-06-22',
-    dateModified: '2026-06-22',
+    dateModified: '2026-10-16',
     author: 'Prafull Sharma',
     readingTime: '6 min read',
     tags: ['Long distance', 'Activities'],
@@ -191,7 +190,7 @@ export const POSTS = [
           <li><strong>Would You Rather.</strong> Silly or deep — you control the dial.</li>
           <li><strong>Truth or Dare (long-distance edition).</strong> Dares become “send a photo of…” or “text me a voice note doing…”.</li>
           <li><strong>Two Truths and a Lie.</strong> You’ll be surprised what you still don’t know.</li>
-          <li><strong>The Question Jar.</strong> Keep a shared list of questions and pull one a day. (See our <Link to="/blog/questions-to-ask-long-distance-partner">150+ questions to ask your long-distance partner</Link>.)</li>
+          <li><strong>The Question Jar.</strong> Keep a shared list of questions and pull one a day. (See our <Link to="/blog/questions-to-ask-long-distance-partner">23 questions to ask your long-distance partner</Link>.)</li>
           <li><strong>Daily check-in challenge.</strong> Each send one “high, low, and a doodle” every day. It’s a game you both win by showing up.</li>
         </ol>
 
@@ -218,13 +217,13 @@ export const POSTS = [
 
   {
     slug: 'questions-to-ask-long-distance-partner',
-    title: '150+ Questions to Ask Your Long-Distance Partner (2026)',
+    title: '23 Questions to Ask Your Long-Distance Partner (2026)',
     metaDescription:
-      '150+ questions to ask your long-distance partner — deep, fun, future, and daily check-in questions to spark real conversation and feel closer from afar.',
+      '23 questions to ask your long-distance partner — deep, fun, future, and daily check-in questions to spark real conversation and feel closer from afar.',
     excerpt:
       'A categorized bank of questions to ask your long-distance partner — for deeper talks, lighter nights, and everyday check-ins.',
     datePublished: '2026-06-22',
-    dateModified: '2026-06-22',
+    dateModified: '2026-10-16',
     author: 'Prafull Sharma',
     readingTime: '7 min read',
     tags: ['Long distance', 'Connection'],
@@ -254,7 +253,7 @@ export const POSTS = [
           “How was your day?” gets you a one-word answer. Better{' '}
           <strong>questions to ask your long-distance partner</strong> invite a
           real story — and over time, those stories are what keep you close. Below
-          are 150+ questions sorted into four buckets so you can match the moment.
+          are 23 questions sorted into four buckets so you can match the moment.
         </p>
 
         <h2>Why questions matter more in long distance</h2>

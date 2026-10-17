@@ -83,6 +83,11 @@ export default function BlogPost({ slug }) {
           )}
 
           <p className="muted-links">
+            Try together in Bunny: <Link to="/shared-pet-for-couples">Raise a shared pet</Link> ·{' '}
+            <Link to="/drawing-widgets-for-couples">Draw together</Link> ·{' '}
+            <Link to="/love-notes-for-couples">Send love notes</Link>
+          </p>
+          <p className="muted-links">
             By {post.author} · <Link to="/about">About Bunny</Link> ·{' '}
             <Link to="/compare">Compare apps</Link>
           </p>

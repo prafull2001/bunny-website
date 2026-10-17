@@ -19,6 +19,9 @@ export const SITE = {
   appStoreUrl:
     'https://apps.apple.com/us/app/bunny-love-notes-for-couples/id6756160637',
   appStoreId: '6756160637',
+  // Generated in Bunny's App Store Connect Campaigns screen on 2026-10-16.
+  appStoreCampaignUrl:
+    'https://apps.apple.com/app/apple-store/id6756160637?pt=128026361&ct=bunny_website&mt=8',
 
   contactEmail: 'prafull2001@gmail.com',
 
@@ -62,9 +65,10 @@ export function pageUrl(path = '/') {
   return `${SITE.url}${p}`;
 }
 
-// Append UTM params to the App Store link so we can attribute installs by surface.
+// Keep one broad Apple campaign so traffic can reach its reporting threshold.
+// UTM values distinguish website placements; they do not replace Apple's pt/ct.
 export function appStoreLink(source = 'website', campaign = 'cta') {
-  const u = new URL(SITE.appStoreUrl);
+  const u = new URL(SITE.appStoreCampaignUrl);
   u.searchParams.set('utm_source', source);
   u.searchParams.set('utm_medium', 'referral');
   u.searchParams.set('utm_campaign', campaign);
