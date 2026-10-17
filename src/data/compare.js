@@ -6,16 +6,18 @@ export const COMPARISONS = [
   {
     slug: 'bunny-vs-paired',
     competitor: 'Paired',
+    reviewedOn: '2026-10-17',
+    sourceUrl: 'https://apps.apple.com/us/app/paired-couples-relationship/id1469609343',
     targetKeyword: 'Bunny vs Paired',
     title: 'Bunny vs Paired: Which Couples App Is Right for You? (2026)',
     metaDescription:
       'Bunny vs Paired compared: daily questions vs shared play. See features, pricing, and which couples app is the better fit for long distance in 2026.',
     intro:
-      'Paired is the best-known couples app, built around research-backed daily questions. Bunny takes a different approach: shared play. Here is an honest, side-by-side look so you can pick the one that fits your relationship.',
+      'Paired is built around expert-led daily questions and relationship exercises. Bunny takes a different approach: shared play. Here is an honest, side-by-side look so you can pick the one that fits your relationship.',
     verdict:
-      'Choose Paired if you mainly want guided conversation prompts and relationship lessons. Choose Bunny if you want to feel connected through shared activities — a virtual pet, a draw-together canvas, love notes, and games — with a lifetime option alongside a weekly subscription. Many couples happily use both.',
-    bunnyPricing: 'Free; Pro from $1.99/week or $19.99 lifetime',
-    competitorPricing: 'Free tier; Premium ~$14.99/month or ~$39.99+/year',
+      'Choose Paired if you mainly want guided conversation prompts and relationship lessons. Choose Bunny if you want to feel connected through shared activities — a virtual pet, a draw-together canvas, love notes, and games — with a lifetime option alongside a weekly subscription.',
+    bunnyPricing: 'Free; optional Pro weekly subscription or lifetime purchase',
+    competitorPricing: 'Free tier; optional Paired Premium subscription',
     features: [
       { feature: 'Shared virtual pet to raise together', bunny: true, competitor: false },
       { feature: 'Draw-together canvas / whiteboard', bunny: true, competitor: false },
@@ -24,7 +26,7 @@ export const COMPARISONS = [
       { feature: 'Daily check-ins', bunny: true, competitor: true },
       { feature: 'Daily questions & conversation prompts', bunny: 'Some', competitor: true },
       { feature: 'Expert-written relationship content', bunny: false, competitor: true },
-      { feature: 'One-time lifetime price option', bunny: true, competitor: 'Limited' },
+      { feature: 'Paid upgrade', bunny: 'Weekly or lifetime', competitor: 'Premium subscription' },
       { feature: 'Free to start', bunny: true, competitor: true },
     ],
     bunnyBestFor: 'Couples who want shared play and daily rituals, and prefer a one-time price.',
@@ -35,8 +37,8 @@ export const COMPARISONS = [
         a: 'Yes. Bunny is a good alternative to Paired for couples who want more than daily questions. Where Paired focuses on conversation prompts and relationship lessons, Bunny adds shared play — a virtual pet, a draw-together canvas, love notes, and mini-games — and offers a lifetime option alongside a weekly subscription.',
       },
       {
-        q: 'Is Bunny cheaper than Paired?',
-        a: 'Bunny can be cheaper over time. Bunny offers a $19.99 one-time lifetime purchase, while Paired Premium is a recurring subscription (around $14.99/month or $39.99+/year). Both apps are free to start.',
+        q: 'How do Bunny and Paired prices compare?',
+        a: 'Both are free to start. Bunny offers a weekly subscription and a one-time lifetime purchase; Paired offers Premium subscriptions. Compare the current offers shown in each app for your region and the features you want to use.',
       },
       {
         q: 'Which is better for long-distance couples, Bunny or Paired?',
@@ -48,6 +50,8 @@ export const COMPARISONS = [
   {
     slug: 'bunny-vs-lovelee',
     competitor: 'lovelee',
+    reviewedOn: '2026-10-17',
+    sourceUrl: 'https://apps.apple.com/us/app/lovelee-couples-love-note-app/id6754182711',
     targetKeyword: 'Bunny vs lovelee',
     title: 'Bunny vs lovelee: Two Playful Couples Apps Compared (2026)',
     metaDescription:
@@ -56,7 +60,7 @@ export const COMPARISONS = [
       'Bunny and lovelee are two of the most playful couples apps, and they share a lot of DNA: love notes, doodles, a shared pet, and daily check-ins. Here is how they actually differ.',
     verdict:
       'Both apps offer shared pets, plants, notes, games, questions, and a whiteboard. Bunny brings these activities into a hand-drawn home with a Home Screen drawing widget. lovelee offers a Love Zone with drawing, note, mood, and days-together widgets. Compare the design and current paid offers to choose the space you both enjoy.',
-    bunnyPricing: 'Free; Pro from $1.99/week or $19.99 lifetime',
+    bunnyPricing: 'Free; optional Pro weekly subscription or lifetime purchase',
     competitorPricing: 'Free; paid subscriptions and lifetime offers vary by region and promotion',
     features: [
       { feature: 'Shared virtual pet', bunny: true, competitor: true },
@@ -78,7 +82,7 @@ export const COMPARISONS = [
       },
       {
         q: 'How do Bunny and lovelee prices compare?',
-        a: 'Both are free to download with paid upgrades. Bunny offers weekly and lifetime options. lovelee’s US listing includes $39.99 lifetime and a $19.99 lifetime offer, so Bunny is not always cheaper. Check the price and offer shown in each app for your region before purchasing.',
+        a: 'Both are free to download with paid upgrades. Bunny offers weekly and lifetime options; lovelee offers subscriptions and lifetime purchases. Check the price and offer shown in each app for your region before purchasing.',
       },
     ],
   },
@@ -86,32 +90,32 @@ export const COMPARISONS = [
   {
     slug: 'bunny-vs-widgetable',
     competitor: 'Widgetable',
+    reviewedOn: '2026-10-17',
+    sourceUrl: 'https://apps.apple.com/us/app/widgetable-besties-couples/id1641107226',
     targetKeyword: 'apps like Widgetable for couples',
     title: 'Bunny vs Widgetable: A Couples App for Your Shared Pet (2026)',
     metaDescription:
-      'Bunny vs Widgetable: a shared pet without the ads. Compare features, pricing, and why couples pick Bunny over a general widget app in 2026.',
+      'Compare Bunny and Widgetable for shared pet care, drawings, notes and widgets. See their different approaches to staying connected with your partner.',
     intro:
-      'Widgetable popularized the co-parented virtual pet on your home screen, but it is built for friends and besties broadly, and many reviews flag heavy ads and pay-to-progress mechanics. Bunny is built specifically for couples.',
+      'Widgetable offers shared pets and connection widgets for friends and couples, including mood, distance, photos, doodles and text. Bunny combines pet care with a shared in-app home, a drawing canvas, letters and games for couples.',
     verdict:
-      'Pick Widgetable if you want a huge catalog of widgets to share with friends. Pick Bunny if you want a calmer, couples-first space — a shared pet, a draw-together canvas, love notes, and games — without ad clutter, and with a one-time lifetime price.',
-    bunnyPricing: 'Free; Pro from $1.99/week or $19.99 lifetime',
-    competitorPricing: 'Free with ads; Premium ~$4.99/month or ~$19.99/year',
+      'Pick Widgetable if you want its range of widgets for friends and couples. Pick Bunny if you prefer a shared home with pet care, a draw-together canvas, love letters and games, with weekly and lifetime upgrade options.',
+    bunnyPricing: 'Free; optional Pro weekly subscription or lifetime purchase',
+    competitorPricing: 'Free with ads and in-app purchases; optional Premium subscription',
     features: [
       { feature: 'Couples-first design', bunny: true, competitor: 'Friends & couples' },
       { feature: 'Shared virtual pet', bunny: true, competitor: true },
-      { feature: 'Draw-together canvas', bunny: true, competitor: false },
-      { feature: 'Love notes & letters', bunny: true, competitor: false },
-      { feature: 'Mini-games for two', bunny: true, competitor: false },
+      { feature: 'Share drawings', bunny: 'Shared canvas and drawing widget', competitor: 'Doodles through Pin It!' },
+      { feature: 'Share written messages', bunny: 'Love letters and mailbox', competitor: 'Texts through Pin It!' },
       { feature: 'Daily check-ins', bunny: true, competitor: 'Mood widgets' },
-      { feature: 'Minimal ads', bunny: true, competitor: false },
-      { feature: 'One-time lifetime price', bunny: true, competitor: false },
+      { feature: 'Paid upgrade', bunny: 'Weekly or lifetime', competitor: 'Premium subscription and in-app purchases' },
     ],
-    bunnyBestFor: 'Couples who want a shared pet plus notes and games, without ads.',
-    competitorBestFor: 'Friend groups who want the widest variety of shareable widgets.',
+    bunnyBestFor: 'Couples who want a shared in-app home with a pet, letters, drawings and games.',
+    competitorBestFor: 'Friends and couples who want pet, mood, distance and other connection widgets.',
     faq: [
       {
-        q: 'Is there a couples app like Widgetable without ads?',
-        a: 'Yes. Bunny offers a shared virtual pet like Widgetable but is built specifically for couples and keeps ads minimal. It also adds love notes, a draw-together canvas, and mini-games, with a one-time $19.99 lifetime option.',
+        q: 'How is Bunny different from Widgetable?',
+        a: 'Both offer shared virtual pets. Widgetable focuses on widgets for friends and couples, including sharing doodles and text through Pin It! Bunny brings pet care, a shared drawing canvas, love letters and games into a couples home, with a separate drawing widget.',
       },
       {
         q: 'Can you raise a pet with your partner in Bunny?',
@@ -123,16 +127,18 @@ export const COMPARISONS = [
   {
     slug: 'apps-like-locket-for-couples',
     competitor: 'Locket',
+    reviewedOn: '2026-10-17',
+    sourceUrl: 'https://apps.apple.com/us/app/locket-widget/id1600525061',
     targetKeyword: 'apps like Locket for couples',
-    title: 'Apps Like Locket for Couples: Why Bunny Goes Further (2026)',
+    title: 'Apps Like Locket for Couples: Photos or Shared Activities? (2026)',
     metaDescription:
       'Compare Bunny’s shared pet, drawing widget, love notes and games with Locket’s photo-sharing experience for friends and couples.',
     intro:
       'Locket focuses on sharing everyday photos with close friends and partners, including through Home Screen widgets. Bunny focuses on shared activities such as pet care, doodles, notes, and games. These are different ways to stay present in each other’s day.',
     verdict:
       'Choose Locket for photo sharing with close friends and partners. Choose Bunny for shared pet care, a draw-together canvas and drawing widget, love notes, games, and daily check-ins. Bunny’s drawing widget is not a photo-sharing widget.',
-    bunnyPricing: 'Free; Pro from $1.99/week or $19.99 lifetime',
-    competitorPricing: 'Free; Locket Gold from ~$1.99',
+    bunnyPricing: 'Free; optional Pro weekly subscription or lifetime purchase',
+    competitorPricing: 'Free; optional Locket Gold subscription',
     features: [
       { feature: 'Feel present on each other’s phones', bunny: true, competitor: true },
       { feature: 'Photo-sharing widget', bunny: false, competitor: true },

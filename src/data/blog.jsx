@@ -14,7 +14,7 @@ export const POSTS = [
     excerpt:
       'A no-fluff roundup of the best apps for long-distance couples in 2026 — from shared-pet apps to daily-question apps — and how to pick the right one.',
     datePublished: '2026-06-22',
-    dateModified: '2026-10-16',
+    dateModified: '2026-10-17',
     author: 'Prafull Sharma',
     readingTime: '7 min read',
     tags: ['Long distance', 'App roundup'],
@@ -35,15 +35,14 @@ export const POSTS = [
       },
       {
         q: 'What is a good free app for long-distance couples?',
-        a: 'Bunny, Paired, and Locket all have free tiers. Bunny is free to download with an optional $19.99 lifetime upgrade, which makes it one of the cheapest ways to unlock a full couples app.',
+        a: 'Bunny, Paired, and Locket all have free features. Bunny includes basic bunny care and text letters free; its shared whiteboard requires Pro. Weekly and lifetime upgrades are available. Compare the features and current regional offers before choosing.',
       },
     ],
     Content: () => (
       <>
         <p>
           If you are in a long-distance relationship, the right app can make the
-          miles feel smaller. But the couples-app space is crowded and most lists
-          just rank whatever pays them. This is an honest roundup of the{' '}
+          miles feel smaller. This guide is written by the Bunny team and compares the{' '}
           <strong>best apps for long-distance couples in 2026</strong>, grouped by
           what they are actually good at, so you can pick the right one.
         </p>
@@ -71,14 +70,15 @@ export const POSTS = [
           <strong>draw-together canvas</strong>, <strong>love notes</strong>,{' '}
           <strong>mini-games for two</strong>, and <strong>daily check-ins</strong>.
           The pitch is simple — instead of stacking three or four single-purpose
-          apps, you get one shared home. It is free on iPhone with an optional
-          $19.99 lifetime upgrade. See how it stacks up in{' '}
+          apps, you get one shared home. Basic bunny care and text letters are
+          free; the shared whiteboard requires Pro. Weekly and lifetime upgrades
+          are available, with current prices shown in the app. See how it stacks up in{' '}
           <Link to="/compare/bunny-vs-paired">Bunny vs Paired</Link>.
         </p>
 
         <h3>2. Paired — best for daily questions</h3>
         <p>
-          Paired is the most established couples app and is built around
+          Paired is built around
           research-backed daily questions and relationship lessons. If your main
           goal is better conversation and you like structure, it is excellent. It
           leans on a recurring premium subscription. If you want more shared play
