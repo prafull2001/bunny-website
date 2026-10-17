@@ -53,6 +53,7 @@ export default function BlogPost({ slug }) {
               year: 'numeric',
               month: 'long',
               day: 'numeric',
+              timeZone: 'UTC',
             })}
           </div>
           <h1>{post.title}</h1>

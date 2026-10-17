@@ -1,5 +1,7 @@
 # Bunny SEO / ASO / GEO Task List
 
+**Current status (October 17, 2026):** PR1 and PR2 are deployed: three feature pages, corrected question counts and widget claims, real 404s, route-specific image preloads, Apple campaign links and Bunny website analytics. Earlier suggestions below are historical and are superseded by the current checklist at the end. Search Console is deferred at the user's request.
+
 **Site:** https://www.bunnycouples.com · **App:** Bunny — Love Notes for Couples (iOS)
 **App Store:** https://apps.apple.com/us/app/bunny-love-notes-for-couples/id6756160637
 
@@ -110,3 +112,25 @@ Add comparison pages as competitors grow: **Bunny vs Cozy Couples**, **Bunny vs 
 - [ ] Update `llms.txt` whenever features/pricing change.
 - [ ] Monthly, ask ChatGPT / Claude / Perplexity "best app for long-distance couples" and note whether Bunny appears and what it's compared to.
 - [ ] Publish (and keep updating) the "best apps for long-distance couples" post — both Google and LLMs cite these.
+
+
+## October 17 — Website accuracy follow-up (current)
+
+- [x] Read website plan, app lessons, Git state and live deployment evidence. Work is isolated from the existing checkout and personal files.
+- [x] Confirm latest remote main is 753b8b5; PR1 and PR2 fixes already deployed.
+- [x] Remove remaining unsupported cheapest/ad-comparison assertions and unqualified competitor price estimates. Add source links and a review date to the existing comparison pages.
+- [x] Clarify free features and Pro drawing access from current app implementation. Partner-sharing guarantees remain omitted because live purchase delivery is unverified. Keep visible copy and reference files aligned.
+- [x] Build assets, pass analytics/SEO checks and scoped lint, inspect rendered HTML and complete independent review.
+- [ ] Push through a PR and verify production.
+- Search Console is deferred at the user's request. No property or account changes are in scope.
+- Follow-up lesson: a partial copy cleanup can leave the same claim in blog FAQs, comparison tables and reference files. Search all public surfaces together before publishing pricing or competitor assertions.
+
+- Verification correction: only change an article’s modified date when its content changes. A broad date replacement briefly changed two untouched guides; restore their dates before publishing.
+
+- Date-rendering lesson: JavaScript parses YYYY-MM-DD at UTC midnight, but locale formatting without a timezone displays the previous day in Los Angeles. Render date-only article metadata explicitly in UTC so visible dates match the Article schema across server/client timezones. Reproduced October17 appearing as October16 before this fix.
+
+- Primary sources rechecked October17: official App Store listings for Paired1469609343, lovelee6754182711, Widgetable1641107226 and Locket1600525061. Widgetable explicitly supports doodles/text through Pin It!; the comparison now represents that overlap. Current app PRO_ACCESS.md/source supports basic bunny care and text letters free, whiteboard Pro. Shared-purchase production verification remains outside this copy change.
+
+- Verification correction: prerendered React inserts comment separators around text. The date check must normalize those separators and whitespace before comparing the visible date; the rendered October17 date was correct.
+
+- Validation: 20 prerendered HTML pages, 17 sitemap URLs, 16 Bunny campaign CTAs and four linked comparison sources. The updated roundup visibly renders October17,2026. Browser automation was unavailable, so no new visual-browser claim is made; layouts and assets are unchanged.

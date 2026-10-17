@@ -47,6 +47,7 @@ export default function ComparePost({ slug }) {
         >
           <h1>{c.title}</h1>
           <p className="lede">{c.intro}</p>
+          <p className="blog-card-meta">Reviewed <time dateTime={c.reviewedOn}>{c.reviewedOn}</time> · By the Bunny team</p>
 
           <div className="verdict-box">
             <h2>The verdict</h2>
@@ -79,6 +80,10 @@ export default function ComparePost({ slug }) {
               </tbody>
             </table>
           </div>
+
+          <p className="muted-links">
+            Source: <a href={c.sourceUrl}>{c.competitor} official product information</a>. Features and offers can change; check each app for current regional prices. Bunny’s shared whiteboard requires Pro; basic bunny care and text letters are included free.
+          </p>
 
           <h2>Which should you choose?</h2>
           <p><strong>Choose Bunny if:</strong> {c.bunnyBestFor}</p>

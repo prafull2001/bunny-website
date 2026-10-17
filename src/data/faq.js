@@ -17,7 +17,7 @@ export const HOME_FAQ = [
   },
   {
     q: 'Is Bunny free?',
-    a: 'Yes. Bunny is free to download and use on iPhone. An optional subscription, Bunny Pro, unlocks extra features and is available from $1.99/week or a $19.99 one-time lifetime purchase.',
+    a: 'Yes. Basic bunny care and text love letters are included free. Bunny Pro unlocks extra features, including the shared whiteboard, through a weekly subscription or one-time lifetime purchase. Check the current price and included features in the app.',
   },
   {
     q: 'Is Bunny a good free alternative to Paired?',
@@ -25,7 +25,7 @@ export const HOME_FAQ = [
   },
   {
     q: 'Can my partner and I draw together in Bunny?',
-    a: 'Yes. Bunny has a shared whiteboard where you and your partner can doodle and draw together. It is one of the simplest, most playful ways to leave each other something personal during the day.',
+    a: 'Yes. Bunny Pro includes a shared whiteboard where you and your partner can doodle together. You can also display the saved drawing in a Home Screen widget.',
   },
   {
     q: 'Can you raise a pet together in a relationship app?',

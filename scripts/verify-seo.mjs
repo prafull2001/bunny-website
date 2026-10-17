@@ -4,6 +4,7 @@ import { readFileSync, readdirSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import config from '../vite.config.js';
+import { COMPARISONS } from '../src/data/compare.js';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const dist = resolve(root, 'dist');
@@ -42,7 +43,10 @@ for (const path of pages) {
   assert(!/150\+ questions|no other mainstream app|Most rivals do only one/i.test(html), `Outdated claim in ${path}`);
   for (const [, href] of html.matchAll(/<a\b[^>]*href="(https:\/\/apps\.apple\.com\/[^\"]+)"/g)) {
     const url = new URL(href.replaceAll('&amp;', '&'));
-    assert(url.pathname.endsWith('/id6756160637'), `Bunny App Store destination in ${path}`);
+    if (!url.pathname.endsWith('/id6756160637')) {
+      assert(COMPARISONS.some((comparison) => comparison.sourceUrl === url.toString()), `Unknown App Store source in ${path}`);
+      continue;
+    }
     for (const [key, value] of Object.entries({ pt: '128026361', ct: 'bunny_website', mt: '8' })) {
       assert.equal(url.searchParams.get(key), value, `Apple campaign ${key} in ${path}`);
     }
@@ -50,6 +54,12 @@ for (const path of pages) {
   }
 }
 assert(campaignLinks >= 16, 'Expected homepage, about, article, comparison, and feature CTAs');
+
+for (const comparison of COMPARISONS) {
+  const html = readFileSync(resolve(dist, `compare/${comparison.slug}/index.html`), 'utf8');
+  assert(html.includes(`href="${comparison.sourceUrl}"`), `Comparison source: ${comparison.slug}`);
+  assert(html.includes(`datetime="${comparison.reviewedOn}"`), `Comparison review date: ${comparison.slug}`);
+}
 
 const questions = readFileSync(resolve(dist, 'blog/questions-to-ask-long-distance-partner/index.html'), 'utf8');
 let count = 0;
@@ -60,6 +70,8 @@ for (const heading of ['Deep questions', 'Fun questions', 'Future questions', 'D
 }
 assert.equal(count, 23);
 assert.match(questions, /<h1>23 Questions to Ask Your Long-Distance Partner \(2026\)<\/h1>/);
+const roundup = readFileSync(resolve(dist, 'blog/best-apps-for-long-distance-couples-2026/index.html'), 'utf8');
+assert.match(roundup.replaceAll('<!-- -->', ''), /Updated\s+October 17, 2026/, 'Visible roundup update date must match the date-only metadata');
 
 const vercel = JSON.parse(readFileSync(resolve(root, 'vercel.json'), 'utf8'));
 assert.equal(vercel.cleanUrls, true);
