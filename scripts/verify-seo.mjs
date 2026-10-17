@@ -1,4 +1,4 @@
-// Run after npm run build: node scripts/verify-seo.mjs
+// Runs after prerendering and sitemap generation in npm run build.
 import assert from 'node:assert/strict';
 import { readFileSync, readdirSync } from 'node:fs';
 import { resolve } from 'node:path';
