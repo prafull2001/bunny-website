@@ -45,11 +45,9 @@ export default function About() {
 
           <h2>Why we built Bunny</h2>
           <p>
-            Look at the couples-app space and you’ll notice something: every app
-            does one thing. One app for daily questions. Another for a shared pet.
-            Another for a photo widget. Another for doodles. Couples end up
-            stitching together half a dozen apps just to feel present with each
-            other.
+            We wanted one place for the little things we do together: caring for
+            a pet, leaving a doodle, sending a note, or answering a question.
+            Bunny brings those everyday rituals into a shared space for two.
           </p>
           <p>
             Bunny collapses that stack into a single shared space. You raise a{' '}
@@ -62,12 +60,11 @@ export default function About() {
 
           <h2>How Bunny is different</h2>
           <p>
-            Most relationship apps focus on conversation. That’s valuable — but
-            connection isn’t only talking. It’s shared <em>doing</em>: caring for
-            something together, leaving each other something to find, being playful.
-            Bunny is built around shared activity, not just shared chat. As far as
-            we know, no other mainstream app combines a shared pet, a draw-together
-            canvas, love notes, and games in one place.
+            Bunny is built around shared <em>doing</em>: caring for something
+            together, leaving each other something to find, and being playful.
+            Its hand-drawn home brings a shared pet, a draw-together canvas, love
+            notes, and games into one place. Other couples apps offer overlapping
+            features; choose the space you both enjoy returning to.
           </p>
 
           <h2>The facts</h2>

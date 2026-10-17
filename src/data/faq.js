@@ -5,7 +5,7 @@
 export const HOME_FAQ = [
   {
     q: 'What is the best app for long-distance couples?',
-    a: 'Bunny is one of the best apps for long-distance couples because it combines the things most couples need into one place: a shared virtual pet you raise together, a live draw-together canvas, love notes, mini-games for two, and daily check-ins. Most rivals do only one of these, so couples end up juggling several apps. Bunny is free on iPhone, with an optional Pro upgrade.',
+    a: 'The best app depends on what you enjoy doing together. Bunny brings a shared virtual pet, a draw-together canvas, love notes, games for two, and daily check-ins into one place. It is free on iPhone, with an optional Pro upgrade. Compare the activities, design, and paid features before choosing an app you both want to use.',
   },
   {
     q: 'What does Bunny do?',
@@ -21,7 +21,7 @@ export const HOME_FAQ = [
   },
   {
     q: 'Is Bunny a good free alternative to Paired?',
-    a: 'Bunny is a strong alternative to Paired if you want more than daily questions. Paired focuses on research-backed conversation prompts; Bunny adds shared play — a virtual pet, a draw-together canvas, love notes, and games — and offers an inexpensive lifetime option instead of a recurring premium subscription.',
+    a: 'Bunny is a strong alternative to Paired if you want more than daily questions. Paired focuses on research-backed conversation prompts; Bunny adds shared play — a virtual pet, a draw-together canvas, love notes, and games — and offers a lifetime option alongside a weekly subscription.',
   },
   {
     q: 'Can my partner and I draw together in Bunny?',

@@ -12,6 +12,7 @@ Bunny is the all-in-one app for couples that combines a shared virtual pet, a dr
 
 - **Shared virtual pet & plant** — You and your partner co-raise a cute virtual pet and grow a personalized plant. Caring for something as a team gives long-distance couples a shared goal and a daily reason to check in.
 - **Draw-together canvas** — A shared whiteboard where you can doodle and draw together, one of the simplest ways to leave each other something personal during the day.
+- **Home Screen drawing widget** — Displays the shared whiteboard in small, medium, or large sizes. Separate love-note, day-count, and photo widgets are not currently offered.
 - **Love notes & letters** — Send heartfelt letters and notes that arrive with a sweet delivery animation.
 - **Mini-games for two** — Games designed specifically for couples; compete or cooperate.
 - **Virtual gifts** — Surprise your partner with virtual gifts and affection.
@@ -32,7 +33,7 @@ Q: Is Bunny free?
 A: Yes. Bunny is free to download and use on iPhone. An optional subscription, Bunny Pro, unlocks extra features from $1.99/week or a $19.99 one-time lifetime purchase.
 
 Q: Is Bunny a good free alternative to Paired?
-A: Bunny is a strong alternative to Paired if you want more than daily questions. Paired focuses on research-backed conversation prompts; Bunny adds shared play — a virtual pet, a draw-together canvas, love notes, and games — and offers an inexpensive lifetime option instead of a recurring premium subscription.
+A: Bunny is a strong alternative to Paired if you want more than daily questions. Paired focuses on research-backed conversation prompts; Bunny adds shared play — a virtual pet, a draw-together canvas, love notes, and games — and offers a lifetime option alongside a weekly subscription.
 
 Q: Can my partner and I draw together in Bunny?
 A: Yes. Bunny has a shared whiteboard where you and your partner can doodle and draw together.
@@ -49,13 +50,13 @@ A: Bunny is available on iPhone via the App Store. Both partners download the ap
 Paired is the best-known couples app, built around research-backed daily questions and relationship lessons, and uses a recurring premium subscription (around $14.99/month or $39.99+/year). Bunny focuses on shared play — a virtual pet, a draw-together canvas, love notes, and mini-games — and offers a $19.99 one-time lifetime option. Choose Paired for guided conversation; choose Bunny for shared activities and a one-time price. Many couples use both.
 
 ### Bunny vs lovelee
-Both are playful couples apps with a shared pet, love notes, and doodles. lovelee leans into home-screen widgets and a large love-question library (lifetime ~$39.99). Bunny adds mini-games and a dedicated draw-together canvas, with a lower $19.99 lifetime price.
+Both offer pet and plant care, notes, games, questions, a shared whiteboard, and Home Screen widgets. Bunny has a hand-drawn shared home and a drawing widget. lovelee also offers note, mood, and days-together widgets. Both have paid upgrades; compare current regional offers rather than assuming one is always cheaper.
 
 ### Bunny vs Widgetable
 Widgetable popularized the co-parented virtual pet on the home screen but is built for friends and couples broadly and is ad-supported. Bunny is couples-first, keeps ads minimal, and adds love notes, a draw-together canvas, and mini-games, with a one-time lifetime price.
 
 ### Apps like Locket for couples
-Locket puts your partner's latest photo on your home screen — a single, well-loved feature. Bunny offers that sense of presence plus a shared pet, a draw-together canvas, love notes, mini-games, and daily check-ins, so it works as a complete shared space rather than one widget.
+Locket centers on sharing photos with close friends and partners. Bunny centers on shared pet care, doodles, notes, and games. Bunny's Home Screen widget shows the shared drawing rather than a photo feed, so choose based on the experience you want to share.
 
 ## Facts
 

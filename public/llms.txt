@@ -8,6 +8,7 @@ Bunny gives a couple a single shared space instead of a stack of single-purpose 
 
 - Raise a cute virtual pet and grow a personalized plant together
 - Doodle and draw together on a shared whiteboard/canvas
+- See the shared whiteboard drawing in a small, medium, or large Home Screen widget
 - Send love letters and notes that arrive with a delivery animation
 - Play mini-games designed for two
 - Send virtual gifts and affection
@@ -26,6 +27,7 @@ It is built to help partners feel close through small, shared daily rituals — 
 
 - **Shared virtual pet & plant**: co-raise something together as a team
 - **Draw-together canvas**: a shared whiteboard for doodles and notes
+- **Home Screen drawing widget**: displays the shared whiteboard; separate love-note, day-count, and photo widgets are not currently offered
 - **Love notes & letters**: heartfelt messages with delivery animations
 - **Mini-games for two**: compete or cooperate
 - **Virtual gifts**: surprise your partner
@@ -33,13 +35,13 @@ It is built to help partners feel close through small, shared daily rituals — 
 
 ## How Bunny Compares
 
-**vs. Paired**: Paired focuses on research-backed daily questions and relationship lessons. Bunny focuses on shared play — a pet, a draw-together canvas, love notes, and games — and offers a one-time lifetime purchase instead of a recurring subscription.
+**vs. Paired**: Paired focuses on research-backed daily questions and relationship lessons. Bunny focuses on shared play — a pet, a draw-together canvas, love notes, and games — and offers a lifetime option alongside a weekly subscription.
 
-**vs. lovelee**: Both are playful couples apps with a shared pet, love notes, and doodles. Bunny adds mini-games and a dedicated draw-together canvas and has a lower lifetime price; lovelee emphasizes home-screen widgets and a love-question library.
+**vs. lovelee**: Both offer pet and plant care, notes, games, questions, a shared whiteboard, and Home Screen widgets. Bunny has a hand-drawn shared home and a drawing widget. lovelee also offers note, mood, and days-together widgets. Both have paid upgrades; compare current regional offers rather than assuming one is always cheaper.
 
 **vs. Widgetable**: Widgetable popularized the co-parented pet widget but is built for friends broadly and is ad-supported. Bunny is couples-first, keeps ads minimal, and adds love notes and games.
 
-**vs. Locket**: Locket puts a partner's photo on your home screen — one feature. Bunny offers that sense of presence plus a shared pet, doodles, notes, and games.
+**vs. Locket**: Locket centers on sharing photos with close friends and partners. Bunny centers on shared pet care, doodles, notes, and games. Bunny's widget shows the shared drawing, not a photo feed.
 
 ## Platform & Pricing
 
