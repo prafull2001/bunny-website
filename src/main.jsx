@@ -1,5 +1,6 @@
 import { ViteReactSSG } from 'vite-react-ssg';
 import { routes } from './routes.jsx';
+import { startMarketingAnalytics } from './analytics.js';
 import './index.css';
 
 // vite-react-ssg builds the router (data router) for both SSG and the client.
@@ -7,7 +8,6 @@ import './index.css';
 // each route to static HTML.
 export const createRoot = ViteReactSSG({ routes }, ({ isClient, router }) => {
   if (isClient && import.meta.env.PROD) {
-    import('./analytics.js').then(({ startMarketingAnalytics }) => startMarketingAnalytics(router))
-      .catch(() => { /* Measurement must not prevent the site from loading. */ });
+    startMarketingAnalytics(router);
   }
 });

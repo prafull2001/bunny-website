@@ -24,7 +24,7 @@ assert.equal(appStorePlacement(cta.replace('apps.apple.com', 'apps.apple.com.evi
 assert.equal(appStorePlacement(cta.replace('6756160637', '1234')), null);
 assert.equal(appStorePlacement(cta.replace('hero', 'email@example.com')), null);
 
-function fixture(href = landing, privacy = {}) {
+function fixture(href = landing, privacy = {}, { deferred = false, noStorage = false } = {}) {
   let subscriber;
   const listeners = new Map(), data = new Map(), events = [];
   const browser = {
@@ -39,12 +39,18 @@ function fixture(href = landing, privacy = {}) {
       if (cleaned) events.push({ ...cleaned, options });
     },
   };
+  if (noStorage) Object.defineProperty(browser, 'sessionStorage', { get() { throw new Error('storage unavailable'); } });
+  let resolveLoad, rejectLoad;
+  const sdkPromise = deferred ? new Promise((resolve, reject) => {
+    resolveLoad = () => resolve({ default: sdk });
+    rejectLoad = reject;
+  }) : Promise.resolve({ default: sdk });
   let loads = 0;
   const router = { subscribe(fn) { subscriber = fn; return () => { subscriber = undefined; }; } };
-  const stop = startMarketingAnalytics(router, { browser, loadSdk: async () => { loads++; return { default: sdk }; } });
+  const stop = startMarketingAnalytics(router, { browser, loadSdk: () => { loads++; return sdkPromise; } });
   const navigate = (path, state = 'idle') => { browser.location = new URL(path, origin); subscriber?.({ navigation: { state } }); };
   const click = () => listeners.get('click')?.({ target: { closest: () => ({ href: cta }) }, defaultPrevented: false });
-  return { browser, sdk, events, data, stop, navigate, click, loads: () => loads };
+  return { browser, sdk, events, data, stop, navigate, click, resolveLoad, rejectLoad, loads: () => loads };
 }
 const settle = () => new Promise((resolve) => setTimeout(resolve, 0));
 const f = fixture();
@@ -100,11 +106,68 @@ await settle();
 assert.equal(privateEntry.events[0].properties.initial_landing_page, `${origin}/love-notes-for-couples/`);
 privateEntry.stop();
 
-const noStorage = fixture();
-Object.defineProperty(noStorage.browser, 'sessionStorage', { get() { throw new Error('storage unavailable'); } });
+const noStorage = fixture(landing, {}, { noStorage: true });
 await settle();
 assert.equal(noStorage.sdk.config.persistence, 'memory', 'unavailable storage explicitly falls back to memory');
 assert.equal(noStorage.events.length, 1);
 assert.equal(sanitizeEvent({ event: '$autocapture', properties: {} }, noStorage.browser, attribution), null);
 noStorage.stop();
-console.log('Analytics checks passed: public routes, privacy signals, URL redaction, initial attribution, SPA pageviews, CTA placement, SDK token and storage fallback.');
+
+const delayed = fixture(landing, {}, { deferred: true });
+const beforeInteraction = Date.now();
+delayed.click();
+delayed.navigate('/shared-pet-for-couples/');
+delayed.navigate('/drawing-widgets-for-couples/');
+const beforeResolve = Date.now();
+await settle();
+assert.equal(delayed.events.length, 0);
+delayed.resolveLoad();
+await settle();
+assert.deepEqual(delayed.events.map((e) => [e.event, e.properties.$pathname]), [
+  ['$pageview', '/'], ['app_store_clicked', '/'],
+  ['$pageview', '/shared-pet-for-couples'], ['$pageview', '/drawing-widgets-for-couples'],
+]);
+assert.equal(delayed.events[1].properties.placement, 'homepage:hero');
+assert.ok(delayed.events.every((e) => e.properties.initial_landing_page === `${origin}/` && e.properties.utm_source === 'chatgpt'));
+assert.ok(delayed.events.every((e) => e.options.timestamp instanceof Date && e.options.timestamp.getTime() <= beforeResolve));
+assert.ok(delayed.events[0].options.timestamp.getTime() <= beforeInteraction);
+delayed.stop();
+
+const privateDuringLoad = fixture(landing, {}, { deferred: true });
+privateDuringLoad.navigate('/confirm?token=secret');
+privateDuringLoad.click();
+privateDuringLoad.resolveLoad();
+await settle();
+assert.equal(privateDuringLoad.sdk.config, undefined, 'SDK does not initialize on a private route');
+assert.equal(privateDuringLoad.events.length, 0);
+privateDuringLoad.navigate('/about');
+await settle();
+assert.deepEqual(privateDuringLoad.events.map((e) => e.properties.$pathname), ['/', '/about']);
+assert.ok(!JSON.stringify(privateDuringLoad.events).includes('secret'));
+privateDuringLoad.stop();
+
+const optedOutDuringLoad = fixture(landing, {}, { deferred: true });
+optedOutDuringLoad.click();
+optedOutDuringLoad.browser.navigator.globalPrivacyControl = true;
+optedOutDuringLoad.resolveLoad();
+await settle();
+assert.equal(optedOutDuringLoad.events.length, 0);
+assert.equal(optedOutDuringLoad.sdk.config, undefined);
+optedOutDuringLoad.stop();
+
+const rejected = fixture(landing, {}, { deferred: true });
+rejected.click();
+rejected.navigate('/about');
+rejected.rejectLoad(new Error('SDK load blocked'));
+await settle();
+assert.equal(rejected.events.length, 0, 'SDK load failure is contained');
+rejected.stop();
+
+const bounded = fixture(landing, {}, { deferred: true });
+for (let i = 0; i < 40; i++) bounded.navigate(i % 2 ? '/about' : '/contact');
+bounded.resolveLoad();
+await settle();
+assert.equal(bounded.events.length, 20, 'slow SDK queue is bounded');
+assert.equal(bounded.events[0].properties.$pathname, '/', 'bounded queue retains the landing event');
+bounded.stop();
+console.log('Analytics checks passed: privacy/routes/redaction, delayed SDK page/click order and timestamps, bounded queue, failure containment, SPA tracking and attribution.');

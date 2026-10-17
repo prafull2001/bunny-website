@@ -129,50 +129,76 @@ export function startMarketingAnalytics(router, {
   loadSdk = () => import('posthog-js/no-external'),
 } = {}) {
   if (!HOSTS.has(browser.location.hostname) || privacyRequested(browser)) return () => {};
-  let sdk, loading, attribution, lastPath;
+  let sdk, loading, attribution, storage, lastPath;
+  // shortcut: a full unload before SDK load can lose events; revisit loading policy if measured loss warrants it.
+  const pending = [];
   let stopped = false;
   const canTrack = () => !stopped && !privacyRequested(browser) && publicPage(browser.location.href);
+  const ensureSdk = () => {
+    if (sdk || loading) return;
+    if (!attribution) {
+      storage = sessionStorageIfAvailable(browser);
+      attribution = readAttribution(storage, browser.location.href, browser.document.referrer);
+    }
+    loading = Promise.resolve().then(loadSdk).then(({ default: posthog }) => {
+      if (!canTrack()) {
+        if (privacyRequested(browser)) pending.length = 0;
+        return;
+      }
+      posthog.init(PROJECT_TOKEN, {
+        api_host: 'https://us.i.posthog.com', ui_host: 'https://us.posthog.com',
+        persistence: storage ? 'sessionStorage' : 'memory', person_profiles: 'never',
+        autocapture: false, capture_pageview: false, capture_pageleave: false,
+        capture_heatmaps: false, capture_dead_clicks: false, rageclick: false,
+        capture_exceptions: false, capture_performance: false,
+        disable_session_recording: true, disable_surveys: true,
+        disable_external_dependency_loading: true, advanced_disable_flags: true,
+        save_referrer: false, save_campaign_params: false, disable_capture_url_hashes: true,
+        respect_dnt: true,
+        before_send: (event) => sanitizeEvent(event, browser, attribution),
+      });
+      sdk = posthog;
+      for (const queued of pending.splice(0)) {
+        if (canTrack()) sdk.capture(queued.event, queued.properties, queued.options);
+      }
+    }).catch(() => {
+      // Analytics must never prevent navigation or hydration.
+      pending.length = 0;
+      lastPath = undefined;
+    }).finally(() => { loading = undefined; });
+  };
+  const capture = (event, properties) => {
+    if (!canTrack()) return;
+    const options = {
+      timestamp: new Date(),
+      ...(event === 'app_store_clicked' ? { transport: 'sendBeacon', send_instantly: true } : {}),
+    };
+    if (sdk) sdk.capture(event, properties, options);
+    else {
+      // Retain the landing event and the latest 19 events during a slow SDK load.
+      if (pending.length === 20) pending.splice(1, 1);
+      pending.push({ event, properties, options });
+      ensureSdk();
+    }
+  };
   const trackPage = () => {
     const page = canTrack();
-    if (!page) { lastPath = undefined; return; }
-    if (!sdk) {
-      if (!loading) {
-        const landingHref = browser.location.href;
-        const referrer = browser.document.referrer;
-        loading = loadSdk().then(({ default: posthog }) => {
-          if (!canTrack()) return;
-          const storage = sessionStorageIfAvailable(browser);
-          attribution = readAttribution(storage, landingHref, referrer);
-          sdk = posthog;
-          sdk.init(PROJECT_TOKEN, {
-            api_host: 'https://us.i.posthog.com', ui_host: 'https://us.posthog.com',
-            persistence: storage ? 'sessionStorage' : 'memory', person_profiles: 'never',
-            autocapture: false, capture_pageview: false, capture_pageleave: false,
-            capture_heatmaps: false, capture_dead_clicks: false, rageclick: false,
-            capture_exceptions: false, capture_performance: false,
-            disable_session_recording: true, disable_surveys: true,
-            disable_external_dependency_loading: true, advanced_disable_flags: true,
-            save_referrer: false, save_campaign_params: false, disable_capture_url_hashes: true,
-            respect_dnt: true,
-            before_send: (event) => sanitizeEvent(event, browser, attribution),
-          });
-          trackPage();
-        }).catch(() => { /* Analytics must never prevent navigation or hydration. */ })
-          .finally(() => { loading = undefined; });
-      }
+    if (!page) {
+      lastPath = undefined;
+      if (privacyRequested(browser)) pending.length = 0;
       return;
     }
     if (page.path !== lastPath) {
       lastPath = page.path;
-      sdk.capture('$pageview', { $current_url: page.url });
+      capture('$pageview', { $current_url: page.url });
     }
   };
   const onClick = (event) => {
     const page = canTrack();
     const href = event.target?.closest?.('a[href]')?.href;
     const placement = href && appStorePlacement(href);
-    if (sdk && page && placement && !event.defaultPrevented) {
-      sdk.capture('app_store_clicked', { $current_url: page.url, placement }, { transport: 'sendBeacon', send_instantly: true });
+    if (page && placement && !event.defaultPrevented) {
+      capture('app_store_clicked', { $current_url: page.url, placement });
     }
   };
   const unsubscribe = router.subscribe((state) => {
@@ -182,6 +208,7 @@ export function startMarketingAnalytics(router, {
   trackPage();
   return () => {
     stopped = true;
+    pending.length = 0;
     unsubscribe();
     browser.document.removeEventListener('click', onClick);
   };
