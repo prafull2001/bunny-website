@@ -27,7 +27,7 @@ export default function BlogIndex() {
           Back to Home
         </Link>
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={false}
           animate={{ opacity: 1, y: 0 }}
           className="legal-content glass-panel"
         >

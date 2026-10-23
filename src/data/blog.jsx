@@ -1,11 +1,13 @@
 import { Link } from 'react-router-dom';
 import { appStoreLink } from '../seo/siteConfig';
+import { TAMAGOTCHI_POST } from './tamagotchi-for-couples';
 
 // Blog posts. Each post is data + a JSX `Content` component so it can use
 // proper heading hierarchy, lists, internal links, and CTAs. The first H2s are
 // phrased as the exact questions people search, to win snippets and LLM quotes.
 
 export const POSTS = [
+  TAMAGOTCHI_POST,
   {
     slug: 'best-apps-for-long-distance-couples-2026',
     title: 'Best Apps for Long-Distance Couples in 2026 (Honest Roundup)',
@@ -14,20 +16,20 @@ export const POSTS = [
     excerpt:
       'A no-fluff roundup of the best apps for long-distance couples in 2026 — from shared-pet apps to daily-question apps — and how to pick the right one.',
     datePublished: '2026-06-22',
-    dateModified: '2026-10-17',
+    dateModified: '2026-10-22',
     author: 'Prafull Sharma',
     readingTime: '7 min read',
     tags: ['Long distance', 'App roundup'],
     tldr: [
       'The best app depends on what you want: shared play, guided conversation, or a simple home-screen widget.',
-      'Bunny bundles a shared pet, draw-together canvas, love notes, and games into one app — useful if you don’t want to juggle several.',
+      'Bunny bundles a shared pet, draw-together canvas, love notes, and couple question packs into one app — useful if you don’t want to juggle several.',
       'Paired is best for research-backed daily questions; Locket is best for a dead-simple photo widget.',
       'You can start most of these free, so try two and keep the one you both open daily.',
     ],
     faq: [
       {
         q: 'What is the best app for long-distance couples?',
-        a: 'There is no single best app for everyone — it depends on what you want. For shared play (a pet, doodles, games) in one place, Bunny is a strong pick. For research-backed daily questions, Paired is the leader. For a simple photo on your home screen, Locket is the easiest. The best app is the one you both actually open every day.',
+        a: 'There is no single best app for everyone — it depends on what you want. For shared pet care, doodles and couple question packs in one place, Bunny is a strong pick. For research-backed daily questions, Paired is the leader. For a simple photo on your home screen, Locket is the easiest. The best app is the one you both actually open every day.',
       },
       {
         q: 'Are long-distance relationship apps worth it?',
@@ -66,13 +68,14 @@ export const POSTS = [
         <h3>1. Bunny — best all-in-one shared space</h3>
         <p>
           <Link to="/">Bunny</Link> bundles the things most couples want into a
-          single app: a <strong>shared virtual pet</strong> you raise together, a{' '}
-          <strong>draw-together canvas</strong>, <strong>love notes</strong>,{' '}
-          <strong>mini-games for two</strong>, and <strong>daily check-ins</strong>.
+          single app: a <Link to="/shared-pet-for-couples">shared virtual pet</Link> you raise together, a{' '}
+          <Link to="/drawing-widgets-for-couples">draw-together canvas</Link>, <Link to="/love-notes-for-couples">love notes</Link>,{' '}
+          <strong>couple question packs</strong>, and <strong>daily check-ins</strong>.
           The pitch is simple — instead of stacking three or four single-purpose
           apps, you get one shared home. Basic bunny care and text letters are
           free; the shared whiteboard requires Pro. Weekly and lifetime upgrades
-          are available, with current prices shown in the app. See how it stacks up in{' '}
+          are available. <Link to="/pricing">See what’s free and what Pro includes</Link>,
+          then check the current offer in the app. See how it stacks up in{' '}
           <Link to="/compare/bunny-vs-paired">Bunny vs Paired</Link>.
         </p>
 
@@ -90,7 +93,7 @@ export const POSTS = [
         <p>
           Locket puts your partner’s latest photo right on your home screen. It is
           built around sharing everyday photos with close friends and partners.
-          If you are looking for shared pet care and games, see{' '}
+          If you are looking for shared pet care and question packs, see{' '}
           <Link to="/compare/apps-like-locket-for-couples">apps like Locket for couples</Link>.
         </p>
 
@@ -117,7 +120,7 @@ export const POSTS = [
         <p>
           The best app for long-distance couples is the one that fits into your day
           effortlessly. If you want a single shared home with a pet, doodles, notes,
-          and games,{' '}
+          and question packs,{' '}
           <a href={appStoreLink('blog', 'best-apps-roundup')}>download Bunny free on the App Store</a>{' '}
           and try it with your partner this week.
         </p>
@@ -133,7 +136,7 @@ export const POSTS = [
     excerpt:
       'From in-app mini-games to questions and challenges, here are 11 long-distance relationship games that actually make you feel closer.',
     datePublished: '2026-06-22',
-    dateModified: '2026-10-18',
+    dateModified: '2026-10-22',
     author: 'Prafull Sharma',
     readingTime: '6 min read',
     tags: ['Long distance', 'Activities'],
@@ -141,7 +144,7 @@ export const POSTS = [
       'The best long-distance games are quick, shared, and repeatable — something you can do in a few minutes any day.',
       'Mix app-based games (mini-games, co-op puzzles) with talking games (20 questions, would-you-rather).',
       'A shared pet or daily challenge keeps a game going even when your schedules don’t line up.',
-      'Bunny includes mini-games made for two plus a shared pet and daily check-ins.',
+      'Bunny includes couple question packs and answer rounds, plus a shared pet and daily check-ins.',
     ],
     faq: [
       {
@@ -150,7 +153,7 @@ export const POSTS = [
       },
       {
         q: 'What is a good app with games for couples?',
-        a: 'Bunny is a good pick because it includes mini-games designed for two alongside a shared virtual pet and daily check-ins, so there is always something to do together. Paired also includes some couple games within its daily-questions format.',
+        a: 'Bunny offers couple question packs and answer rounds alongside a shared virtual pet and daily check-ins. Some question packs are free; others require Bunny Pro. Paired also includes some couple games within its daily-questions format.',
       },
       {
         q: 'How do you keep a long-distance relationship fun?',
@@ -177,8 +180,8 @@ export const POSTS = [
 
         <h3>App &amp; screen games</h3>
         <ol>
-          <li><strong>In-app mini-games for two.</strong> Apps built for couples — like <Link to="/">Bunny</Link> — include quick mini-games you can play head-to-head or cooperatively without downloading anything extra.</li>
-          <li><strong>Raise a shared pet.</strong> Co-caring for a virtual pet is a slow game you both “win” over time. It keeps going even when you can’t be online at the same moment.</li>
+          <li><strong>Couple question rounds.</strong> In <Link to="/">Bunny</Link>, choose a question pack and answer a round with your partner. Some packs are free; others require Bunny Pro.</li>
+          <li><strong>Raise a shared pet.</strong> Co-caring for a <Link to="/shared-pet-for-couples">virtual pet</Link> is a slow game you both “win” over time. It keeps going even when you can’t be online at the same moment.</li>
           <li><strong>Co-op mobile puzzles.</strong> Pick a co-op puzzle or escape-room style game you only play together, so progress is a shared thing.</li>
           <li><strong>Online multiplayer classics.</strong> Chess, cards, or a casual battle-royale — pick one “your game” and keep a running scoreboard.</li>
           <li><strong>Watch-and-guess.</strong> Start the same show and pause to bet on what happens next; loser plans the next virtual date.</li>
@@ -206,8 +209,8 @@ export const POSTS = [
         <h2>The bottom line</h2>
         <p>
           You don’t need elaborate plans to keep a long-distance relationship
-          playful — just a few quick games you return to often. If you want mini-
-          games, a shared pet, and a daily check-in in one place,{' '}
+          playful — just a few quick games you return to often. If you want
+          question rounds, a shared pet, and a daily check-in in one place,{' '}
           <a href={appStoreLink('blog', 'ldr-games')}>download Bunny free</a> and
           start a round tonight.
         </p>

@@ -1,38 +1,36 @@
-// Homepage FAQ. Written answer-first (the answer is in the first sentence) so
-// it can win Featured Snippets / People-Also-Ask boxes and be quoted cleanly by
-// ChatGPT / Claude / Perplexity. Also emitted as FAQPage JSON-LD.
+// Current product answers, shared by the visible homepage and its structured data.
 
 export const HOME_FAQ = [
   {
-    q: 'What is the best app for long-distance couples?',
-    a: 'The best app depends on what you enjoy doing together. Bunny brings a shared virtual pet, a draw-together canvas, love notes, games for two, and daily check-ins into one place. It is free on iPhone, with an optional Pro upgrade. Compare the activities, design, and paid features before choosing an app you both want to use.',
+    q: 'Can we raise the same virtual pet together?',
+    a: 'Yes. Connect your accounts in Bunny and you share one pet, including its name, mood and care timers. Both partners can feed, play with and give water to the same bunny. Basic bunny care is free.',
   },
   {
-    q: 'What does Bunny do?',
-    a: 'Bunny is a relationship app that gives you and your partner a shared digital home. You raise a virtual pet and grow a plant together, send love letters that arrive with a delivery animation, doodle on a shared whiteboard, play mini-games designed for two, and send virtual gifts. It is built to help couples — especially long distance — feel close every day.',
+    q: 'How do we connect our accounts?',
+    a: 'Each partner installs Bunny and creates their own account. One of you creates a Love Nest and shares its invite code; the other joins using that code. You then share the same pet, whiteboard and space for your letters.',
   },
   {
-    q: 'How do I feel closer to my partner when we are far apart?',
-    a: 'Small, shared daily rituals are the most reliable way to feel close in a long-distance relationship. Caring for a shared pet, swapping a quick doodle, leaving a love note, or doing a daily check-in creates a steady stream of low-pressure touchpoints that keep you connected between calls. Bunny bundles all of these into a single app so the ritual is effortless.',
+    q: 'Do we need to open Bunny at the same time?',
+    a: 'No. You can care for the pet, send a text letter or add to the shared whiteboard at different times. Open Bunny with an internet connection to send and load updates. The whiteboard requires Pro.',
   },
   {
     q: 'Is Bunny free?',
     a: 'Yes. Basic bunny care and text love letters are included free. Bunny Pro unlocks extra features, including the shared whiteboard, through a weekly subscription or one-time lifetime purchase. Check the current price and included features in the app.',
   },
   {
-    q: 'Is Bunny a good free alternative to Paired?',
-    a: 'Bunny is a strong alternative to Paired if you want more than daily questions. Paired focuses on research-backed conversation prompts; Bunny adds shared play — a virtual pet, a draw-together canvas, love notes, and games — and offers a lifetime option alongside a weekly subscription.',
+    q: 'Can I buy Bunny Pro once instead of subscribing?',
+    a: 'Yes. Bunny offers a one-time lifetime Pro purchase alongside its weekly subscription. Basic bunny care and text letters do not require either. Review the current price and included features in the app before purchasing.',
   },
   {
     q: 'Can my partner and I draw together in Bunny?',
-    a: 'Yes. Bunny Pro includes a shared whiteboard where you and your partner can doodle together. You can also display the saved drawing in a Home Screen widget.',
+    a: 'Yes. Bunny Pro includes one shared whiteboard you can both draw on. You can display it in a Home Screen widget; iOS controls widget refresh timing. Text letters are a separate free feature.',
   },
   {
-    q: 'Can you raise a pet together in a relationship app?',
-    a: 'Yes. In Bunny you and your partner co-raise a cute virtual pet and grow a personalized plant together. Caring for something as a team gives long-distance couples a shared goal and a reason to check in every day.',
+    q: 'Who makes Bunny?',
+    a: 'Bunny is made by Prafull Sharma. It started as a present for his girlfriend before he opened it up for other couples. You can contact him through the website with feedback or questions.',
   },
   {
     q: 'What devices does Bunny work on?',
-    a: 'Bunny is available on iPhone via the App Store. Both partners download the app, link up, and share the same private space.',
+    a: 'Bunny is available on iPhone and iPad. Both partners need a supported Apple device; there is currently no Android version. The app interface and built-in questions are in English.',
   },
 ];

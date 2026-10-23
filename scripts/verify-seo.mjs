@@ -5,6 +5,7 @@ import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import config from '../vite.config.js';
 import { COMPARISONS } from '../src/data/compare.js';
+import { publicPage, appStorePlacement } from '../src/analytics.js';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const dist = resolve(root, 'dist');
@@ -50,6 +51,7 @@ for (const path of pages) {
     for (const [key, value] of Object.entries({ pt: '128026361', ct: 'bunny_website', mt: '8' })) {
       assert.equal(url.searchParams.get(key), value, `Apple campaign ${key} in ${path}`);
     }
+    assert(appStorePlacement(url.href), `Untracked App Store CTA in ${path}`);
     campaignLinks++;
   }
 }
@@ -72,7 +74,7 @@ for (const heading of ['Deep questions', 'Fun questions', 'Future questions', 'D
 assert(count >= 23, 'Preserve the existing questions while the owner expands the guide');
 assert.match(questions, /<h1>150\+ Questions to Ask Your Long-Distance Partner \(2026\)<\/h1>/);
 const roundup = readFileSync(resolve(dist, 'blog/best-apps-for-long-distance-couples-2026/index.html'), 'utf8');
-assert.match(roundup.replaceAll('<!-- -->', ''), /Updated\s+October 17, 2026/, 'Visible roundup update date must match the date-only metadata');
+assert.match(roundup.replaceAll('<!-- -->', ''), /Updated\s+October 22, 2026/, 'Visible roundup update date must match the date-only metadata');
 
 const vercel = JSON.parse(readFileSync(resolve(root, 'vercel.json'), 'utf8'));
 assert.equal(vercel.cleanUrls, true);
@@ -82,9 +84,10 @@ const locations = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => m
 for (const location of locations) {
   const path = resolve(dist, `.${new URL(location).pathname}`, 'index.html');
   assert(/<div\b[^>]*\bid="root"[^>]*>\s*</.test(readFileSync(path, 'utf8')), `Missing prerendered content: ${location}`);
+  assert(publicPage(location), `Public sitemap route missing analytics review: ${location}`);
 }
 
-const features = ['shared-pet-for-couples', 'drawing-widgets-for-couples', 'love-notes-for-couples'];
+const features = ['shared-pet-for-couples', 'drawing-widgets-for-couples', 'love-notes-for-couples', 'pricing', 'blog/tamagotchi-for-couples'];
 const titles = new Set();
 const descriptions = new Set();
 const home = readFileSync(resolve(dist, 'index.html'), 'utf8');
@@ -112,4 +115,4 @@ for (const slug of features) {
     assert(readFileSync(resolve(dist, `.${href}`, 'index.html'), 'utf8').length > 0, `Internal link ${href} from ${slug}`);
   }
 }
-console.log(`SEO checks passed: ${pages.length} HTML pages, ${count} listed questions, 3 feature pages with metadata/FAQ/links, ${campaignLinks} Apple campaign CTAs, route-specific image preloads and static route/config checks.`);
+console.log(`SEO checks passed: ${pages.length} HTML pages, ${count} listed questions, ${features.length} acquisition pages with metadata/FAQ/links, ${campaignLinks} tracked Apple campaign CTAs, route-specific image preloads and static route/config checks.`);

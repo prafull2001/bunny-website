@@ -14,7 +14,7 @@ export const SITE = {
   // One-liner reused across meta descriptions, schema, and llms.txt
   tagline: 'Your digital home for two.',
   description:
-    'Bunny is the all-in-one app for couples — especially long distance. Raise a shared virtual pet, draw together on a live canvas, send love notes, play mini-games, and check in daily. Free on iPhone.',
+    'Raise a shared pet and send text love letters free with Bunny on iPhone and iPad. Add a shared drawing canvas with Pro. Made by Prafull as a present for his girlfriend, with weekly and lifetime upgrade options.',
 
   appStoreUrl:
     'https://apps.apple.com/us/app/bunny-love-notes-for-couples/id6756160637',

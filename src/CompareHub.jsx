@@ -29,20 +29,19 @@ export default function CompareHub() {
           Back to Home
         </Link>
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={false}
           animate={{ opacity: 1, y: 0 }}
           className="legal-content glass-panel"
         >
           <h1>Bunny vs other couples apps</h1>
           <p className="last-updated">Honest, side-by-side comparisons.</p>
           <p>
-            There are a lot of couples apps, and most “best app” lists are paid
-            placements. These comparisons are written to actually help you choose —
-            with real feature tables, fair pros and cons, and pricing. Bunny is an
-            all-in-one shared space (a pet, a draw-together canvas, love notes, and
-            games), so here is how it stacks up against the apps you’re probably
-            weighing.
+            These comparisons are written by Bunny’s maker. Compare what each
+            app lets you do together, which features cost money, and which devices
+            you both need. Each page links to the other app’s official listing so
+            you can check its current features and offers.
           </p>
+          <p>Looking for a pet you can raise together? Start with our <Link to="/blog/tamagotchi-for-couples">Tamagotchi-style shared pet guide</Link>.</p>
 
           <div className="compare-grid">
             {COMPARISONS.map((c) => (

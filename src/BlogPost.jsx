@@ -43,7 +43,7 @@ export default function BlogPost({ slug }) {
           All articles
         </Link>
         <motion.article
-          initial={{ opacity: 0, y: 20 }}
+          initial={false}
           animate={{ opacity: 1, y: 0 }}
           className="legal-content glass-panel blog-post"
         >

@@ -9,7 +9,11 @@ const path = '/drawing-widgets-for-couples';
 const faq = [
   {
     q: 'Can my partner and I draw on the same canvas?',
-    a: 'Yes. Bunny’s shared whiteboard lets connected partners add drawings to the same canvas. The whiteboard is a Bunny Pro feature.',
+    a: 'Yes. Bunny’s shared whiteboard lets connected partners add drawings to the same canvas. You can leave a drawing for your partner to open and add to later. The whiteboard is a Bunny Pro feature.',
+  },
+  {
+    q: 'Are drawings saved as separate letters?',
+    a: 'No. The whiteboard is one editable shared canvas that either partner can change or clear. Bunny’s separate text letters stay in your mailbox so you can read them again.',
   },
   {
     q: 'Is this a Home Screen or Lock Screen widget?',
@@ -21,7 +25,11 @@ const faq = [
   },
   {
     q: 'Is the shared whiteboard free?',
-    a: 'Bunny is free to download; the shared whiteboard requires Bunny Pro. Review the current offer and included features in the app before purchasing.',
+    a: 'Bunny is free to download; the shared whiteboard requires Bunny Pro. Pro offers include a weekly subscription and a one-time lifetime purchase. Review the current offer and included features in the app before purchasing.',
+  },
+  {
+    q: 'Which devices and languages does Bunny support?',
+    a: 'Bunny is available on iPhone and iPad, with an English interface. There is currently no Android version. Check the App Store listing for current device and operating-system requirements.',
   },
 ];
 
@@ -29,8 +37,8 @@ export default function DrawingWidgetsForCouples() {
   return (
     <main className="legal-page" style={{ padding: '40px 16px' }}>
       <Seo
-        title="Drawing Widgets for Couples | Bunny"
-        description="Draw together on Bunny’s shared whiteboard and add your doodles to a Home Screen widget. See setup steps, supported widget sizes and Bunny Pro details."
+        title="Shared Drawing App & Widgets for Couples | Bunny"
+        description="Leave a drawing for your partner on Bunny’s shared canvas for iPhone and iPad. Add to each other’s doodles and use a Home Screen widget. Requires Bunny Pro."
         path={path}
         schema={[
           breadcrumbSchema([{ name: 'Home', path: '/' }, { name: 'Drawing widgets for couples', path }]),
@@ -42,23 +50,36 @@ export default function DrawingWidgetsForCouples() {
         <article className="legal-content glass-panel" style={{ padding: 'clamp(24px, 5vw, 40px)' }}>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 32, alignItems: 'center' }}>
             <div style={{ flex: '1 1 260px' }}>
-              <p className="blog-card-meta">A drawing widget for couples</p>
-              <h1>Your little doodles, on your Home Screen</h1>
-              <p className="lede">Draw a heart, an inside joke or a tiny hello on your shared whiteboard. Add Bunny’s Whiteboard widget to keep your drawings close throughout the day.</p>
+              <p className="blog-card-meta">One shared canvas for the two of you</p>
+              <h1>Leave a drawing for your partner to find</h1>
+              <p className="lede">Draw a heart, an inside joke or a tiny hello in Bunny. Your partner can open the same whiteboard and add something of their own. You don’t have to draw at the same time.</p>
               <a href={appStoreLink('drawing-widgets', 'hero')} className="app-store-badge" aria-label="Download Bunny on the App Store" />
-              <p>Shared whiteboard included with Bunny Pro</p>
+              <p>Requires Bunny Pro · iPhone and iPad · <Link to="/pricing">See free and Pro features</Link></p>
             </div>
             <figure style={{ flex: '0 1 220px', margin: '0 auto' }}>
               <img src={screenshotWhiteboard} alt="Bunny’s in-app shared drawing canvas with colored doodles and drawing controls" width="720" height="1564" style={{ height: 'auto', borderRadius: 24 }} />
-              <figcaption style={{ marginTop: 12, fontSize: 14, color: 'var(--text-secondary)' }}>Draw inside Bunny. Add the Home Screen widget separately.</figcaption>
+              <figcaption style={{ marginTop: 12, fontSize: 14, color: 'var(--text-secondary)' }}>Bunny’s in-app whiteboard. Both partners contribute to this shared canvas.</figcaption>
             </figure>
           </div>
 
-          <h2>A shared canvas for the two of you</h2>
-          <p>Connect with your partner, open the whiteboard and choose a brush color and size. Both of you can contribute to the drawing. Use undo for your last stroke, or clear the canvas when you’re ready to start again.</p>
-          <p>Try finishing each other’s drawing, sketching tonight’s dinner or leaving a good-morning heart. You don’t need to be good at drawing to make something that feels like you.</p>
+          <h2>A drawing you can both add to</h2>
+          <p>Sketch tonight’s dinner, write a short hello by hand or start a doodle for your partner to finish. Choose a brush color and size, use undo for your last stroke, or clear the canvas when you’re ready to start again.</p>
+          <p>This is one shared, editable whiteboard. Either of you can add to it or clear it. For a message you want to keep in your mailbox, send a separate <Link to="/love-notes-for-couples">text love letter</Link>.</p>
 
-          <h2>How to add Bunny’s drawing widget</h2>
+          <h2>Open your first shared whiteboard</h2>
+          <ol style={{ paddingLeft: 24, color: 'var(--text-secondary)' }}>
+            <li>Install Bunny on both devices and create an account each.</li>
+            <li>One partner creates a Love Nest and shares the invite code. The other joins using that code.</li>
+            <li>Open the whiteboard with Bunny Pro, choose a color and draw something for your partner.</li>
+            <li>Your partner opens the same whiteboard with an internet connection to see it and add their own strokes.</li>
+          </ol>
+
+          <h2>Drawing is part of Bunny Pro</h2>
+          <p>You can start with <Link to="/shared-pet-for-couples">free basic bunny care</Link> and text love letters before choosing Pro for the shared canvas. Pro offers include a weekly subscription and a one-time lifetime purchase. <Link to="/pricing">Compare what’s free and what’s included with Pro</Link>, then check the current offer in the app.</p>
+          <p>Bunny began as an app Prafull built for his girlfriend. <Link to="/about">Read the story behind Bunny</Link>.</p>
+
+          <h2>Keep your drawing on the Home Screen, too</h2>
+          <p>The optional Whiteboard widget displays your shared drawing on your Home Screen. You draw inside Bunny; tap the widget to open the canvas when you want to add something.</p>
           <ol style={{ paddingLeft: 24, color: 'var(--text-secondary)' }}>
             <li>Install Bunny, connect with your partner and open your shared whiteboard.</li>
             <li>Make a drawing in Bunny, then return to your iPhone Home Screen.</li>
@@ -70,14 +91,13 @@ export default function DrawingWidgetsForCouples() {
 
           <h2>Keep your shared drawing up to date</h2>
           <p>The widget displays a saved view of your whiteboard. Open Bunny and the shared canvas to load the latest drawing; iOS decides when the Home Screen widget refreshes. Tap the widget whenever you want to open the board and add something.</p>
-          <p>Bunny is available on iPhone and iPad. Check the App Store listing for the current device requirements. The shared whiteboard requires Bunny Pro; current purchase options are shown in the app.</p>
 
           <h2>Questions about drawing together</h2>
           {faq.map(({ q, a }) => <div className="faq-item" key={q}><h3>{q}</h3><p>{a}</p></div>)}
 
           <div className="cta-row">
-            <h2>Leave a little drawing for your partner</h2>
-            <p>Explore Bunny’s shared whiteboard alongside <Link to="/love-notes-for-couples">love notes</Link> and a <Link to="/shared-pet-for-couples">pet you care for together</Link>.</p>
+            <h2>Make your first doodle together</h2>
+            <p>Download Bunny, connect your accounts and choose Pro to open your shared canvas. Start with something only the two of you would understand.</p>
             <a href={appStoreLink('drawing-widgets', 'footer')} className="app-store-badge" aria-label="Download Bunny on the App Store" />
           </div>
           <p className="muted-links"><Link to="/compare/apps-like-locket-for-couples">Drawing and photo widgets compared</Link> · <Link to="/contact">Get help</Link> · <Link to="/privacy">Privacy</Link></p>
