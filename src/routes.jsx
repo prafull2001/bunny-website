@@ -48,7 +48,7 @@ const pages = [
     entry: 'src/BlogPost.jsx',
   })),
 
-  // Utility / personal pages — pre-rendered so GitHub Pages never 404s on a
+  // Utility / personal pages: pre-rendered so GitHub Pages never 404s on a
   // direct hit, but kept out of search indexes via a noindex <Seo>.
   { path: '/confirm', element: <Confirm />, entry: 'src/Confirm.jsx' },
   {

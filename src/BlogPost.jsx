@@ -90,7 +90,7 @@ export default function BlogPost({ slug }) {
           </p>
           <p className="muted-links">
             By {post.author} · <Link to="/about">About Bunny</Link> ·{' '}
-            <Link to="/compare">Compare apps</Link>
+            <Link to="/pricing">Free and Pro features</Link>
           </p>
         </motion.article>
       </div>

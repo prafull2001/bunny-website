@@ -13,7 +13,7 @@ import {
 import { HOME_FAQ } from './data/faq';
 import './index.css';
 
-// Assets (WebP — see scripts/optimize-images.mjs)
+// Assets (WebP; see scripts/optimize-images.mjs)
 import logoImg from './assets/bunny-logo.webp';
 import bunnyPetImg from './assets/bunny-pet.webp';
 import screenshotHome from './assets/screenshot-home.webp';
@@ -71,7 +71,7 @@ export function Home() {
   return (
     <div className="app-container">
       <Seo
-        title="Bunny — Shared Virtual Pet & Love Notes for Couples"
+        title="Bunny: Shared Virtual Pet & Love Notes for Couples"
         description="Raise one virtual pet together and leave love notes. Start with free bunny care and text letters on iPhone and iPad. Shared drawing is included with Bunny Pro."
         path="/"
         image="/og/og-home.jpg"
@@ -112,12 +112,12 @@ export function Home() {
             <h1 className="hero-title">
               Raise a pet,<br />
               <Link to="/avishi" style={{ display: 'inline-block' }}>
-                <img src={bunnyPetImg} alt="Bunny — the virtual pet couples raise together" className="hero-pet-img" />
+                <img src={bunnyPetImg} alt="Bunny, the virtual pet couples raise together" className="hero-pet-img" />
               </Link>
               <span className="highlight-text">together.</span>
             </h1>
             <p className="hero-subtitle">
-              One little bunny, cared for by both of you. Feed and play with your shared pet, leave a love note, or draw something for your partner to find—even when you’re miles apart.
+              One little bunny, cared for by both of you. Feed and play with your shared pet, leave a love note, or draw something for your partner to find, even when you’re miles apart.
             </p>
             <div className="hero-buttons">
               <a href={appStoreLink('homepage', 'hero')} className="app-store-badge" aria-label="Download Bunny on the App Store"></a>
@@ -250,10 +250,10 @@ export function Home() {
             ))}
           </div>
           <p className="faq-more-links">
-            Compare Bunny with other apps: <Link to="/compare/bunny-vs-paired">vs Paired</Link>,{' '}
-            <Link to="/compare/bunny-vs-lovelee">vs lovelee</Link>,{' '}
-            <Link to="/compare/apps-like-locket-for-couples">apps like Locket</Link>. Or read our{' '}
-            <Link to="/blog">articles about couples apps and activities</Link>.
+            Explore <Link to="/shared-pet-for-couples">shared pet care</Link>,{' '}
+            <Link to="/drawing-widgets-for-couples">drawing together</Link> and{' '}
+            <Link to="/love-notes-for-couples">text love letters</Link>. See{' '}
+            <Link to="/pricing">what’s free and what Pro adds</Link>.
           </p>
         </div>
       </section>

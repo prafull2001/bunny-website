@@ -36,8 +36,7 @@ export default function CompareHub() {
           <h1>Bunny vs other couples apps</h1>
           <p className="last-updated">Honest, side-by-side comparisons.</p>
           <p>
-            These comparisons are written by Bunny’s maker. Compare what each
-            app lets you do together, which features cost money, and which devices
+            Compare what each app lets you do together, which features cost money, and which devices
             you both need. Each page links to the other app’s official listing so
             you can check its current features and offers.
           </p>

@@ -9,7 +9,7 @@ export default function About() {
   return (
     <div className="legal-page">
       <Seo
-        title="About Bunny — A Present That Became a Couples App"
+        title="About Bunny: A Present That Became a Couples App"
         description="Bunny began as a present Prafull Sharma made for his girlfriend. Meet the maker behind the shared pet, drawing and love-note app for iPhone and iPad."
         path="/about"
         image="/og/og-about.jpg"
@@ -62,7 +62,7 @@ export default function About() {
             Hearing how other couples use Bunny helps me decide what to improve
             next. If something doesn’t work or you have an idea, email me directly
             at <a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a>.
-            I’d like to know what you and your partner enjoy—and what gets in the way.
+            I’d like to know what you and your partner enjoy and what gets in the way.
           </p>
 
           <h2>Bunny today</h2>

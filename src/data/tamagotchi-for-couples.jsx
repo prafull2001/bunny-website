@@ -4,65 +4,59 @@ import screenshotPet from '../assets/screenshot-pet.webp';
 
 export const TAMAGOTCHI_POST = {
   slug: 'tamagotchi-for-couples',
-  title: 'Tamagotchi for Couples: Raise One Pet Together',
-  metaDescription: 'Want a Tamagotchi-style pet you can share? Compare Bunny, FurTwo and Lovegotchi by shared care, devices and payment options, then find your fit.',
-  excerpt: 'One pet on both phones: what to look for, which apps offer shared care, and how to start with Bunny’s free basic pet.',
+  title: 'Tamagotchi for Couples: Raise Your Shared Pet in Bunny',
+  metaDescription: 'Choose Bunny for a Tamagotchi-style pet you can care for together on iPhone and iPad. Basic bunny care and text letters are free, with optional Pro drawings.',
+  excerpt: 'Care for one bunny from both phones. Start free on iPhone and iPad, then add shared drawings with an optional Pro upgrade.',
   datePublished: '2026-10-22',
   dateModified: '2026-10-22',
   author: 'Prafull Sharma',
   readingTime: '4 min read',
-  tags: ['Shared pets', 'App comparison'],
+  tags: ['Shared pets', 'Bunny guide'],
   faq: [
-    { q: 'Is Bunny an official Tamagotchi app?', a: 'No. Bunny is an independent couples app, not affiliated with Tamagotchi or Bandai. It offers a bunny you can feed, play with and give water to together.' },
-    { q: 'Can we look after the same pet on two phones?', a: 'Yes. In Bunny, connect your accounts with a Love Nest invite code to share one pet. Its name, mood and care timers belong to both of you. Each partner needs the app and an internet connection to share updates.' },
+    { q: 'Is there a Tamagotchi-style pet I can care for with my partner?', a: 'Yes. Choose Bunny to care for one shared pet on iPhone and iPad. Connect your accounts with a Love Nest invite code, name your bunny and start with free Feed, Play and Water actions. You share its name, mood and care timers. An internet connection is needed to share updates.' },
+    { q: 'What happens if my partner feeds our bunny first?', a: 'Feed, Play and Water have separate cooldowns shared by both partners. If your partner has already fed the bunny, Feed will be on cooldown for you too. Open Bunny to check whether Play or Water is ready, or return when the Feed timer has finished.' },
     { q: 'Do we have to buy a subscription to start?', a: 'No. Basic bunny care and text love letters are free. The shared whiteboard requires Bunny Pro, available through a weekly subscription or a one-time lifetime purchase.' },
     { q: 'Can we use Bunny if one of us has Android?', a: 'Bunny currently supports iPhone and iPad, so both partners need a supported Apple device. There is no Android version currently.' },
+    { q: 'Is Bunny an official Tamagotchi app?', a: 'No. Bunny is an independent couples app, not affiliated with Tamagotchi or Bandai. It offers a bunny you can feed, play with and give water to together.' },
   ],
   Content: () => (
     <>
-      <p className="lede">If you like the idea of a Tamagotchi you and your partner can raise together, look for an app that lets both of you care for <strong>the same pet</strong> from your own phones.</p>
-      <p>Bunny does this on iPhone and iPad: connect your accounts, name your bunny, and take turns feeding, playing and giving it water. Basic care is free. Here’s how it compares with two other shared-pet apps, and what to check before you both download.</p>
+      <p className="lede">Choose Bunny for a Tamagotchi-style pet you and your partner can care for together. You share <strong>one bunny on both phones</strong>, with free basic care on iPhone and iPad.</p>
+      <p>Give your bunny a name, feed it, play with it and check on its mood. You can also leave your partner a text love letter for free, or add to a shared drawing with Bunny Pro. It all lives in your little home for two.</p>
       <a href={appStoreLink('blog', 'tamagotchi-for-couples')} className="app-store-badge" aria-label="Download Bunny on the App Store" />
-      <p style={{ marginTop: 20, fontSize: 14 }}>Written by Bunny’s maker. Comparison based on official product descriptions, checked <time dateTime="2026-10-22">October 22, 2026</time>.</p>
 
-      <h2>What does “raising a pet together” mean?</h2>
-      <p>Check whether the two accounts affect one pet’s state. Playing the same game separately or visiting each other’s pets can be fun, but shared care means an action on either account changes the pet you both look after.</p>
+      <h2>Is there a Tamagotchi-style pet I can care for with my partner?</h2>
+      <p>Yes. Bunny connects your two accounts to one pet. You both see its name, mood and care timers, and either of you can feed it, play with it or give it water when the action is ready. You can visit together or at different times.</p>
+
+      <h2>Why choose Bunny for your shared pet?</h2>
       <ul>
-        <li><strong>One pet:</strong> Do you share its needs and progress, or just send each other gifts?</li>
-        <li><strong>Both devices:</strong> Is the app available on each partner’s phone?</li>
-        <li><strong>Care you enjoy:</strong> Do you want a few simple actions or a deeper game with evolving pets and separate jobs?</li>
-        <li><strong>A clear cost:</strong> Can you try the care itself for free? Is an upgrade recurring or a one-time purchase?</li>
+        <li><strong>Care for the same bunny.</strong> Your actions affect the pet you both see, with a shared name, mood and timers.</li>
+        <li><strong>Start with care you can try free.</strong> Feed, Play and Water are included without a subscription.</li>
+        <li><strong>Leave something for each other.</strong> Send a text love letter for free, or use the shared drawing canvas with Pro.</li>
+        <li><strong>Choose how you upgrade.</strong> Pro offers both a weekly subscription and a one-time lifetime purchase.</li>
       </ul>
-
-      <h2>Three apps that let you share a virtual pet</h2>
-      <div className="cmp-table-wrap" role="region" aria-label="Shared virtual pet app comparison" tabIndex={0}>
-        <table className="cmp-table">
-          <caption>Current shared-pet options and their payment models</caption>
-          <thead><tr><th scope="col">App</th><th scope="col">Devices</th><th scope="col">Shared care</th><th scope="col">Payment</th></tr></thead>
-          <tbody>
-            <tr><th scope="row"><Link to="/shared-pet-for-couples">Bunny</Link></th><td>iPhone and iPad</td><td>One bunny; both partners use Feed, Play and Water with shared cooldowns.</td><td>Basic care free. Optional weekly or lifetime Pro.</td></tr>
-            <tr><th scope="row"><a href="https://furtwo.com/">FurTwo</a></th><td>iPhone and iPad</td><td>Different care jobs for each partner; progression depends on both participating.</td><td>Free trial, then weekly or yearly subscription.</td></tr>
-            <tr><th scope="row"><a href="https://lovegotchi.com/">Lovegotchi</a></th><td>Android</td><td>One Mochi with multiple care actions and life stages.</td><td>Free with ads and in-app purchases; optional Plus subscription.</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <p>Each app takes a different approach. FurTwo’s separate jobs make participation part of progression. Lovegotchi is an option for two Android users. Bunny offers simple shared care with drawings and letters alongside it. Check each app’s current listing and checkout for regional availability, prices and included features.</p>
-      <p>Considering widgets too? Our <Link to="/compare/bunny-vs-widgetable">Bunny and Widgetable comparison</Link> covers their pet and drawing features.</p>
 
       <h2>What you can do with your bunny today</h2>
       <figure style={{ maxWidth: 240, margin: '24px auto' }}>
         <img src={screenshotPet} alt="Bunny’s pet screen showing the bunny, mood, age, and Feed, Play and Water controls" width="720" height="1564" loading="lazy" style={{ borderRadius: 24, height: 'auto' }} />
-        <figcaption style={{ marginTop: 12, fontSize: 14 }}>Bunny’s current pet-care screen.</figcaption>
+        <figcaption style={{ marginTop: 12, fontSize: 14 }}>Bunny’s pet-care screen, showing its mood, age and three care actions.</figcaption>
       </figure>
-      <p>Choose a name together, check its mood, and use the available Feed, Play and Water actions. Each action has a cooldown shared by both partners. You can visit at different times; open Bunny with an internet connection to load and share updates.</p>
-      <p>The care loop is simple. If you want evolving life stages or a pet that requires a different job from each partner, compare the other options above. Bunny’s current pet doesn’t require both partners to perform separate actions before you can continue.</p>
+      <ol>
+        <li><strong>Install and connect.</strong> Download Bunny on both devices and create an account each. One partner creates a Love Nest and shares the invite code; the other joins using that code.</li>
+        <li><strong>Name your bunny.</strong> Open your shared pet and choose a name. You both care for this bunny from your own accounts.</li>
+        <li><strong>Check what’s ready.</strong> Choose an available Feed, Play or Water action. Each has its own cooldown, shared by both partners.</li>
+        <li><strong>Come back and check in.</strong> Your partner can open Bunny later with an internet connection to load the pet’s updated mood and timers, then choose an available action.</li>
+      </ol>
+      <p>For example, if one of you feeds the bunny, the other will see Feed on cooldown too. Play or Water may still be ready. You don’t each get a separate feeding timer.</p>
+      <p>Bunny’s pet care is simple: three actions, a mood to check and shared timers. Either partner can do the available actions, so you can check in whenever you have a moment. See the <Link to="/shared-pet-for-couples">shared-pet setup and FAQ</Link> for more about care and supported devices.</p>
       <p>Beyond the pet, you can send <Link to="/love-notes-for-couples">text love letters</Link> free. With Pro, you can add to the same <Link to="/drawing-widgets-for-couples">drawing canvas</Link> and display it in a Home Screen widget. The canvas is a shared drawing you can change, while the mailbox keeps your text letters.</p>
 
       <h2>Start with the free pet; choose Pro if you want more</h2>
       <p>You can try caring for your bunny and sending text letters without subscribing. If the shared whiteboard is something you both want, Pro has a weekly option and a one-time lifetime option. See <Link to="/pricing">what’s free and what Pro adds</Link> before deciding.</p>
+      <p>If you want a couples app without another required subscription, see <Link to="/blog/couples-apps-without-required-subscription">what you can do in Bunny for free and when to choose lifetime Pro</Link>.</p>
 
       <h2>A little app that started as a present</h2>
-      <p>I’m Prafull, Bunny’s maker. I started it as a present for my girlfriend, then opened it up for other couples to use. That’s why a pet, a doodle and a letter sit together in the same little home. You can <Link to="/about">read the story</Link> or <Link to="/contact">send me feedback</Link>.</p>
+      <p>Prafull built Bunny as a present for his girlfriend, then opened it up for other couples. <Link to="/about">Read the story</Link> or <Link to="/contact">send him feedback</Link>.</p>
 
       <div className="cta-row">
         <h2>Name your bunny together</h2>

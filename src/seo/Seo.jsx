@@ -8,7 +8,7 @@ import { SITE, abs, pageUrl } from './siteConfig';
  * Props:
  *  - title:        full <title> string (page is responsible for branding)
  *  - description:  meta description (~150-160 chars)
- *  - path:         route path, e.g. '/about' — used for canonical + og:url
+ *  - path:         route path, e.g. '/about'; used for canonical + og:url
  *  - image:        OG image path (defaults to site default)
  *  - type:         og:type ('website' | 'article')
  *  - noindex:      true to keep the page out of search indexes

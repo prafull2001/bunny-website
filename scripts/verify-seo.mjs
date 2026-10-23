@@ -87,10 +87,11 @@ for (const location of locations) {
   assert(publicPage(location), `Public sitemap route missing analytics review: ${location}`);
 }
 
-const features = ['shared-pet-for-couples', 'drawing-widgets-for-couples', 'love-notes-for-couples', 'pricing', 'blog/tamagotchi-for-couples'];
+const features = ['shared-pet-for-couples', 'drawing-widgets-for-couples', 'love-notes-for-couples', 'pricing', 'blog/tamagotchi-for-couples', 'blog/couples-apps-without-required-subscription'];
 const titles = new Set();
 const descriptions = new Set();
 const home = readFileSync(resolve(dist, 'index.html'), 'utf8');
+const blog = readFileSync(resolve(dist, 'blog/index.html'), 'utf8');
 for (const slug of features) {
   const url = `https://www.bunnycouples.com/${slug}/`;
   assert.equal(locations.filter((location) => location === url).length, 1, `Sitemap entry: ${slug}`);
@@ -103,7 +104,8 @@ for (const slug of features) {
   descriptions.add(description);
   assert(html.includes(`rel="canonical" href="${url}"`), `Canonical: ${slug}`);
   assert.equal([...html.matchAll(/<h1\b/g)].length, 1, `Single H1: ${slug}`);
-  assert(home.includes(`href="/${slug}"`), `Homepage link: ${slug}`);
+  const discoveryPage = slug.startsWith('blog/') ? blog : home;
+  assert(discoveryPage.includes(`href="/${slug}"`), `Discovery link: ${slug}`);
   const schemas = [...html.matchAll(/<script\b[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)].map((match) => JSON.parse(match[1]));
   const faq = schemas.find((schema) => schema['@type'] === 'FAQPage');
   assert(faq?.mainEntity?.length > 0, `FAQ schema: ${slug}`);

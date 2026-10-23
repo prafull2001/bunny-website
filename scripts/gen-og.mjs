@@ -1,6 +1,7 @@
 // Generates branded 1200x630 Open Graph cards into public/og/.
 // Run locally with `node scripts/gen-og.mjs` and commit the output (it is NOT
 // part of the CI build, so it has no effect on deploy reliability).
+// Pass card filenames to regenerate only those cards.
 import sharp from 'sharp';
 import { readFileSync, mkdirSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
@@ -38,14 +39,16 @@ function card({ heading, sub }) {
 }
 
 const cards = [
-  { file: 'og-default.jpg', heading: 'The app for couples', sub: 'A shared pet, doodles, love notes & games — your home for two.' },
+  { file: 'og-default.jpg', heading: 'The app for couples', sub: 'A shared pet, drawings and love notes. A home for two.' },
   { file: 'og-home.jpg', heading: 'Together, miles apart', sub: 'The all-in-one app for couples, especially long distance.' },
-  { file: 'og-about.jpg', heading: 'About Bunny', sub: 'One shared home for two — instead of five separate apps.' },
-  { file: 'og-compare.jpg', heading: 'Compare couples apps', sub: 'Bunny vs Paired, lovelee, Widgetable & Locket — honestly.' },
+  { file: 'og-about.jpg', heading: 'About Bunny', sub: 'A present for my girlfriend became a home for two.' },
+  { file: 'og-compare.jpg', heading: 'Compare couples apps', sub: 'See Bunny’s shared pet, drawing and letter features.' },
   { file: 'og-blog.jpg', heading: 'Long-distance guides', sub: 'Ideas, games & questions to feel close from afar.' },
 ];
 
+const requestedFiles = process.argv.slice(2);
 for (const c of cards) {
+  if (requestedFiles.length && !requestedFiles.includes(c.file)) continue;
   await sharp(Buffer.from(card({ heading: c.heading, sub: c.sub })))
     .jpeg({ quality: 82 })
     .toFile(resolve(outDir, c.file));

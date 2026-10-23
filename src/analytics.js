@@ -7,6 +7,7 @@ const PUBLIC_PATHS = new Set([
   '/blog/best-apps-for-long-distance-couples-2026',
   '/blog/long-distance-relationship-games', '/blog/questions-to-ask-long-distance-partner',
   '/blog/tamagotchi-for-couples',
+  '/blog/couples-apps-without-required-subscription',
 ]);
 const HOSTS = new Set(['bunnycouples.com', 'www.bunnycouples.com']);
 const ORIGIN = 'https://www.bunnycouples.com';
@@ -23,7 +24,7 @@ const PLACEMENTS = {
   'shared-pet': ['hero', 'footer'], 'drawing-widgets': ['hero', 'footer'],
   'love-notes': ['hero', 'footer'],
   pricing: ['hero', 'footer'],
-  blog: ['best-apps-roundup', 'ldr-games', 'ldr-questions', 'tamagotchi-for-couples'],
+  blog: ['best-apps-roundup', 'ldr-games', 'ldr-questions', 'tamagotchi-for-couples', 'couples-apps-without-required-subscription'],
   compare: ['bunny-vs-paired', 'bunny-vs-lovelee', 'bunny-vs-widgetable', 'apps-like-locket-for-couples'],
 };
 

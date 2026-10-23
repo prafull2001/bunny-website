@@ -70,6 +70,7 @@ export default function Pricing() {
           </div>
 
           <p style={{ fontSize: 14 }}>US App Store prices checked October 22, 2026. Prices and availability can vary by region. Confirm the amount and terms shown in Bunny before purchase. iOS controls when the drawing widget refreshes.</p>
+          <p>Prefer to skip recurring bills? See <Link to="/blog/couples-apps-without-required-subscription">what you can share in Bunny without a subscription</Link>.</p>
 
           <h2>A few things to know</h2>
           {faq.map(({ q, a }) => <div className="faq-item" key={q}><h3>{q}</h3><p>{a}</p></div>)}

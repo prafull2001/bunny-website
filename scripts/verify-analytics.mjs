@@ -17,7 +17,7 @@ for (const host of ['localhost', 'bunny-website.vercel.app', 'bunnycouples.com.e
 assert.equal(publicPage('http://bunnycouples.com/'), null);
 assert.equal(publicPage('https://bunnycouples.com:444/'), null);
 assert.equal(publicPage(`${origin}/drawing-widgets-for-couples/?code=secret#token`).url, `${origin}/drawing-widgets-for-couples/`);
-for (const path of ['/pricing', '/blog/tamagotchi-for-couples']) {
+for (const path of ['/pricing', '/blog/tamagotchi-for-couples', '/blog/couples-apps-without-required-subscription']) {
   assert.equal(publicPage(`${origin}${path}/?code=secret#token`).url, `${origin}${path}/`);
 }
 
@@ -26,7 +26,7 @@ assert.equal(appStorePlacement(cta), 'homepage:hero');
 assert.equal(appStorePlacement(cta.replace('apps.apple.com', 'apps.apple.com.evil.test')), null);
 assert.equal(appStorePlacement(cta.replace('6756160637', '1234')), null);
 assert.equal(appStorePlacement(cta.replace('hero', 'email@example.com')), null);
-for (const [source, campaign] of [['pricing', 'hero'], ['pricing', 'footer'], ['blog', 'tamagotchi-for-couples']]) {
+for (const [source, campaign] of [['pricing', 'hero'], ['pricing', 'footer'], ['blog', 'tamagotchi-for-couples'], ['blog', 'couples-apps-without-required-subscription']]) {
   const link = new URL(cta);
   link.searchParams.set('utm_source', source);
   link.searchParams.set('utm_campaign', campaign);

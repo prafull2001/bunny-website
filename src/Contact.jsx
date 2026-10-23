@@ -19,8 +19,8 @@ function Contact() {
     return (
         <div className="contact-page">
             <Seo
-                title="Contact Bunny — Get in Touch"
-                description="Questions, feedback, or feature requests for the Bunny couples app? Email us directly — a real person reads every message."
+                title="Contact Bunny: Get in Touch"
+                description="Questions, feedback, or feature requests for the Bunny couples app? Email Prafull, the person making Bunny, directly."
                 path="/contact"
                 schema={breadcrumbSchema([
                     { name: 'Home', path: '/' },
