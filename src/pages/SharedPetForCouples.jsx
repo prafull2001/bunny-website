@@ -80,7 +80,9 @@ export default function SharedPetForCouples() {
           </ol>
 
           <h2>Start with free basic pet care</h2>
+          <p>Still picking a name? Try our <Link to="/blog/virtual-pet-names-for-couples">24 names for your shared virtual pet</Link>, with small ways to choose one together.</p>
           <p>Feeding, playing with and giving water to your bunny are included free, along with text love letters. The shared drawing whiteboard requires Bunny Pro.</p>
+          <p>You can also <Link to="/shared-plant-for-couples">name and grow a plant together</Link> for free. It has its own watering action and growth stages beside your pet.</p>
           <p>Optional Pro offers include a weekly subscription and a one-time lifetime purchase. <Link to="/pricing">See what’s free and what Pro includes</Link>, then check the current price and offer in the app before choosing. You can start caring for your bunny without a subscription.</p>
           <p>Bunny began as an app Prafull built for his girlfriend. <Link to="/about">Read the story behind your little bunny</Link>.</p>
 

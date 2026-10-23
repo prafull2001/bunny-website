@@ -19,7 +19,6 @@ import bunnyPetImg from './assets/bunny-pet.webp';
 import screenshotHome from './assets/screenshot-home.webp';
 import screenshotWhiteboard from './assets/screenshot-whiteboard.webp';
 import screenshotPet from './assets/screenshot-pet.webp';
-import screenshotGames from './assets/screenshot-games.webp';
 
 export function Home() {
   const [scrolled, setScrolled] = useState(false);
@@ -36,7 +35,7 @@ export function Home() {
   // Simple auto-rotate for carousel
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % 4);
+      setCurrentSlide((prev) => (prev + 1) % 3);
     }, 4000);
     return () => clearInterval(timer);
   }, []);
@@ -143,7 +142,6 @@ export function Home() {
                   { img: screenshotHome, alt: 'Bunny app home screen showing a couple’s shared space' },
                   { img: screenshotWhiteboard, alt: 'Shared draw-together whiteboard in the Bunny couples app' },
                   { img: screenshotPet, alt: 'Raising a shared virtual pet together in Bunny' },
-                  { img: screenshotGames, alt: 'Question packs for couples in Bunny' },
                 ].map((slide, idx) => (
                   <div
                     key={idx}
@@ -175,7 +173,7 @@ export function Home() {
                 gap: '6px',
                 zIndex: 15,
               }}>
-                {[0, 1, 2, 3].map(i => (
+                {[0, 1, 2].map(i => (
                   <div key={i} style={{
                     width: '6px',
                     height: '6px',
@@ -221,6 +219,11 @@ export function Home() {
           <p className="muted-links" style={{ textAlign: 'center', marginTop: 32 }}>
             Looking for a pet you can raise as a pair? Read about a{' '}
             <Link to="/blog/tamagotchi-for-couples">Tamagotchi-style experience for couples</Link>.
+          </p>
+          <p className="muted-links" style={{ textAlign: 'center' }}>
+            You can also <Link to="/shared-plant-for-couples">grow a shared plant</Link>{' '}
+            for free or try a <Link to="/couples-question-games">couple question round</Link>.{' '}
+            Explore <Link to="/blog/best-apps-for-long-distance-couples-2026">five things to share in Bunny</Link>.
           </p>
           <div className="section-header" style={{ marginTop: 64, marginBottom: 0 }}>
             <h2>Start with free bunny care</h2>

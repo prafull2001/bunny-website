@@ -3,124 +3,28 @@ import { appStoreLink } from '../seo/siteConfig';
 import { TAMAGOTCHI_POST } from './tamagotchi-for-couples';
 import { SUBSCRIPTION_GUIDE } from './couples-apps-without-required-subscription';
 import { SHARED_DRAWING_GUIDE } from './shared-drawing-apps-for-couples';
+import { SHARED_ACTIVITIES_GUIDE } from './shared-activities-in-bunny';
+import { VIRTUAL_PET_NAMES_GUIDE } from './virtual-pet-names-for-couples';
 
 // Blog posts. Each post is data + a JSX `Content` component so it can use
-// proper heading hierarchy, lists, internal links, and CTAs. The first H2s are
-// phrased as the exact questions people search, to win snippets and LLM quotes.
+// proper heading hierarchy, lists, internal links, and CTAs.
 
 export const POSTS = [
+  VIRTUAL_PET_NAMES_GUIDE,
   SHARED_DRAWING_GUIDE,
   SUBSCRIPTION_GUIDE,
   TAMAGOTCHI_POST,
-  {
-    slug: 'best-apps-for-long-distance-couples-2026',
-    title: 'Is Bunny Right for Your Long-Distance Relationship?',
-    metaDescription:
-      'See how Bunny helps long-distance couples share a pet, send text letters and draw together. Learn what is free, what Pro adds and how to get started.',
-    excerpt:
-      'A shared bunny, a letter to come back to and a place to draw. See what you can do together in Bunny, with free basics and optional Pro.',
-    datePublished: '2026-06-22',
-    dateModified: '2026-10-22',
-    author: 'Prafull Sharma',
-    readingTime: '4 min read',
-    tags: ['Long distance', 'Bunny guide'],
-    tldr: [
-      'Bunny gives you one pet to care for together and a mailbox for your text love letters. Both are free.',
-      'Bunny Pro adds a shared whiteboard and Home Screen drawing widget, with weekly or one-time lifetime purchase options.',
-      'You can care for the bunny and leave letters at different times. Open the app with an internet connection to share updates.',
-      'Both partners need an iPhone or iPad. Bunny’s interface and built-in questions are in English.',
-    ],
-    faq: [
-      {
-        q: 'Is Bunny a good app for long-distance couples?',
-        a: 'Bunny fits couples who want small things to do together between calls: caring for one pet, sending text love letters, answering question packs and drawing on a shared whiteboard. Basic bunny care and text letters are free. Drawing requires Pro. Both partners need an iPhone or iPad.',
-      },
-      {
-        q: 'Do we have to use Bunny at the same time?',
-        a: 'No. You can care for the bunny or send a text letter when you have a moment, and your partner can open Bunny later to see the update. Both devices need an internet connection to share changes. Pet care timers are shared between you.',
-      },
-      {
-        q: 'Can we try Bunny without subscribing?',
-        a: 'Yes. Basic bunny care and text love letters are free. Shared drawing requires Bunny Pro, with an optional weekly subscription or a one-time lifetime purchase. Check the current price and terms in the app before buying.',
-      },
-    ],
-    Content: () => (
-      <>
-        <p>
-          You don’t always have time for a long call. Bunny gives you something
-          small to share in between: a bunny you both care for, a letter waiting
-          in your mailbox, or a doodle your partner leaves for you. Here’s what
-          you can do together and what you can try for free.
-        </p>
-
-        <h2>One bunny, cared for from both phones</h2>
-        <p>
-          Connect your accounts with a Love Nest invite code and give your{' '}
-          <Link to="/shared-pet-for-couples">shared bunny</Link> a name. Both of
-          you can check its mood and use Feed, Play and Water when each action
-          is ready. If your partner feeds it first, you’ll see the same feeding
-          cooldown when you open the app.
-        </p>
-        <p>
-          Basic bunny care is free. You can visit together or at different times;
-          open Bunny with an internet connection to load and share updates. For
-          a closer look at the care actions, read our{' '}
-          <Link to="/blog/tamagotchi-for-couples">Tamagotchi-style shared pet guide</Link>.
-        </p>
-
-        <h2>Leave something for your partner to find</h2>
-        <p>
-          A <Link to="/love-notes-for-couples">text love letter</Link> can be a
-          good-morning note, something you miss about them, or a thought you want
-          to save. Your letters stay in the mailbox so you can read them again.
-          Text letters are free, and you can write one whenever you have a moment.
-        </p>
-        <p>
-          If you like drawing, Pro opens a{' '}
-          <Link to="/drawing-widgets-for-couples">shared whiteboard</Link> for
-          doodles and little messages. You can add to the same canvas and put
-          its drawing on your Home Screen with Bunny’s widget. iOS controls when
-          the widget refreshes.
-        </p>
-
-        <h2>Find a question to talk about</h2>
-        <p>
-          Bunny also includes couple question packs and answer rounds. Pick a
-          topic and see how you each answer. Some packs are free; others require
-          Pro. You can start a conversation on a call, then return to your pet
-          or letters another time.
-        </p>
-
-        <h2>Try the free parts before choosing an upgrade</h2>
-        <p>
-          Name your bunny and send each other a letter first. If you want shared
-          drawing or more question packs, Bunny Pro has a weekly subscription
-          and a one-time lifetime option. The{' '}
-          <Link to="/pricing">pricing page</Link> explains the free features and
-          paid options. Confirm the amount and terms shown in Bunny before buying.
-        </p>
-
-        <h2>Start your shared home</h2>
-        <p>
-          Both of you need an iPhone or iPad; Bunny’s interface and built-in
-          questions are in English. Install the app, create an account each,
-          then connect with a Love Nest invite code. You can{' '}
-          <a href={appStoreLink('blog', 'best-apps-roundup')}>download Bunny free on the App Store</a>{' '}
-          and give your bunny a name today.
-        </p>
-      </>
-    ),
-  },
+  SHARED_ACTIVITIES_GUIDE,
 
   {
     slug: 'long-distance-relationship-games',
     title: '11 Long-Distance Relationship Games to Play Together (2026)',
     metaDescription:
-      '11 long-distance relationship games to play with your partner, from app mini-games to questions and challenges. Fun ways to feel close from afar in 2026.',
+      '11 long-distance relationship games to play with your partner, from question rounds to talking games and challenges. Fun ways to feel close from afar in 2026.',
     excerpt:
-      'From in-app mini-games to questions and challenges, here are 11 long-distance relationship games that actually make you feel closer.',
+      'From couple question rounds to talking games and challenges, here are 11 long-distance relationship games that actually make you feel closer.',
     datePublished: '2026-06-22',
-    dateModified: '2026-10-22',
+    dateModified: '2026-10-23',
     author: 'Prafull Sharma',
     readingTime: '6 min read',
     tags: ['Long distance', 'Activities'],
@@ -164,7 +68,7 @@ export const POSTS = [
 
         <h3>App &amp; screen games</h3>
         <ol>
-          <li><strong>Couple question rounds.</strong> In <Link to="/">Bunny</Link>, choose a question pack and answer a round with your partner. Some packs are free; others require Bunny Pro.</li>
+          <li><strong>Couple question rounds.</strong> In <Link to="/couples-question-games">Bunny’s question games</Link>, choose a pack and compare when both partners finish. Travel Adventures, Foodie Fun and Random Fun are free; additional packs require Pro.</li>
           <li><strong>Raise a shared pet.</strong> Co-caring for a <Link to="/shared-pet-for-couples">virtual pet</Link> is a slow game you both “win” over time. It keeps going even when you can’t be online at the same moment.</li>
           <li><strong>Co-op mobile puzzles.</strong> Pick a co-op puzzle or escape-room style game you only play together, so progress is a shared thing.</li>
           <li><strong>Online multiplayer classics.</strong> Chess, cards, or a casual battle-royale: pick one “your game” and keep a running scoreboard.</li>
