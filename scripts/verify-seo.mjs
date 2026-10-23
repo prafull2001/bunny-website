@@ -87,7 +87,7 @@ for (const location of locations) {
   assert(publicPage(location), `Public sitemap route missing analytics review: ${location}`);
 }
 
-const features = ['shared-pet-for-couples', 'drawing-widgets-for-couples', 'love-notes-for-couples', 'pricing', 'blog/tamagotchi-for-couples', 'blog/couples-apps-without-required-subscription'];
+const features = ['shared-pet-for-couples', 'drawing-widgets-for-couples', 'love-notes-for-couples', 'pricing', 'blog/tamagotchi-for-couples', 'blog/couples-apps-without-required-subscription', 'blog/shared-drawing-apps-for-couples'];
 const titles = new Set();
 const descriptions = new Set();
 const home = readFileSync(resolve(dist, 'index.html'), 'utf8');

@@ -2,12 +2,14 @@ import { Link } from 'react-router-dom';
 import { appStoreLink } from '../seo/siteConfig';
 import { TAMAGOTCHI_POST } from './tamagotchi-for-couples';
 import { SUBSCRIPTION_GUIDE } from './couples-apps-without-required-subscription';
+import { SHARED_DRAWING_GUIDE } from './shared-drawing-apps-for-couples';
 
 // Blog posts. Each post is data + a JSX `Content` component so it can use
 // proper heading hierarchy, lists, internal links, and CTAs. The first H2s are
 // phrased as the exact questions people search, to win snippets and LLM quotes.
 
 export const POSTS = [
+  SHARED_DRAWING_GUIDE,
   SUBSCRIPTION_GUIDE,
   TAMAGOTCHI_POST,
   {
