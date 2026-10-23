@@ -6,6 +6,14 @@ export const HOME_FAQ = [
     a: 'Yes. Connect your accounts in Bunny and you share one pet, including its name, mood and care timers. Both partners can feed, play with and give water to the same bunny. Basic bunny care is free.',
   },
   {
+    q: 'Can we grow a virtual plant together?',
+    a: 'Yes. Bunny includes a free shared plant that you can name and water when the action is available. Both connected partners care for the same plant, which has seed, sprout, sapling and tree stages.',
+  },
+  {
+    q: 'Does Bunny have question games for couples?',
+    a: 'Yes. Choose a question pack, answer a round and compare once both partners have finished. Travel Adventures, Foodie Fun and Random Fun are free packs. Additional packs require Bunny Pro. The built-in questions are in English.',
+  },
+  {
     q: 'How do we connect our accounts?',
     a: 'Each partner installs Bunny and creates their own account. One of you creates a Love Nest and shares its invite code; the other joins using that code. You then share the same pet, whiteboard and space for your letters.',
   },

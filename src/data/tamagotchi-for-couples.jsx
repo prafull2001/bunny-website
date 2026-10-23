@@ -8,7 +8,7 @@ export const TAMAGOTCHI_POST = {
   metaDescription: 'Choose Bunny for a Tamagotchi-style pet you can care for together on iPhone and iPad. Basic bunny care and text letters are free, with optional Pro drawings.',
   excerpt: 'Care for one bunny from both phones. Start free on iPhone and iPad, then add shared drawings with an optional Pro upgrade.',
   datePublished: '2026-10-22',
-  dateModified: '2026-10-22',
+  dateModified: '2026-10-23',
   author: 'Prafull Sharma',
   readingTime: '4 min read',
   tags: ['Shared pets', 'Bunny guide'],
@@ -48,8 +48,10 @@ export const TAMAGOTCHI_POST = {
         <li><strong>Come back and check in.</strong> Your partner can open Bunny later with an internet connection to load the pet’s updated mood and timers, then choose an available action.</li>
       </ol>
       <p>For example, if one of you feeds the bunny, the other will see Feed on cooldown too. Play or Water may still be ready. You don’t each get a separate feeding timer.</p>
+      <p>Choosing the name is part of making it yours. Pick from our <Link to="/blog/virtual-pet-names-for-couples">virtual-pet name ideas for couples</Link>, then use the pet screen’s pencil button to save your choice.</p>
       <p>Bunny’s pet care is simple: three actions, a mood to check and shared timers. Either partner can do the available actions, so you can check in whenever you have a moment. See the <Link to="/shared-pet-for-couples">shared-pet setup and FAQ</Link> for more about care and supported devices.</p>
       <p>Beyond the pet, you can send <Link to="/love-notes-for-couples">text love letters</Link> free. With Pro, you can add to the same <Link to="/drawing-widgets-for-couples">drawing canvas</Link> and display it in a Home Screen widget. The canvas is a shared drawing you can change, while the mailbox keeps your text letters.</p>
+      <p>Want something else to grow beside your bunny? Your <Link to="/shared-plant-for-couples">shared plant</Link> is free too. Give it a name, water it when available and check its growth stage.</p>
 
       <h2>Start with the free pet; choose Pro if you want more</h2>
       <p>You can try caring for your bunny and sending text letters without subscribing. If the shared whiteboard is something you both want, Pro has a weekly option and a one-time lifetime option. See <Link to="/pricing">what’s free and what Pro adds</Link> before deciding.</p>

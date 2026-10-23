@@ -44,6 +44,9 @@ const cards = [
   { file: 'og-about.jpg', heading: 'About Bunny', sub: 'A present for my girlfriend became a home for two.' },
   { file: 'og-compare.jpg', heading: 'Compare couples apps', sub: 'See Bunny’s shared pet, drawing and letter features.' },
   { file: 'og-blog.jpg', heading: 'Long-distance guides', sub: 'Ideas, games & questions to feel close from afar.' },
+  { file: 'og-shared-plant.jpg', heading: 'Grow a plant together', sub: 'One shared plant to name and water. Free in Bunny.' },
+  { file: 'og-question-games.jpg', heading: 'Questions for two', sub: 'Pick a pack, answer and compare. Three free packs in Bunny.' },
+  { file: 'og-pet-names.jpg', heading: 'Name your shared pet', sub: '24 little names to choose together for your Bunny rabbit.' },
 ];
 
 const requestedFiles = process.argv.slice(2);

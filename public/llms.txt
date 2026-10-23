@@ -27,11 +27,12 @@ It is built to help partners feel close through small, shared daily rituals, inc
 
 ## Key Features
 
-- **Shared virtual pet & plant**: connected partners care for the same pet, sharing its name, mood and Feed/Play/Water timers. Partners can visit at different times; an internet connection is needed to sync care updates
+- **Shared virtual pet**: connected partners care for the same pet, sharing its name, mood and Feed/Play/Water timers. Partners can visit at different times; an internet connection is needed to sync care updates
+- **Shared plant (free)**: one named plant for connected partners, with watering when available and Seed, Sprout, Sapling and Tree stages
 - **Draw-together canvas (Pro)**: one editable whiteboard for doodles; both partners can contribute, together or at different times
 - **Home Screen drawing widget**: displays the shared whiteboard; separate love-note, day-count, and photo widgets are not currently offered
 - **Text love notes & letters (free)**: write messages and reread sent and received letters in the mailbox; distinct from the editable drawing canvas
-- **Couple question packs**: answer prompts and compare your answers
+- **Couple question packs**: Who’s More Likely To? rounds with Me/My Partner choices; results appear after both finish. Travel Adventures, Foodie Fun and Random Fun are free; additional packs require Pro
 - **Virtual gifts**: surprise your partner
 - **Daily check-ins**: a steady, low-pressure way to stay close
 
@@ -50,6 +51,10 @@ Bunny brings a shared pet and text love letters into one couples app. Basic care
 
 - Website: https://www.bunnycouples.com
 - Shared pet setup and FAQ: https://www.bunnycouples.com/shared-pet-for-couples/
+- Shared plant setup and free care: https://www.bunnycouples.com/shared-plant-for-couples/
+- Couples question games and free packs: https://www.bunnycouples.com/couples-question-games/
+- 24 names for your shared virtual pet: https://www.bunnycouples.com/blog/virtual-pet-names-for-couples/
+- Five current shared activities in Bunny: https://www.bunnycouples.com/blog/best-apps-for-long-distance-couples-2026/
 - Drawing and Home Screen widget: https://www.bunnycouples.com/drawing-widgets-for-couples/
 - Shared drawing setup and five ideas to try in Bunny: https://www.bunnycouples.com/blog/shared-drawing-apps-for-couples/
 - Text love letters: https://www.bunnycouples.com/love-notes-for-couples/

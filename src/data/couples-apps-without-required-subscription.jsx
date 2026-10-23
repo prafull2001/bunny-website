@@ -7,7 +7,7 @@ export const SUBSCRIPTION_GUIDE = {
   metaDescription: 'Raise one pet and send love letters in Bunny for free. Add a shared drawing canvas with a one-time lifetime Pro purchase. No subscription required.',
   excerpt: 'One shared bunny, little love letters and no recurring bill required. See what you can do for free and when lifetime Pro makes sense.',
   datePublished: '2026-10-22',
-  dateModified: '2026-10-22',
+  dateModified: '2026-10-23',
   author: 'Prafull Sharma',
   readingTime: '4 min read',
   tags: ['Free features', 'Pricing'],
@@ -39,6 +39,8 @@ export const SUBSCRIPTION_GUIDE = {
           <thead><tr><th scope="col">What you want to share</th><th scope="col">What’s included</th><th scope="col">Access</th></tr></thead>
           <tbody>
             <tr><th scope="row">A little pet</th><td>One bunny with basic Feed, Play and Water actions, mood and shared care timers.</td><td>Free</td></tr>
+            <tr><th scope="row">A growing plant</th><td>A named shared plant, watering when available and growth stages.</td><td>Free</td></tr>
+            <tr><th scope="row">A question round</th><td>Travel Adventures, Foodie Fun and Random Fun packs.</td><td>Free; additional packs with Pro</td></tr>
             <tr><th scope="row">Love letters</th><td>Text letters and a mailbox for sent and received messages.</td><td>Free</td></tr>
             <tr><th scope="row">A drawing for each other</th><td>One editable shared whiteboard and a Home Screen widget that displays it.</td><td>Pro: lifetime or weekly</td></tr>
           </tbody>
@@ -49,6 +51,8 @@ export const SUBSCRIPTION_GUIDE = {
       <p>Each of you creates a Bunny account. One partner creates a Love Nest and shares its invite code; the other joins using that code. Then open your <Link to="/shared-pet-for-couples">shared pet</Link> and give it a name.</p>
       <p>Feed, Play and Water each have a shared cooldown. If you feed the bunny, your partner sees that Feed is on cooldown too. They can check whether Play or Water is ready when they visit. Our <Link to="/blog/tamagotchi-for-couples">Tamagotchi-for-couples guide</Link> explains the care in more detail.</p>
       <p>Then send a <Link to="/love-notes-for-couples">text love letter</Link>. It can be a good-morning message, a small thank-you or something you forgot to say on your last call. Your mailbox keeps sent and received letters so you can come back to them.</p>
+
+      <p>You can also <Link to="/shared-plant-for-couples">grow a shared plant</Link> and try three free <Link to="/couples-question-games">couple question packs</Link>. Choose a small activity you both want to come back to.</p>
 
       <h2>Want to leave drawings? Choose lifetime Pro.</h2>
       <p>Pro adds <Link to="/drawing-widgets-for-couples">a shared drawing whiteboard</Link> that both of you can change. Leave a doodle for your partner, add to their drawing or write something by hand. You can also display that canvas in a Home Screen widget; iOS controls when the widget refreshes.</p>

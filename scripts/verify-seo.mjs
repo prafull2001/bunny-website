@@ -74,7 +74,7 @@ for (const heading of ['Deep questions', 'Fun questions', 'Future questions', 'D
 assert(count >= 23, 'Preserve the existing questions while the owner expands the guide');
 assert.match(questions, /<h1>150\+ Questions to Ask Your Long-Distance Partner \(2026\)<\/h1>/);
 const roundup = readFileSync(resolve(dist, 'blog/best-apps-for-long-distance-couples-2026/index.html'), 'utf8');
-assert.match(roundup.replaceAll('<!-- -->', ''), /Updated\s+October 22, 2026/, 'Visible roundup update date must match the date-only metadata');
+assert.match(roundup.replaceAll('<!-- -->', ''), /Updated\s+October 23, 2026/, 'Visible roundup update date must match the date-only metadata');
 
 const vercel = JSON.parse(readFileSync(resolve(root, 'vercel.json'), 'utf8'));
 assert.equal(vercel.cleanUrls, true);
@@ -87,7 +87,7 @@ for (const location of locations) {
   assert(publicPage(location), `Public sitemap route missing analytics review: ${location}`);
 }
 
-const features = ['shared-pet-for-couples', 'drawing-widgets-for-couples', 'love-notes-for-couples', 'pricing', 'blog/tamagotchi-for-couples', 'blog/couples-apps-without-required-subscription', 'blog/shared-drawing-apps-for-couples'];
+const features = ['shared-pet-for-couples', 'drawing-widgets-for-couples', 'love-notes-for-couples', 'pricing', 'blog/tamagotchi-for-couples', 'blog/couples-apps-without-required-subscription', 'blog/shared-drawing-apps-for-couples', 'shared-plant-for-couples', 'couples-question-games', 'blog/virtual-pet-names-for-couples', 'blog/best-apps-for-long-distance-couples-2026'];
 const titles = new Set();
 const descriptions = new Set();
 const home = readFileSync(resolve(dist, 'index.html'), 'utf8');

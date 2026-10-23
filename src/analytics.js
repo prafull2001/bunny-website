@@ -2,13 +2,14 @@
 const PUBLIC_PATHS = new Set([
   '/', '/about', '/pricing', '/contact', '/privacy', '/terms', '/compare', '/blog',
   '/shared-pet-for-couples', '/drawing-widgets-for-couples', '/love-notes-for-couples',
+  '/shared-plant-for-couples', '/couples-question-games',
   '/compare/bunny-vs-paired', '/compare/bunny-vs-lovelee',
   '/compare/bunny-vs-widgetable', '/compare/apps-like-locket-for-couples',
   '/blog/best-apps-for-long-distance-couples-2026',
   '/blog/long-distance-relationship-games', '/blog/questions-to-ask-long-distance-partner',
   '/blog/tamagotchi-for-couples',
   '/blog/couples-apps-without-required-subscription',
-  '/blog/shared-drawing-apps-for-couples',
+  '/blog/shared-drawing-apps-for-couples', '/blog/virtual-pet-names-for-couples',
 ]);
 const HOSTS = new Set(['bunnycouples.com', 'www.bunnycouples.com']);
 const ORIGIN = 'https://www.bunnycouples.com';
@@ -24,8 +25,9 @@ const PLACEMENTS = {
   homepage: ['nav', 'hero'], about: ['about-page'],
   'shared-pet': ['hero', 'footer'], 'drawing-widgets': ['hero', 'footer'],
   'love-notes': ['hero', 'footer'],
+  'shared-plant': ['hero', 'footer'], 'question-games': ['hero', 'footer'],
   pricing: ['hero', 'footer'],
-  blog: ['best-apps-roundup', 'ldr-games', 'ldr-questions', 'tamagotchi-for-couples', 'couples-apps-without-required-subscription', 'shared-drawing-apps-for-couples'],
+  blog: ['best-apps-roundup', 'ldr-games', 'ldr-questions', 'tamagotchi-for-couples', 'couples-apps-without-required-subscription', 'shared-drawing-apps-for-couples', 'virtual-pet-names-for-couples'],
   compare: ['bunny-vs-paired', 'bunny-vs-lovelee', 'bunny-vs-widgetable', 'apps-like-locket-for-couples'],
 };
 

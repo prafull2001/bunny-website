@@ -9,8 +9,8 @@ export default function BlogIndex() {
   return (
     <div className="legal-page">
       <Seo
-        title="Bunny Blog: Long-Distance &amp; Couples Guides"
-        description="Guides for couples and long-distance relationships: the best couples apps, games to play together, questions to ask, and ways to feel close from afar."
+        title="Bunny Guides: Shared Pets, Drawing & Couples Activities"
+        description="Practical Bunny guides for couples: choose a shared pet name, try drawing ideas, find things to do together and understand free features and lifetime Pro."
         path="/blog"
         image="/og/og-blog.jpg"
         schema={[

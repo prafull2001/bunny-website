@@ -20,6 +20,8 @@ import SharedPetForCouples from './pages/SharedPetForCouples';
 import DrawingWidgetsForCouples from './pages/DrawingWidgetsForCouples';
 import LoveNotesForCouples from './pages/LoveNotesForCouples';
 import Pricing from './pages/Pricing';
+import SharedPlantForCouples from './pages/SharedPlantForCouples';
+import CouplesQuestionGames from './pages/CouplesQuestionGames';
 
 const pages = [
   { path: '/', element: <Home />, entry: 'src/App.jsx' },
@@ -29,6 +31,8 @@ const pages = [
   { path: '/privacy', element: <PrivacyPolicy />, entry: 'src/PrivacyPolicy.jsx' },
   { path: '/terms', element: <TermsOfService />, entry: 'src/TermsOfService.jsx' },
   { path: '/shared-pet-for-couples', element: <SharedPetForCouples />, entry: 'src/pages/SharedPetForCouples.jsx' },
+  { path: '/shared-plant-for-couples', element: <SharedPlantForCouples />, entry: 'src/pages/SharedPlantForCouples.jsx' },
+  { path: '/couples-question-games', element: <CouplesQuestionGames />, entry: 'src/pages/CouplesQuestionGames.jsx' },
   { path: '/drawing-widgets-for-couples', element: <DrawingWidgetsForCouples />, entry: 'src/pages/DrawingWidgetsForCouples.jsx' },
   { path: '/love-notes-for-couples', element: <LoveNotesForCouples />, entry: 'src/pages/LoveNotesForCouples.jsx' },
 

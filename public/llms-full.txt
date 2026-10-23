@@ -14,7 +14,7 @@ Bunny gives two connected partners one pet to care for, a mailbox for their text
 - **Draw-together canvas (Pro)**: One editable whiteboard both partners can contribute to, together or at different times. It is distinct from the text-letter mailbox and is not an archive of separate handwritten letters.
 - **Home Screen drawing widget**: Displays the shared whiteboard in small, medium, or large sizes. Separate love-note, day-count, and photo widgets are not currently offered.
 - **Text love notes & letters (free)**: Write to your partner and reread sent and received letters in the mailbox.
-- **Couple question packs**: Answer prompts and compare your answers.
+- **Couple question packs**: Who’s More Likely To? rounds. Each partner chooses Me or My Partner; results compare the person chosen after both finish. Travel Adventures, Foodie Fun and Random Fun are free. Additional packs require Pro.
 - **Virtual gifts**: Surprise your partner with virtual gifts and affection.
 - **Daily check-ins**: A steady, low-pressure stream of touchpoints that keep you connected between calls.
 
@@ -57,6 +57,22 @@ Q: Who makes Bunny?
 A: Prafull Sharma made Bunny as a present for his girlfriend and opened it up for other couples. Read the story at https://www.bunnycouples.com/about/ or contact prafull2001@gmail.com.
 
 ## Guides
+
+### Grow a virtual plant together
+Page: https://www.bunnycouples.com/shared-plant-for-couples/
+Connected partners share one named plant for free. Open Plant in the home or Our plant in shortcuts, rename it with the pencil in Our Garden and water when the control is available. Its stages are Seed, Sprout, Sapling and Tree. Use an internet connection to load its current state. Do not treat the watering count as a count of elapsed calendar days.
+
+### Couples question games
+Page: https://www.bunnycouples.com/couples-question-games/
+Open Games to reach Questions, choose a pack and start a Who’s More Likely To? round. Each partner answers Me or My Partner. The pair has one active round, saved answers can be continued and results appear when both finish. Travel Adventures, Foodie Fun and Random Fun are free; more packs require Pro. Questions and interface are English.
+
+### Names for your shared virtual pet
+Guide: https://www.bunnycouples.com/blog/virtual-pet-names-for-couples/
+24 name ideas with a choosing exercise, six Japanese words with linked dictionary meanings and current Bunny rename steps. Choosing a Japanese pet name does not change the app’s English interface. The list is a set of suggestions, not a popularity ranking.
+
+### Five things to share in Bunny
+Guide: https://www.bunnycouples.com/blog/best-apps-for-long-distance-couples-2026/
+A guide to five current activities: shared bunny care, a shared plant, text letters, an editable Pro drawing canvas and couple question rounds. Basic care, plant, text letters and three question packs are free. More question packs and drawing require Pro.
 
 ### Shared drawing for couples in Bunny
 Guide: https://www.bunnycouples.com/blog/shared-drawing-apps-for-couples/
