@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Gamepad, Gift, Sprout } from 'lucide-react';
+import { Mail, Pencil, Sprout } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Seo from './seo/Seo';
 import { appStoreLink } from './seo/siteConfig';
@@ -43,36 +43,36 @@ export function Home() {
 
   const features = [
     {
-      title: "Raise Pets",
-      description: "Raise a cute virtual pet and grow a personalized plant together.",
+      title: "Care for one shared pet",
+      description: "Give your bunny a name, feed it, play with it and check on its mood. Both of you care for the same pet from your own phones.",
+      access: "Basic bunny care is free",
+      path: "/shared-pet-for-couples",
       icon: <Sprout className="feature-icon-svg" />,
       color: "#FFE0B2"
     },
     {
-      title: "Love Letters",
-      description: "Send heartfelt letters that arrive with a sweet delivery animation.",
-      icon: <Mail className="feature-icon-svg" />,
-      color: "#BBDEFB"
-    },
-    {
-      title: "Play Together",
-      description: "Mini-games designed for two. Compete or cooperate!",
-      icon: <Gamepad className="feature-icon-svg" />,
+      title: "Draw something together",
+      description: "Share a whiteboard for doodles and little messages. Draw together or leave something for your partner to find later.",
+      access: "Included with Bunny Pro",
+      path: "/drawing-widgets-for-couples",
+      icon: <Pencil className="feature-icon-svg" />,
       color: "#E1BEE7"
     },
     {
-      title: "Send Gifts",
-      description: "Surprise your partner with virtual gifts and affections.",
-      icon: <Gift className="feature-icon-svg" />,
-      color: "#F8BBD0"
+      title: "Leave a love note",
+      description: "Write a text letter just for your partner. Keep your messages in one shared place, ready to read again.",
+      access: "Text letters are free",
+      path: "/love-notes-for-couples",
+      icon: <Mail className="feature-icon-svg" />,
+      color: "#BBDEFB"
     }
   ];
 
   return (
     <div className="app-container">
       <Seo
-        title="Bunny — App for Couples | Shared Pet, Notes &amp; Long Distance"
-        description="The all-in-one app for couples, especially long distance. Raise a shared pet, draw together, send love notes, play games &amp; check in daily. Free on iPhone."
+        title="Bunny — Shared Virtual Pet & Love Notes for Couples"
+        description="Raise one virtual pet together and leave love notes. Start with free bunny care and text letters on iPhone and iPad. Shared drawing is included with Bunny Pro."
         path="/"
         image="/og/og-home.jpg"
         schema={[
@@ -91,10 +91,11 @@ export function Home() {
           </div>
           <div className="nav-links">
             <a href="#features">Features</a>
+            <Link to="/pricing">Pricing</Link>
+            <Link to="/about">Our story</Link>
             <Link to="/compare">Compare</Link>
-            <Link to="/blog">Blog</Link>
             <Link to="/contact">Contact</Link>
-            <a href={appStoreLink('homepage', 'nav')} className="app-store-badge-small" title="Download Bunny on the App Store"></a>
+            <a href={appStoreLink('homepage', 'nav')} className="app-store-badge-small" aria-label="Download Bunny on the App Store"></a>
           </div>
         </div>
       </nav>
@@ -103,29 +104,33 @@ export function Home() {
       <section className="hero-section">
         <div className="container hero-grid">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="hero-text"
           >
             <h1 className="hero-title">
-              Stay connected,<br />
+              Raise a pet,<br />
               <Link to="/avishi" style={{ display: 'inline-block' }}>
                 <img src={bunnyPetImg} alt="Bunny — the virtual pet couples raise together" className="hero-pet-img" />
               </Link>
-              <span className="highlight-text">miles apart.</span>
+              <span className="highlight-text">together.</span>
             </h1>
             <p className="hero-subtitle">
-              Bunny is the all-in-one app for couples — especially long distance. Feel closer through a shared pet, a draw-together canvas, love notes, games, and daily check-ins. Your digital home for two.
+              One little bunny, cared for by both of you. Feed and play with your shared pet, leave a love note, or draw something for your partner to find—even when you’re miles apart.
             </p>
             <div className="hero-buttons">
-              <a href={appStoreLink('homepage', 'hero')} className="app-store-badge" title="Download Bunny on the App Store"></a>
+              <a href={appStoreLink('homepage', 'hero')} className="app-store-badge" aria-label="Download Bunny on the App Store"></a>
             </div>
+            <p className="hero-access-note">
+              Free basic pet care and text letters · iPhone and iPad<br />
+              <Link to="/pricing">Optional Bunny Pro, including a one-time lifetime upgrade</Link>
+            </p>
           </motion.div>
 
           {/* ... (Visual remains same) ... */}
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
+            initial={false}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="hero-visual"
@@ -138,7 +143,7 @@ export function Home() {
                   { img: screenshotHome, alt: 'Bunny app home screen showing a couple’s shared space' },
                   { img: screenshotWhiteboard, alt: 'Shared draw-together whiteboard in the Bunny couples app' },
                   { img: screenshotPet, alt: 'Raising a shared virtual pet together in Bunny' },
-                  { img: screenshotGames, alt: 'Mini-games for couples to play together in Bunny' },
+                  { img: screenshotGames, alt: 'Question packs for couples in Bunny' },
                 ].map((slide, idx) => (
                   <div
                     key={idx}
@@ -193,32 +198,38 @@ export function Home() {
       <section id="features" className="features-section">
         <div className="container">
           <div className="section-header">
-            <h2>Everything you need to<br />nurture your relationship</h2>
-            <p>Designed with love, for love. Every feature is crafted to bring a smile to your face.</p>
+            <h2>Little things to share,<br />from your own phones</h2>
+            <p>A pet to look after. A drawing to come back to. A note that’s just for them.</p>
           </div>
 
-          <div className="features-grid">
-            {features.map((feature, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
+          <div className="features-grid home-features-grid">
+            {features.map((feature) => (
+              <Link
+                key={feature.path}
+                to={feature.path}
                 className="feature-card"
               >
-                <div className="feature-icon-wrapper" style={{ backgroundColor: feature.color, opacity: 0.8 }}>
+                <div className="feature-icon-wrapper" aria-hidden="true" style={{ backgroundColor: feature.color, opacity: 0.8 }}>
                   {feature.icon}
                 </div>
                 <h3>{feature.title}</h3>
                 <p>{feature.description}</p>
-              </motion.div>
+                <p className="feature-access">{feature.access} <span aria-hidden="true">→</span></p>
+              </Link>
             ))}
           </div>
           <p className="muted-links" style={{ textAlign: 'center', marginTop: 32 }}>
-            Explore Bunny: <Link to="/shared-pet-for-couples">Shared pet for couples</Link> ·{' '}
-            <Link to="/drawing-widgets-for-couples">Drawing widgets</Link> ·{' '}
-            <Link to="/love-notes-for-couples">Love notes</Link>
+            Looking for a pet you can raise as a pair? Read about a{' '}
+            <Link to="/blog/tamagotchi-for-couples">Tamagotchi-style experience for couples</Link>.
+          </p>
+          <div className="section-header" style={{ marginTop: 64, marginBottom: 0 }}>
+            <h2>Start with free bunny care</h2>
+            <p>Basic pet care and text letters are free. Shared drawing is part of Bunny Pro, available through an optional weekly subscription or a one-time lifetime purchase.</p>
+            <p style={{ marginTop: 16 }}><Link to="/pricing">See free features and Pro pricing →</Link></p>
+          </div>
+          <p className="muted-links" style={{ textAlign: 'center' }}>
+            Bunny began as a present Prafull made for his girlfriend.{' '}
+            <Link to="/about">Meet the maker and read the story</Link>.
           </p>
         </div>
       </section>
@@ -228,7 +239,7 @@ export function Home() {
         <div className="container">
           <div className="section-header">
             <h2>Frequently asked questions</h2>
-            <p>Everything couples ask about Bunny, long-distance connection, and how it compares.</p>
+            <p>What to know before you make a little home together.</p>
           </div>
           <div className="home-faq">
             {HOME_FAQ.map((item) => (
@@ -242,7 +253,7 @@ export function Home() {
             Compare Bunny with other apps: <Link to="/compare/bunny-vs-paired">vs Paired</Link>,{' '}
             <Link to="/compare/bunny-vs-lovelee">vs lovelee</Link>,{' '}
             <Link to="/compare/apps-like-locket-for-couples">apps like Locket</Link>. Or read our{' '}
-            <Link to="/blog">long-distance guides</Link>.
+            <Link to="/blog">articles about couples apps and activities</Link>.
           </p>
         </div>
       </section>
@@ -257,7 +268,7 @@ export function Home() {
                 <span className="brand-name">Bunny</span>
               </div>
               <p>
-                Building stronger relationships, one pixel at a time. Download Bunny today and start your journey together.
+                A shared pet, little notes and a place to draw together. Made by Prafull, originally as a present for his girlfriend.
               </p>
             </div>
 
@@ -265,6 +276,7 @@ export function Home() {
               <h4>Company</h4>
               <ul className="footer-links">
                 <li><Link to="/about">About Us</Link></li>
+                <li><Link to="/pricing">Free &amp; Pro</Link></li>
                 <li><Link to="/blog">Blog</Link></li>
                 <li><Link to="/compare">Compare</Link></li>
               </ul>

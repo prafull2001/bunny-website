@@ -1,5 +1,6 @@
 // Central route manifest consumed by vite-react-ssg at build time to know
 // which pages to statically pre-render, and by the client router at runtime.
+import { Outlet, ScrollRestoration } from 'react-router-dom';
 import { Home } from './App.jsx';
 import Contact from './Contact';
 import PrivacyPolicy from './PrivacyPolicy';
@@ -18,10 +19,12 @@ import { POSTS } from './data/blog';
 import SharedPetForCouples from './pages/SharedPetForCouples';
 import DrawingWidgetsForCouples from './pages/DrawingWidgetsForCouples';
 import LoveNotesForCouples from './pages/LoveNotesForCouples';
+import Pricing from './pages/Pricing';
 
-export const routes = [
+const pages = [
   { path: '/', element: <Home />, entry: 'src/App.jsx' },
   { path: '/about', element: <About />, entry: 'src/About.jsx' },
+  { path: '/pricing', element: <Pricing />, entry: 'src/pages/Pricing.jsx' },
   { path: '/contact', element: <Contact />, entry: 'src/Contact.jsx' },
   { path: '/privacy', element: <PrivacyPolicy />, entry: 'src/PrivacyPolicy.jsx' },
   { path: '/terms', element: <TermsOfService />, entry: 'src/TermsOfService.jsx' },
@@ -69,5 +72,11 @@ export const routes = [
     entry: 'src/Anniversaries.jsx',
   },
 ];
+
+// Keep scroll positions for Back/Forward, but open a new page at its heading.
+export const routes = [{
+  element: <><Outlet /><ScrollRestoration /></>,
+  children: pages,
+}];
 
 export default routes;

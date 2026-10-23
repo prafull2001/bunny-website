@@ -9,8 +9,8 @@ export default function About() {
   return (
     <div className="legal-page">
       <Seo
-        title="About Bunny — The All-in-One App for Couples"
-        description="Bunny is the app for couples who want one shared home instead of five. Learn why we built a single app for shared pets, doodles, love notes, and games."
+        title="About Bunny — A Present That Became a Couples App"
+        description="Bunny began as a present Prafull Sharma made for his girlfriend. Meet the maker behind the shared pet, drawing and love-note app for iPhone and iPad."
         path="/about"
         image="/og/og-about.jpg"
         schema={[
@@ -27,75 +27,62 @@ export default function About() {
           Back to Home
         </Link>
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={false}
           animate={{ opacity: 1, y: 0 }}
           className="legal-content glass-panel"
         >
           <h1>About Bunny</h1>
-          <p className="last-updated">Building a digital home for two.</p>
+          <p className="last-updated">A present for my girlfriend became a little home for other couples, too.</p>
 
-          <h2>Our mission</h2>
+          <h2>Hi, I’m Prafull</h2>
           <p>
-            Bunny exists to help couples feel close every day — especially the
-            ones doing the hard, beautiful work of loving someone from a distance.
-            We think staying connected shouldn’t require a five-app stack and a
-            shared calendar full of reminders. It should be small, playful, and
-            effortless.
+            I’m <a href={SITE.founder.url} target="_blank" rel="noopener noreferrer">{SITE.founder.name}</a>,
+            a software engineer and the maker of Bunny. I originally made the app
+            as a present for my girlfriend: a small, playful place for the two of us.
+            My sister drew the original bunny artwork that gave it its character.
           </p>
 
-          <h2>Why we built Bunny</h2>
+          <h2>Something to care for together</h2>
           <p>
-            We wanted one place for the little things we do together: caring for
-            a pet, leaving a doodle, sending a note, or answering a question.
-            Bunny brings those everyday rituals into a shared space for two.
+            Bunny gives you and your partner one shared pet to look after from
+            your own phones. You can also grow a plant, leave a text letter,
+            answer couple questions or draw on a shared whiteboard. It’s a place
+            for small things you do for each other, whether you’re nearby or miles apart.
           </p>
           <p>
-            Bunny collapses that stack into a single shared space. You raise a{' '}
-            <strong>virtual pet</strong> and grow a plant together, doodle on a{' '}
-            <strong>shared canvas</strong>, send <strong>love letters</strong> that
-            arrive with a little ceremony, play <strong>mini-games</strong> made for
-            two, and <strong>check in</strong> each day. It’s one home, for two
-            people, wherever they are.
-          </p>
-
-          <h2>How Bunny is different</h2>
-          <p>
-            Bunny is built around shared <em>doing</em>: caring for something
-            together, leaving each other something to find, and being playful.
-            Its hand-drawn home brings a shared pet, a draw-together canvas, love
-            notes, and games into one place. Other couples apps offer overlapping
-            features; choose the space you both enjoy returning to.
+            Start with <Link to="/shared-pet-for-couples">free basic bunny care</Link>{' '}
+            and <Link to="/love-notes-for-couples">text love letters</Link>. The{' '}
+            <Link to="/drawing-widgets-for-couples">shared drawing whiteboard</Link>{' '}
+            is included with Bunny Pro. Pro is optional, with weekly and one-time
+            lifetime options; <Link to="/pricing">see what’s included and current pricing</Link>.
           </p>
 
-          <h2>The facts</h2>
+          <h2>You can talk to the person making it</h2>
+          <p>
+            Hearing how other couples use Bunny helps me decide what to improve
+            next. If something doesn’t work or you have an idea, email me directly
+            at <a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a>.
+            I’d like to know what you and your partner enjoy—and what gets in the way.
+          </p>
+
+          <h2>Bunny today</h2>
           <ul>
-            <li><strong>Platform:</strong> iPhone (iOS), via the App Store</li>
-            <li><strong>Category:</strong> Lifestyle — relationships &amp; couples</li>
+            <li><strong>Devices:</strong> iPhone and iPad. There is currently no Android app.</li>
+            <li><strong>Language:</strong> English interface and built-in questions.</li>
             <li>
-              <strong>Price:</strong> Free to download; Bunny Pro from $
-              {SITE.pricing.proWeekly}/week or ${SITE.pricing.lifetime} lifetime
+              <strong>Price:</strong> Free basic bunny care and text letters, with optional Bunny Pro.
             </li>
-            <li><strong>Built for:</strong> couples, especially long distance</li>
+            <li><strong>Built for:</strong> two partners sharing a little space, including long-distance couples.</li>
             <li><strong>Maker:</strong> {SITE.founder.name}</li>
-            <li><strong>Contact:</strong> {SITE.contactEmail}</li>
           </ul>
 
-          <h2>Who makes Bunny</h2>
-          <p>
-            Bunny is made by <a href={SITE.founder.url} target="_blank" rel="noopener noreferrer">{SITE.founder.name}</a>,
-            an indie developer who wanted a kinder, more playful way to stay close
-            to the people who matter. Have feedback or a feature request? Email{' '}
-            <a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a> — a real
-            person reads every message.
-          </p>
-
           <div className="cta-row">
-            <a href={appStoreLink('about', 'about-page')} className="app-store-badge" title="Download Bunny on the App Store"></a>
+            <a href={appStoreLink('about', 'about-page')} className="app-store-badge" aria-label="Download Bunny on the App Store"></a>
           </div>
 
           <p className="muted-links">
-            Explore: <Link to="/compare">app comparisons</Link> ·{' '}
-            <Link to="/blog">long-distance guides</Link> ·{' '}
+            Explore: <Link to="/pricing">free features and Pro</Link> ·{' '}
+            <Link to="/blog/tamagotchi-for-couples">a virtual pet for two</Link> ·{' '}
             <Link to="/contact">contact</Link>
           </p>
         </motion.div>

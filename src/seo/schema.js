@@ -23,7 +23,7 @@ export function organizationSchema() {
       url: SITE.founder.url,
       sameAs: SITE.founder.sameAs,
     },
-    sameAs: [SITE.appStoreUrl, ...SITE.founder.sameAs],
+    sameAs: [SITE.appStoreUrl],
   };
 }
 
@@ -41,7 +41,7 @@ export function softwareApplicationSchema() {
     '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',
     name: SITE.appName,
-    operatingSystem: 'iOS',
+    operatingSystem: 'iOS, iPadOS',
     applicationCategory: 'LifestyleApplication',
     applicationSubCategory: 'Relationship & Couples App',
     description: SITE.description,
@@ -52,7 +52,7 @@ export function softwareApplicationSchema() {
       '@type': 'Offer',
       price: '0',
       priceCurrency: SITE.pricing.currency,
-      description: `Free to download. Bunny Pro from $${SITE.pricing.proWeekly}/week or $${SITE.pricing.lifetime} lifetime.`,
+      description: `Basic bunny care and text letters are free. Pro includes the shared whiteboard. US listed prices: $${SITE.pricing.proWeekly}/week or $${SITE.pricing.lifetime} lifetime; regional prices and offers may vary. Check the in-app checkout.`,
     },
     publisher: {
       '@type': 'Organization',

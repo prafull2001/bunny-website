@@ -15,14 +15,14 @@ export const COMPARISONS = [
     intro:
       'Paired is built around expert-led daily questions and relationship exercises. Bunny takes a different approach: shared play. Here is an honest, side-by-side look so you can pick the one that fits your relationship.',
     verdict:
-      'Choose Paired if you mainly want guided conversation prompts and relationship lessons. Choose Bunny if you want to feel connected through shared activities — a virtual pet, a draw-together canvas, love notes, and games — with a lifetime option alongside a weekly subscription.',
+      'Choose Paired if you mainly want guided conversation prompts and relationship lessons. Choose Bunny if you want to feel connected through shared activities — a virtual pet, a draw-together canvas, love notes, and question packs — with a lifetime option alongside a weekly subscription.',
     bunnyPricing: 'Free; optional Pro weekly subscription or lifetime purchase',
     competitorPricing: 'Free tier; optional Paired Premium subscription',
     features: [
       { feature: 'Shared virtual pet to raise together', bunny: true, competitor: false },
       { feature: 'Draw-together canvas / whiteboard', bunny: true, competitor: false },
       { feature: 'Love notes & letters', bunny: true, competitor: false },
-      { feature: 'Mini-games for two', bunny: true, competitor: 'Some' },
+      { feature: 'Mini-games for two', bunny: false, competitor: 'Some' },
       { feature: 'Daily check-ins', bunny: true, competitor: true },
       { feature: 'Daily questions & conversation prompts', bunny: 'Some', competitor: true },
       { feature: 'Expert-written relationship content', bunny: false, competitor: true },
@@ -34,7 +34,7 @@ export const COMPARISONS = [
     faq: [
       {
         q: 'Is Bunny a good alternative to Paired?',
-        a: 'Yes. Bunny is a good alternative to Paired for couples who want more than daily questions. Where Paired focuses on conversation prompts and relationship lessons, Bunny adds shared play — a virtual pet, a draw-together canvas, love notes, and mini-games — and offers a lifetime option alongside a weekly subscription.',
+        a: 'Yes. Bunny is a good alternative to Paired for couples who want more than daily questions. Where Paired focuses on conversation prompts and relationship lessons, Bunny adds shared pet care, a draw-together canvas and love notes alongside its question packs, and offers a lifetime option alongside a weekly subscription.',
       },
       {
         q: 'How do Bunny and Paired prices compare?',
@@ -42,7 +42,7 @@ export const COMPARISONS = [
       },
       {
         q: 'Which is better for long-distance couples, Bunny or Paired?',
-        a: 'For long distance, it depends on what you want. Paired is better for guided daily conversation; Bunny is better for feeling present together through a shared pet, doodles, love notes, and games between calls.',
+        a: 'For long distance, it depends on what you want. Paired is better for guided daily conversation; Bunny is better for feeling present together through a shared pet, doodles, love notes, and question rounds between calls.',
       },
     ],
   },
@@ -59,7 +59,7 @@ export const COMPARISONS = [
     intro:
       'Bunny and lovelee are two of the most playful couples apps, and they share a lot of DNA: love notes, doodles, a shared pet, and daily check-ins. Here is how they actually differ.',
     verdict:
-      'Both apps offer shared pets, plants, notes, games, questions, and a whiteboard. Bunny brings these activities into a hand-drawn home with a Home Screen drawing widget. lovelee offers a Love Zone with drawing, note, mood, and days-together widgets. Compare the design and current paid offers to choose the space you both enjoy.',
+      'Both apps offer shared pets, plants, notes, questions, and a whiteboard. Bunny brings these activities into an illustrated shared home with a Home Screen drawing widget. lovelee offers a Love Zone with drawing, note, mood, and days-together widgets. Compare the design and current paid offers to choose the space you both enjoy.',
     bunnyPricing: 'Free; optional Pro weekly subscription or lifetime purchase',
     competitorPricing: 'Free; paid subscriptions and lifetime offers vary by region and promotion',
     features: [
@@ -67,18 +67,18 @@ export const COMPARISONS = [
       { feature: 'Grow a plant together', bunny: true, competitor: true },
       { feature: 'Draw-together canvas / whiteboard', bunny: true, competitor: true },
       { feature: 'Love notes & letters', bunny: true, competitor: true },
-      { feature: 'Mini-games for two', bunny: true, competitor: true },
+      { feature: 'Mini-games for two', bunny: false, competitor: true },
       { feature: 'Home-screen widgets', bunny: 'Drawing widget', competitor: 'Drawings, notes, moods, days together' },
       { feature: 'Love-question library', bunny: true, competitor: true },
       { feature: 'Daily check-ins', bunny: true, competitor: true },
       { feature: 'One-time lifetime option', bunny: true, competitor: true },
     ],
-    bunnyBestFor: 'Couples who enjoy a hand-drawn home, shared activities, and a lifetime upgrade option.',
+    bunnyBestFor: 'Couples who enjoy an illustrated shared home, shared activities, and a lifetime upgrade option.',
     competitorBestFor: 'Couples who prefer lovelee’s Love Zone and its note, mood, and days-together widgets.',
     faq: [
       {
         q: 'What is the difference between Bunny and lovelee?',
-        a: 'Both offer pets, plants, games, shared whiteboards, love notes, question packs, and Home Screen widgets. Bunny centers these activities in a hand-drawn home and provides a drawing widget; lovelee also promotes note, mood, and days-together widgets. The design and current paid offers are useful points to compare.',
+        a: 'Both offer pets, plants, shared whiteboards, love notes, question packs, and Home Screen widgets. Bunny centers these activities in an illustrated shared home and provides a drawing widget; lovelee also promotes note, mood, and days-together widgets. The design and current paid offers are useful points to compare.',
       },
       {
         q: 'How do Bunny and lovelee prices compare?',
@@ -97,9 +97,9 @@ export const COMPARISONS = [
     metaDescription:
       'Compare Bunny and Widgetable for shared pet care, drawings, notes and widgets. See their different approaches to staying connected with your partner.',
     intro:
-      'Widgetable offers shared pets and connection widgets for friends and couples, including mood, distance, photos, doodles and text. Bunny combines pet care with a shared in-app home, a drawing canvas, letters and games for couples.',
+      'Widgetable offers shared pets and connection widgets for friends and couples, including mood, distance, photos, doodles and text. Bunny combines pet care with a shared in-app home, a drawing canvas, letters and question packs for couples.',
     verdict:
-      'Pick Widgetable if you want its range of widgets for friends and couples. Pick Bunny if you prefer a shared home with pet care, a draw-together canvas, love letters and games, with weekly and lifetime upgrade options.',
+      'Pick Widgetable if you want its range of widgets for friends and couples. Pick Bunny if you prefer a shared home with pet care, a draw-together canvas, love letters and question packs, with weekly and lifetime upgrade options.',
     bunnyPricing: 'Free; optional Pro weekly subscription or lifetime purchase',
     competitorPricing: 'Free with ads and in-app purchases; optional Premium subscription',
     features: [
@@ -110,12 +110,12 @@ export const COMPARISONS = [
       { feature: 'Daily check-ins', bunny: true, competitor: 'Mood widgets' },
       { feature: 'Paid upgrade', bunny: 'Weekly or lifetime', competitor: 'Premium subscription and in-app purchases' },
     ],
-    bunnyBestFor: 'Couples who want a shared in-app home with a pet, letters, drawings and games.',
+    bunnyBestFor: 'Couples who want a shared in-app home with a pet, letters, drawings and question rounds.',
     competitorBestFor: 'Friends and couples who want pet, mood, distance and other connection widgets.',
     faq: [
       {
         q: 'How is Bunny different from Widgetable?',
-        a: 'Both offer shared virtual pets. Widgetable focuses on widgets for friends and couples, including sharing doodles and text through Pin It! Bunny brings pet care, a shared drawing canvas, love letters and games into a couples home, with a separate drawing widget.',
+        a: 'Both offer shared virtual pets. Widgetable focuses on widgets for friends and couples, including sharing doodles and text through Pin It! Bunny brings pet care, a shared drawing canvas, love letters and question packs into a couples home, with a separate drawing widget.',
       },
       {
         q: 'Can you raise a pet with your partner in Bunny?',
@@ -132,11 +132,11 @@ export const COMPARISONS = [
     targetKeyword: 'apps like Locket for couples',
     title: 'Apps Like Locket for Couples: Photos or Shared Activities? (2026)',
     metaDescription:
-      'Compare Bunny’s shared pet, drawing widget, love notes and games with Locket’s photo-sharing experience for friends and couples.',
+      'Compare Bunny’s shared pet, drawing widget, love notes and question packs with Locket’s photo-sharing experience for friends and couples.',
     intro:
-      'Locket focuses on sharing everyday photos with close friends and partners, including through Home Screen widgets. Bunny focuses on shared activities such as pet care, doodles, notes, and games. These are different ways to stay present in each other’s day.',
+      'Locket focuses on sharing everyday photos with close friends and partners, including through Home Screen widgets. Bunny focuses on shared activities such as pet care, doodles, notes, and question rounds. These are different ways to stay present in each other’s day.',
     verdict:
-      'Choose Locket for photo sharing with close friends and partners. Choose Bunny for shared pet care, a draw-together canvas and drawing widget, love notes, games, and daily check-ins. Bunny’s drawing widget is not a photo-sharing widget.',
+      'Choose Locket for photo sharing with close friends and partners. Choose Bunny for shared pet care, a draw-together canvas and drawing widget, love notes, question packs, and daily check-ins. Bunny’s drawing widget is not a photo-sharing widget.',
     bunnyPricing: 'Free; optional Pro weekly subscription or lifetime purchase',
     competitorPricing: 'Free; optional Locket Gold subscription',
     features: [
@@ -146,7 +146,6 @@ export const COMPARISONS = [
       { feature: 'Shared virtual pet', bunny: true, competitor: false },
       { feature: 'Draw-together canvas', bunny: true, competitor: false },
       { feature: 'Love notes & letters', bunny: true, competitor: false },
-      { feature: 'Mini-games for two', bunny: true, competitor: false },
       { feature: 'Daily check-ins', bunny: true, competitor: false },
       { feature: 'Built specifically for couples', bunny: true, competitor: 'Friends & couples' },
     ],
@@ -155,11 +154,11 @@ export const COMPARISONS = [
     faq: [
       {
         q: 'What is a good app like Locket for couples?',
-        a: 'Bunny is an alternative for couples who want shared activities: a virtual pet, a draw-together canvas and drawing widget, love notes, and games. Choose Locket if photo sharing is your main goal; Bunny’s widget displays your shared drawing rather than photos.',
+        a: 'Bunny is an alternative for couples who want shared activities: a virtual pet, a draw-together canvas and drawing widget, love notes, and question packs. Choose Locket if photo sharing is your main goal; Bunny’s widget displays your shared drawing rather than photos.',
       },
       {
         q: 'Is Bunny better than Locket for long-distance relationships?',
-        a: 'It depends on your routine. Locket centers on sharing everyday photos. Bunny offers shared pet care, doodles, notes, games, and daily check-ins. Try the experience that you and your partner are most likely to use regularly.',
+        a: 'It depends on your routine. Locket centers on sharing everyday photos. Bunny offers shared pet care, doodles, notes, question rounds, and daily check-ins. Try the experience that you and your partner are most likely to use regularly.',
       },
     ],
   },

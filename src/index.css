@@ -574,6 +574,14 @@ a {
   line-height: 1.6;
 }
 
+@media (min-width: 1024px) {
+  .home-features-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+.hero-access-note { margin-top: 18px; color: var(--text-secondary); font-size: 15px; }
+.feature-access { display: block; margin-top: 18px; font-size: 14px; font-weight: 600; }
+.feature-card:focus-visible { outline: 3px solid var(--primary-hover); outline-offset: 5px; }
+
 /* --- Testimonial Section --- */
 .testimonial-section {
   padding: 100px 0;
@@ -1029,6 +1037,12 @@ a {
   line-height: 1.7;
   color: var(--text-secondary);
   margin-bottom: 24px;
+}
+
+@media (max-width: 600px) {
+  .legal-page > .container { padding-inline: 0; }
+  .legal-content { padding: 24px; }
+  .legal-content h1 { font-size: 30px; line-height: 1.25; }
 }
 
 .legal-content a {

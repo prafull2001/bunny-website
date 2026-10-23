@@ -17,12 +17,21 @@ for (const host of ['localhost', 'bunny-website.vercel.app', 'bunnycouples.com.e
 assert.equal(publicPage('http://bunnycouples.com/'), null);
 assert.equal(publicPage('https://bunnycouples.com:444/'), null);
 assert.equal(publicPage(`${origin}/drawing-widgets-for-couples/?code=secret#token`).url, `${origin}/drawing-widgets-for-couples/`);
+for (const path of ['/pricing', '/blog/tamagotchi-for-couples']) {
+  assert.equal(publicPage(`${origin}${path}/?code=secret#token`).url, `${origin}${path}/`);
+}
 
 const cta = 'https://apps.apple.com/app/apple-store/id6756160637?pt=128026361&ct=bunny_website&mt=8&utm_source=homepage&utm_campaign=hero';
 assert.equal(appStorePlacement(cta), 'homepage:hero');
 assert.equal(appStorePlacement(cta.replace('apps.apple.com', 'apps.apple.com.evil.test')), null);
 assert.equal(appStorePlacement(cta.replace('6756160637', '1234')), null);
 assert.equal(appStorePlacement(cta.replace('hero', 'email@example.com')), null);
+for (const [source, campaign] of [['pricing', 'hero'], ['pricing', 'footer'], ['blog', 'tamagotchi-for-couples']]) {
+  const link = new URL(cta);
+  link.searchParams.set('utm_source', source);
+  link.searchParams.set('utm_campaign', campaign);
+  assert.equal(appStorePlacement(link.href), `${source}:${campaign}`);
+}
 
 function fixture(href = landing, privacy = {}, { deferred = false, noStorage = false } = {}) {
   let subscriber;
