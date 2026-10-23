@@ -53,6 +53,7 @@ export const SUBSCRIPTION_GUIDE = {
       <h2>Want to leave drawings? Choose lifetime Pro.</h2>
       <p>Pro adds <Link to="/drawing-widgets-for-couples">a shared drawing whiteboard</Link> that both of you can change. Leave a doodle for your partner, add to their drawing or write something by hand. You can also display that canvas in a Home Screen widget; iOS controls when the widget refreshes.</p>
       <p>The canvas stays editable. Your saved text letters live separately in the mailbox. That gives you a place to make things together and a place to keep what you’ve written.</p>
+      <p>Need somewhere to start? Try our <Link to="/blog/shared-drawing-apps-for-couples">five little drawing ideas for couples</Link>, from finishing each other’s doodles to leaving a handwritten hello.</p>
       <p>Bunny Pro Lifetime is <strong>${SITE.pricing.lifetime} USD</strong> as a one-time purchase. There is also an optional <strong>${SITE.pricing.proWeekly} USD weekly subscription</strong>, which renews automatically. If avoiding recurring payments is your priority, choose lifetime when you’re ready for Pro.</p>
       <p style={{ fontSize: 14 }}>US App Store prices checked October 22, 2026. Regional prices and offers can differ. Confirm the price and purchase terms in Bunny before paying. See <Link to="/pricing">Bunny’s pricing page</Link> for free and Pro features, restoring purchases and managing the weekly plan.</p>
 

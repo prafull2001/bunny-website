@@ -63,14 +63,15 @@ export default function DrawingWidgetsForCouples() {
           </div>
 
           <h2>A drawing you can both add to</h2>
-          <p>Sketch tonight’s dinner, write a short hello by hand or start a doodle for your partner to finish. Choose a brush color and size, use undo for your last stroke, or clear the canvas when you’re ready to start again.</p>
+          <p>Sketch tonight’s dinner, write a short hello by hand or start a doodle for your partner to finish. Choose a brush color and size, use Undo to remove the most recent stroke on the shared canvas, or clear the board when you both want to start again.</p>
           <p>This is one shared, editable whiteboard. Either of you can add to it or clear it. For a message you want to keep in your mailbox, send a separate <Link to="/love-notes-for-couples">text love letter</Link>.</p>
+          <p>Start with our <Link to="/blog/shared-drawing-apps-for-couples">five drawing ideas for couples</Link>, with a guide to making your first shared doodle in Bunny.</p>
 
           <h2>Open your first shared whiteboard</h2>
           <ol style={{ paddingLeft: 24, color: 'var(--text-secondary)' }}>
             <li>Install Bunny on both devices and create an account each.</li>
             <li>One partner creates a Love Nest and shares the invite code. The other joins using that code.</li>
-            <li>Open the whiteboard with Bunny Pro, choose a color and draw something for your partner.</li>
+            <li>Open Doodles with Bunny Pro, choose a color and draw something for your partner. Completed strokes save automatically; if Bunny shows a save error, use Retry before closing.</li>
             <li>Your partner opens the same whiteboard with an internet connection to see it and add their own strokes.</li>
           </ol>
 
@@ -100,7 +101,7 @@ export default function DrawingWidgetsForCouples() {
             <p>Download Bunny, connect your accounts and choose Pro to open your shared canvas. Start with something only the two of you would understand.</p>
             <a href={appStoreLink('drawing-widgets', 'footer')} className="app-store-badge" aria-label="Download Bunny on the App Store" />
           </div>
-          <p className="muted-links"><Link to="/compare/apps-like-locket-for-couples">Drawing and photo widgets compared</Link> · <Link to="/contact">Get help</Link> · <Link to="/privacy">Privacy</Link></p>
+          <p className="muted-links"><Link to="/blog/shared-drawing-apps-for-couples">Shared drawing guide</Link> · <Link to="/contact">Get help</Link> · <Link to="/privacy">Privacy</Link></p>
         </article>
       </div>
     </main>
