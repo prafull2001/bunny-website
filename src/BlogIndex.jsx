@@ -9,7 +9,7 @@ export default function BlogIndex() {
   return (
     <div className="legal-page">
       <Seo
-        title="Bunny Blog — Long-Distance &amp; Couples Guides"
+        title="Bunny Blog: Long-Distance &amp; Couples Guides"
         description="Guides for couples and long-distance relationships: the best couples apps, games to play together, questions to ask, and ways to feel close from afar."
         path="/blog"
         image="/og/og-blog.jpg"

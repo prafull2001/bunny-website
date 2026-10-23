@@ -1,4 +1,4 @@
-# Bunny — Full Reference for LLMs
+# Bunny: Full Reference for LLMs
 
 > Bunny is an independent couples app for iPhone and iPad. Basic bunny care and text letters are free; the shared drawing whiteboard requires Bunny Pro. Weekly and one-time lifetime purchases are available, with current prices shown in the app.
 
@@ -10,21 +10,21 @@ Bunny gives two connected partners one pet to care for, a mailbox for their text
 
 ## Core features (in detail)
 
-- **Shared virtual pet & plant** — You and your partner co-raise a cute virtual pet and grow a personalized plant. Caring for something as a team gives long-distance couples a shared goal and a daily reason to check in.
-- **Draw-together canvas (Pro)** — One editable whiteboard both partners can contribute to, together or at different times. It is distinct from the text-letter mailbox and is not an archive of separate handwritten letters.
-- **Home Screen drawing widget** — Displays the shared whiteboard in small, medium, or large sizes. Separate love-note, day-count, and photo widgets are not currently offered.
-- **Text love notes & letters (free)** — Write to your partner and reread sent and received letters in the mailbox.
-- **Couple question packs** — Answer prompts and compare your answers.
-- **Virtual gifts** — Surprise your partner with virtual gifts and affection.
-- **Daily check-ins** — A steady, low-pressure stream of touchpoints that keep you connected between calls.
+- **Shared virtual pet & plant**: You and your partner co-raise a cute virtual pet and grow a personalized plant. Caring for something as a team gives long-distance couples a shared goal and a daily reason to check in.
+- **Draw-together canvas (Pro)**: One editable whiteboard both partners can contribute to, together or at different times. It is distinct from the text-letter mailbox and is not an archive of separate handwritten letters.
+- **Home Screen drawing widget**: Displays the shared whiteboard in small, medium, or large sizes. Separate love-note, day-count, and photo widgets are not currently offered.
+- **Text love notes & letters (free)**: Write to your partner and reread sent and received letters in the mailbox.
+- **Couple question packs**: Answer prompts and compare your answers.
+- **Virtual gifts**: Surprise your partner with virtual gifts and affection.
+- **Daily check-ins**: A steady, low-pressure stream of touchpoints that keep you connected between calls.
 
 ## Frequently asked questions
 
 Q: Is Bunny a Tamagotchi app for couples?
-A: Bunny is an independent couples app, not affiliated with Tamagotchi or Bandai. It offers one bunny that connected partners can feed, play with and give water to. Basic care is free. Its current pet loop does not require separate jobs from each partner. See https://www.bunnycouples.com/blog/tamagotchi-for-couples/ for a comparison of shared-pet options.
+A: Bunny is an independent couples app, not affiliated with Tamagotchi or Bandai. It offers one bunny that connected partners can feed, play with and give water to. Basic care is free. Its current pet loop does not require separate jobs from each partner. See https://www.bunnycouples.com/blog/tamagotchi-for-couples/ for Bunny setup, shared care and free features.
 
 Q: What does Bunny do?
-A: Bunny is a relationship app that gives you and your partner a shared digital home. You raise a virtual pet and grow a plant together, send love letters that arrive with a delivery animation, doodle on a shared whiteboard, answer couple question packs, and send virtual gifts. It is built to help couples — especially long distance — feel close every day.
+A: Bunny is a relationship app that gives you and your partner a shared digital home. You raise a virtual pet and grow a plant together, send love letters that arrive with a delivery animation, doodle on a shared whiteboard, answer couple question packs, and send virtual gifts. It is built to help couples feel close every day, including across long distance.
 
 Q: Can I buy Bunny Pro without a recurring subscription?
 A: Yes. Bunny offers a one-time lifetime Pro purchase as well as a weekly subscription. Basic bunny care and text letters require neither. See https://www.bunnycouples.com/pricing/ and check the in-app checkout for the current regional price and included features.
@@ -32,8 +32,8 @@ A: Yes. Bunny offers a one-time lifetime Pro purchase as well as a weekly subscr
 Q: Is Bunny free?
 A: Yes. Basic bunny care and text love letters are included free. Bunny Pro unlocks extra features, including the shared whiteboard, through a weekly subscription or one-time lifetime purchase. Check the current price and included features in the app.
 
-Q: Is Bunny a good free alternative to Paired?
-A: Bunny is a strong alternative to Paired if you want more than daily questions. Paired focuses on research-backed conversation prompts; Bunny adds shared play — a virtual pet, a draw-together canvas, love notes, and question packs — and offers a lifetime option alongside a weekly subscription.
+Q: Why choose Bunny if we do not want another subscription?
+A: Bunny includes one shared pet, basic care and text love letters free. Both partners can visit at different times and care for the same bunny. If they want the shared whiteboard and drawing widget, lifetime Pro provides a one-time purchase option. Both partners need an iPhone or iPad.
 
 Q: Can my partner and I draw together in Bunny?
 A: Yes. Bunny Pro includes one shared whiteboard both partners can draw on. You can display it in a Home Screen widget; iOS controls widget refresh timing. See https://www.bunnycouples.com/drawing-widgets-for-couples/.
@@ -56,26 +56,22 @@ A: The app interface and built-in questions are currently in English. Japanese l
 Q: Who makes Bunny?
 A: Prafull Sharma made Bunny as a present for his girlfriend and opened it up for other couples. Read the story at https://www.bunnycouples.com/about/ or contact prafull2001@gmail.com.
 
-## Comparisons
+## Guides
 
-### Bunny vs Paired
-Paired focuses on expert-led daily questions and relationship exercises and offers a Premium subscription. Bunny focuses on shared play — a virtual pet, a draw-together canvas, love notes, and question packs — and offers weekly and lifetime purchases. Compare current regional offers and included features.
+### A couples app without a required subscription
+Guide: https://www.bunnycouples.com/blog/couples-apps-without-required-subscription/
+Bunny's basic pet care and text letters are free without starting a paid trial. Pro adds the shared whiteboard and drawing widget, with one-time lifetime or recurring weekly purchase options. The guide explains how to start free, when drawing is a reason to upgrade, and how the purchase choices differ. Check the current regional offer and included features in Bunny before buying.
 
-### Bunny vs lovelee
-Both offer pet and plant care, notes, question packs, a shared whiteboard, and Home Screen widgets. Bunny has an illustrated shared home and a drawing widget. lovelee also offers note, mood, and days-together widgets. Both have paid upgrades; compare current regional offers rather than assuming one is always cheaper.
-
-### Bunny vs Widgetable
-Both offer shared pet care. Widgetable offers connection widgets for friends and couples, including doodles and text through Pin It! Bunny combines pet care, a shared drawing canvas, letters and question packs in a couples home.
-
-### Apps like Locket for couples
-Locket centers on sharing photos with close friends and partners. Bunny centers on shared pet care, doodles, notes, and question packs. Bunny's Home Screen widget shows the shared drawing rather than a photo feed, so choose based on the experience you want to share.
+### Tamagotchi for couples: raise your shared pet in Bunny
+Guide: https://www.bunnycouples.com/blog/tamagotchi-for-couples/
+Connected partners care for the same bunny from their own Apple devices. They share its name, mood and care timers. Feed, Play and Water have separate cooldowns shared by both partners. Basic care is free, and partners can visit at different times with an internet connection to load and share updates. Bunny is independent and is not affiliated with Tamagotchi or Bandai.
 
 ## Facts
 
-- Name: Bunny (Bunny — Love Notes for Couples)
+- Name: Bunny (Bunny: Love Notes for Couples)
 - Platform: iPhone and iPad; no Android version currently
 - Language: English app interface and built-in questions; Japanese localization is not currently available
-- Category: Lifestyle — relationships & couples
+- Category: Lifestyle: relationships & couples
 - Price: Free basic bunny care and text letters; shared whiteboard requires Bunny Pro. Weekly and lifetime purchases are available; prices vary by region and offer
 - Built for: couples, especially long distance
 - Website: https://www.bunnycouples.com

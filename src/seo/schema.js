@@ -109,7 +109,7 @@ export function articleSchema({ title, description, path, datePublished, dateMod
 }
 
 export function itemListSchema(items) {
-  // items: [{ name, path }] — used for the comparison hub & listicles
+  // items: [{ name, path }]; used for the comparison hub & listicles
   return {
     '@context': 'https://schema.org',
     '@type': 'ItemList',

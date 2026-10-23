@@ -15,7 +15,7 @@ export const COMPARISONS = [
     intro:
       'Paired is built around expert-led daily questions and relationship exercises. Bunny takes a different approach: shared play. Here is an honest, side-by-side look so you can pick the one that fits your relationship.',
     verdict:
-      'Choose Paired if you mainly want guided conversation prompts and relationship lessons. Choose Bunny if you want to feel connected through shared activities — a virtual pet, a draw-together canvas, love notes, and question packs — with a lifetime option alongside a weekly subscription.',
+      'Choose Paired if you mainly want guided conversation prompts and relationship lessons. Choose Bunny for a virtual pet, a draw-together canvas, love notes and question packs, with a lifetime option alongside a weekly subscription.',
     bunnyPricing: 'Free; optional Pro weekly subscription or lifetime purchase',
     competitorPricing: 'Free tier; optional Paired Premium subscription',
     features: [

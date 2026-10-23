@@ -52,7 +52,7 @@ export default function SharedPetForCouples() {
             <div style={{ flex: '1 1 260px' }}>
               <p className="blog-card-meta">One pet. Two phones.</p>
               <h1>Raise a virtual pet together, even when you’re apart</h1>
-              <p className="lede">Share a little bunny with your partner. Give it a name, feed it, play with it and check on its mood—from your own phones, whenever you have a moment.</p>
+              <p className="lede">Share a little bunny with your partner. Give it a name, feed it, play with it and check on its mood from your own phones, whenever you have a moment.</p>
               <a href={appStoreLink('shared-pet', 'hero')} className="app-store-badge" aria-label="Download Bunny on the App Store" />
               <p>Basic bunny care is free · iPhone and iPad</p>
             </div>
@@ -68,7 +68,7 @@ export default function SharedPetForCouples() {
 
           <h2>Looking for a Tamagotchi-style pet you can share?</h2>
           <p>If you enjoy looking after a virtual pet and want your partner to join in, Bunny gives the two of you a bunny to care for together. Choose a name you both like, check on its mood and take turns with the available care actions.</p>
-          <p>Still choosing? Our <Link to="/blog/tamagotchi-for-couples">Tamagotchi-style apps for couples guide</Link> compares shared-pet options and the devices you’ll need.</p>
+          <p>See how to get started in our <Link to="/blog/tamagotchi-for-couples">Tamagotchi-for-couples guide</Link>, from connecting your accounts to taking turns caring for your bunny.</p>
           <p>Bunny also has space to leave something personal: send a <Link to="/love-notes-for-couples">love note</Link> or add a <Link to="/drawing-widgets-for-couples">shared doodle</Link> for your partner to find between calls.</p>
 
           <h2>Start your shared pet</h2>

@@ -5,7 +5,7 @@
 export const SITE = {
   name: 'Bunny',
   // Full marketing name used in titles / schema
-  appName: 'Bunny — Love Notes for Couples',
+  appName: 'Bunny: Love Notes for Couples',
   // Canonical origin (no trailing slash). The site is served from www.
   url: 'https://www.bunnycouples.com',
   locale: 'en_US',
